@@ -1,0 +1,99 @@
+---
+import HomeSliderBgImage from "./HomeSliderBgImage.astro";
+---
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <!--video no usara el componente -->
+        <div class="swiper-slide w-full min-h-[calc(100vh-6rem)] lg:min-h-[calc(100vh-8rem)] relative">
+            <div class='bg-blend-color bg-black/40 bg-fixed bg-cover bg-center w-full h-full absolute bg-no-repeat'>
+                <!-- ... -->
+                <video src="/assets/video/SV-WEB.mp4" autoplay muted loop class="absolute h-full w-full object-cover -z-10" />
+                <div class="text-white text-xl w-full h-full xl:container xl:mx-auto flex flex-col justify-center px-4 xl:px-0">
+                    <div class="flex flex-col text-start lg:gap-2">
+                        <h2 class="text-2xl lg:text-6xl font-black ">TU SOCIO</h2>
+                        <h3 class="text-2xl lg:text-6xl font-normal">CONFIABLE</h3>
+                    </div>
+                    <p class="mt-6 max-w-[540px]">Ofrecemos excelencia y una amplia gama de productos para el óptimo funcionamiento de tu equipo.</p>
+                    <a href="" class="mt-6 px-10 py-3 lg:px-10 lg:py-5 bg-sv-blue text-white rounded-full w-max transition-colors duration-300 hover:bg-sv-negro">
+                        Conoce a SV
+                    </a>
+                </div>
+            </div>
+         
+          
+         </div>
+            <HomeSliderBgImage 
+            className="bg-[url('/assets/Banner-portal-SV.webp')]" 
+            titleBold="LO QUE NECESITAS," 
+            titleNormal="FÁCIL Y RAPIDO" 
+            text="Registrate ahora y accede a precios especiales dentro de nuestro portal de compras." 
+            buttonText="Registrarse"
+            />
+         
+             <HomeSliderBgImage 
+             className="bg-[url('/assets/banner-productos-home.webp')]" 
+             titleBold="AMPLIA VARIEDAD" 
+             titleNormal="DE PRODUCTOS" 
+             text="Descubrí la mejor calidad en filtros, repuestos, herramientas de corte, tren rodante y accesorios." 
+             buttonText="Nuestros productos"
+             />
+
+             <HomeSliderBgImage 
+             className="bg-[url('/assets/SLIDER-crecemos.webp')]" 
+             titleBold="CRECEMOS JUNTOS" 
+             titleNormal="HACIA EL ÉXITO" 
+             text="Son el motor fundamental de nuestro crecimiento, avanzamos gracias a su dedicación y compromiso." 
+             buttonText="Trabajá con nosotros"
+             />
+
+             <HomeSliderBgImage 
+             className="bg-[url('/assets/banner-programa-de-beneficios-scaled-1.webp')]" 
+             titleBold="PROGRAMA DE" 
+             titleNormal="BENEFICIOS" 
+             text="En SV entendemos el valor de tu esfuerzo, sumate a nuestro programa y recibí grandes beneficios." 
+             buttonText="Trabajá con nosotros"
+             />
+          
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+<script>
+    import Swiper from 'swiper';
+    import 'swiper/css';
+    import { Pagination,Autoplay,EffectFade } from 'swiper/modules';
+    import 'swiper/css/pagination';
+    import 'swiper/css/autoplay';
+    import 'swiper/css/effect-fade';
+    new Swiper('.mySwiper',{
+        modules:[Pagination,Autoplay,EffectFade],
+        pagination : {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+        },
+        autoplay:{
+            delay:3000
+        },
+        effect:'fade',
+        fadeEffect:{
+            crossFade:true
+        },
+        loop:true
+    })
+</script>
+<style>
+    .swiper-pagination {
+        width: 100% !important;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 8rem;
+        margin-bottom: 2rem;
+    }
+   /** Color paginacion swiper */
+   :root {
+    --swiper-theme-color: white;
+    --swiper-pagination-bullet-width: 12px;
+    --swiper-pagination-bullet-height: 12px;
+}
+</style>
+

@@ -1,0 +1,50 @@
+<header class="block w-full justify-between lg:hidden">
+    <div class="w-full bg-sv-negro text-white text-xs sm:text-base min-h-8 flex items-center">
+        <div class="w-full px-4">
+          <p>+54 9 (342) 631-1894 | contacto@serviciosviales.com.ar</p>
+        </div>
+    </div>
+    <nav class="w-full px-4 min-h-16 flex items-center justify-between">
+        <div>
+            <img src="/assets/LOGO-SV-COLOR.svg" alt="Logo Servicios Viales" width="140" height="140" />
+        </div>
+        <div>
+            <input type="checkbox" id="open-menu" class="hidden"  />
+            <label for="open-menu">
+                <i class="fa-solid fa-bars-staggered text-2xl"></i>
+            </label>
+            <ul class="menu-despegable-mobile">
+                <label for="open-menu">
+                    <i class="fa-solid fa-xmark text-2xl text-white absolute top-12 right-6"></i>
+                </label>
+                <li>
+                   <a href="/">Inicio</a>
+                </li>
+                <li>
+                   <a href="/">Productos</a>
+                </li>
+                <li>
+                   <a href="/">Servicios</a>
+                </li>
+                <li>
+                   <a href="/">Nosotros</a>
+                </li>
+                <li>
+                   <a href="/">Blog</a>
+                </li>
+                <li>
+                   <a href="/">Contacto</a>
+                </li>
+           </ul>
+        </div>
+    </nav>
+</header>
+<style>
+    .menu-despegable-mobile {
+        @apply fixed w-2/3 bg-sv-negro min-h-full top-0 bottom-0 right-0 text-white text-xl flex flex-col justify-center items-start gap-5 pl-8 translate-x-full invisible opacity-0 transition-all duration-300 z-10
+    }
+    #open-menu:checked ~ .menu-despegable-mobile {
+        @apply visible translate-x-0 opacity-100
+    }
+   
+</style>

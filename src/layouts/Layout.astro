@@ -1,0 +1,68 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon-sv.webp" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<slot />
+		</main>
+
+		<Footer />
+		<script src="https://kit.fontawesome.com/94b7263109.js" crossorigin="anonymous"></script> <!-- Fontawesome icons -->
+	</body>
+</html>
+<style is:global>
+	/* nunito-sans-latin-wght-normal */
+	@font-face {
+		font-family: "Nunito Sans Variable";
+		font-style: normal;
+		font-display: swap;
+		font-weight: 200 1000;
+		src: url(https://cdn.jsdelivr.net/fontsource/fonts/nunito-sans:vf@latest/latin-wght-normal.woff2)
+			format("woff2-variations");
+		unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+			U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+			U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	}
+	*,*::before,*::after{
+		box-sizing: border-box;
+	}
+	img,svg {
+		display: block;
+		height: auto;
+		max-width: 100%;
+	}
+	body {
+		margin: 0;
+		min-height: 100dvh;
+		font-family: "Nunito Sans Variable", sans-serif;
+	}
+	h1,h2,h3,h4,h5,h6{
+		text-wrap: balance;
+	}
+	p{
+		text-wrap: pretty;
+	}
+	strong{
+		font-weight: 900;
+	}
+	
+</style>

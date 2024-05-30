@@ -1,0 +1,29 @@
+---
+
+/** La idea es recibir el bg imagen y los textos de cada imagen para mostrarlos en 
+ * cada slider
+ */
+interface Props {
+    titleBold:string;
+    titleNormal:string;
+    text:string;
+    buttonText:string;
+    className?:string;
+}
+const {titleBold,titleNormal,text,buttonText,className} = Astro.props;
+---
+<div class="swiper-slide w-full min-h-[calc(100vh-6rem)] lg:min-h-[calc(100vh-8rem)] relative">
+<div class={`${className} bg-blend-color bg-black/40 bg-fixed bg-cover bg-center w-full h-full absolute bg-no-repeat`}>
+    <!-- ... -->
+    <div class="text-white text-xl w-full h-full xl:container xl:mx-auto flex flex-col justify-center px-4 xl:px-0">
+        <div class="flex flex-col text-start lg:gap-2">
+            <h2 class="text-2xl lg:text-6xl font-black ">{ titleBold }</h2>
+            <h3 class="text-2xl lg:text-6xl font-normal">{ titleNormal }</h3>
+        </div>
+        <p class="mt-6 max-w-[540px]">{ text }</p>
+        <a href="" class="mt-6 px-10 py-3 lg:px-10 lg:py-5 bg-sv-blue text-white rounded-full w-max transition-colors duration-300 hover:bg-sv-negro">
+           {buttonText}
+        </a>
+    </div>
+</div>
+</div>

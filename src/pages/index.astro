@@ -1,0 +1,179 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SliderHome from "../components/homepage/SliderHome.astro";
+import NumberSectionHome from "../components/homepage/NumberSectionHome.astro";
+import CardItemHome from "../components/homepage/CardItemHome.astro";
+import TestimoniosHome from "../components/homepage/TestimoniosHome.astro";
+import FormContactoHome from "../components/homepage/FormContactoHome.astro";
+---
+
+<Layout
+	title="SV - Importador #1 Filtros Donaldson Argentina - Servicios Viales"
+	description="Importadores N° 1 de Filtros Donaldson en Argentina. ¡Visitanos ahora! - Filtros de Aire - Filtros de Combustible - Filtros Hidraulicos - Filtros de Aceite para máquinas pesadas. Calidad superior y variedad de productos para satisfacer tus necesidades."
+>
+	<SliderHome />
+	<NumberSectionHome />
+	<section
+		class="w-full min-h-screen bg-[url('/assets/MAQUINA-C-1.webp')] bg-cover bg-center flex px-4 lg:px-40 bg-blend-color lg:bg-blend-normal bg-black/20"
+	>
+		<div
+			class="w-full lg:max-w-[800px] flex flex-col text-center items-center justify-between lg:items-start lg:text-start min-h-full mt-10 mb-20"
+		>
+			<div class="text-white flex flex-col text-center lg:text-start">
+				<span class="text-xs font-semibold ml-1">NUESTRO FOCO —</span>
+				<h4
+					class="text-3xl lg:text-[50px] leading-tight lg:leading-[3.2rem]"
+				>
+					ENTENDEMOS EL<br />VALOR DE TU<br /><strong
+						>EQUIPO PARADO</strong
+					>
+				</h4>
+			</div>
+			<p class="text-white text-xl w-full lg:max-w-[35vw]">
+				Comprendemos los desafíos a los que se enfrentan los
+				profesionales y las empresas que operan maquinaria pesada. Desde
+				la <strong
+					>dificultad de abastecimiento, hasta la disponibilidad
+					inmediata de los productos y sus altos costos.</strong
+				>
+			</p>
+		</div>
+	</section>
+
+	<section class="w-full py-20">
+		<div
+			class="px-4 w-full xl:container xl:px-0 xl:mx-auto text-sv-blue flex flex-col lg:flex-row lg:items-center"
+		>
+			<div class="lg:w-1/2">
+				<span class="text-xs font-semibold ml-1">OFRECEMOS —</span>
+				<h4 class="text-4xl lg:text-[50px] lg:leading-[1.10]">
+					UN PASO ADELANTE<br />EN <strong>SOLUCIONES</strong><br
+					/><strong>INTEGRALES</strong>
+				</h4>
+			</div>
+			<div class="lg:w-1/2 mt-4 lg:mt-0 lg:ml-24">
+				<p class="text-xl text-sv-negro">
+					Nuestro excelente servicio en conjunto con nuestras líneas
+					de productos te permitirán prolongar la vida útil de tus
+					equipos, mejorar la producción y disminuir los costos.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="w-full bg-sv-blue mt-28">
+		<div
+			class="w-full px-4 xl:container xl:px-0 xl:mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10"
+		>
+			<CardItemHome
+				className="-mt-28 sm:-mt-28 lg:-mt-32"
+				iconUrl="/assets/icon.cubos.png"
+				title="AMPLIO"
+				subtitle="STOCK"
+				text="Variedad de productos siempre disponibles."
+			/>
+			<CardItemHome
+				className="sm:-mt-28 lg:-mt-32"
+				iconUrl="/assets/icon-camion.png"
+				title="ENTREGA"
+				subtitle="EXPRESS"
+				text="Tu pedido, en tu lugar, en tiempo récord."
+			/>
+			<CardItemHome
+				className="lg:-mt-32"
+				iconUrl="/assets/icon-atencion.png"
+				title="ASESORAMIENTO"
+				subtitle="TÉCNICO"
+				text="Servicio y soluciones al cliente personalizadas."
+			/>
+			<CardItemHome
+				className="lg:-mt-32"
+				iconUrl="/assets/icon-manos.png"
+				title="ALIANZA"
+				subtitle="ESTRATÉGICA"
+				text="Comercializamos marcas reconocidas mundialmente."
+			/>
+		</div>
+		<div
+			class="py-32 px-4 lg:px-0 flex flex-col items-center gap-5 lg:gap-10 text-white"
+		>
+			<div class="flex flex-col text-center gap-0">
+				<h4 class="text-3xl lg:text-[50px]">ENCONTRAR PRODUCTOS</h4>
+				<h4
+					class="text-3xl lg:text-[50px] font-black lg:leading-relaxed"
+				>
+					AHORA ES FÁCIL
+				</h4>
+			</div>
+			<p class="text-xl">
+				Buscá directamente en línea, ya sea por número de pieza y/o
+				referencia cruzada de cualquier marca.
+			</p>
+			<a
+				href="/"
+				title="Portal de compras"
+				class="bg-white text-sv-blue py-4 px-8 rounded-full text-lg font-semibold transition-colors duration-300 hover:bg-sv-negro hover:text-white"
+				>Ir al portal de compras</a
+			>
+		</div>
+	</section>
+	<TestimoniosHome />
+	<!-- Infinite text -->
+	<div class="text-wrapper flex justify-star bg-white overflow-hidden py-2">
+		<p class="text-base whitespace-nowrap text-sv-blue animate-text inline-block">
+			&nbsp • HONESTIDAD • CONFIANZA • AGILIDAD • COMPROMISO • HONESTIDAD •
+			CONFIANZA • AGILIDAD • COMPROMISO • HONESTIDAD • CONFIANZA •
+			AGILIDAD • COMPROMISO • HONESTIDAD • CONFIANZA • AGILIDAD •
+			HONESTIDAD • CONFIANZA • AGILIDAD • COMPROMISO
+		</p>
+		<p class="text-base whitespace-nowrap text-sv-blue animate-text inline-block">
+			• HONESTIDAD • CONFIANZA • AGILIDAD • COMPROMISO • HONESTIDAD •
+			CONFIANZA • AGILIDAD • COMPROMISO • HONESTIDAD • CONFIANZA •
+			AGILIDAD • COMPROMISO • HONESTIDAD • CONFIANZA • AGILIDAD •
+			HONESTIDAD • CONFIANZA • AGILIDAD • COMPROMISO
+		</p>
+	</div>
+	<section class="w-full hidden min-h-[90vh] lg:flex">
+         <div class="min-h-full w-full bg-sv-blue text-white flex flex-col items-start gap-10 justify-center">
+              <div class="lg:ml-32 lg:mr-10">
+				 <span class="text-xs font-semibold">UNITE —</span>
+				 <h4 class="text-[50px] font-black leading-[3rem]">ENFRENTEMOS JUNTOS</h4>
+				 <h4 class="text-[50px]">LOS DESAFÍOS</h4>
+			  </div>
+			  <p class="lg:ml-32 lg:mr-10 text-xl">
+				Sumate como cliente, para obtener una solución adaptada a tus necesidades.
+			  </p>
+			  <a href="" class="bg-white lg:ml-32 lg:mr-10 text-sv-blue px-8 py-4 rounded-full text-lg font-semibold transition-colors duration-300 hover:bg-sv-negro hover:text-white">Sumate como cliente</a>
+		 </div>
+		 <div class="min-h-full w-full bg-[url('/assets/uniteBg.jpg')] bg-cover bg-center">
+
+		 </div>
+	</section>
+	<section class="flex px-4 lg:hidden justify-center items-center w-full min-h-[90vh] bg-[url('/assets/uniteBg.jpg')] bg-cover bg-center bg-blend-color bg-black/45">
+        <div class="flex flex-col text-center items-center gap-10 text-white">
+			<div>
+			<span class="text-xs font-semibold">UNITE —</span>
+			<h4 class="text-4xl font-black">ENFRENTEMOS JUNTOS</h4>
+			<h4 class="text-4xl leading-10">LOS DESAFÍOS</h4>
+		   </div>
+			<p class="text-lg">
+				Sumate como cliente, para obtener una solución adaptada a tus necesidades.
+			</p>
+			<a href="" class="bg-white lg:ml-32 lg:mr-10 text-sv-blue px-8 py-4 rounded-full text-lg font-semibold transition-colors duration-300 hover:bg-sv-negro hover:text-white">Sumate como cliente</a>
+		</div>
+	</section>
+	<FormContactoHome />
+</Layout>
+<style>
+	.animate-text {
+		animation: move-rtl 20s linear infinite;
+	}
+	@keyframes move-rtl {
+		0%{
+			transform: translateX(0);
+		}
+		100%{
+			transform: translateX(-100%);
+		}
+	}
+</style>

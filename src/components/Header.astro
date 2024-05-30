@@ -1,0 +1,123 @@
+---
+import HeaderMobile from '../components/HeaderMobile.astro'
+const urlActual = Astro.url.pathname;
+---
+<header class="hidden lg:block">
+    <div class="w-full bg-sv-negro text-white min-h-8 flex items-center">
+        <div class="w-full px-4 xl:container xl:px-0 xl:mx-auto">
+          <p>+54 9 (342) 631-1894 | contacto@serviciosviales.com.ar</p>
+        </div>
+    </div>
+
+    <div class="bg-white shadow-lg w-full min-h-24 flex items-center">
+        <div class="w-full px-4 xl:container xl:px-0 xl:mx-auto flex items-center justify-between">
+            <div class="">
+                <img src="/assets/LOGO-SV-COLOR.svg" alt="logo Servicios Viales" width="200" height="200" />
+            </div>
+            <nav class="">
+                <ul class="flex items-center gap-x-5 font-semibold text-sv-blue">
+                    <li class={`relative nav-item ${urlActual === '/' ? 'underline underline-offset-4' : 'nav-item-underline-slide'}`}>
+                        <a href="/" title="Inicio">Inicio</a>
+                    </li>
+                    <li class={`relative nav-item ${urlActual === '/productos' ? 'underline underline-offset-4' : 'nav-item-underline-slide'}`}>
+                        <a href="/productos" title="Productos">Productos<i class="fa-solid fa-chevron-down text-xs ml-2"></i></a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="/productos/filtros-y-accesorios">Filtros y accesorios</a>
+                            </li>
+                            <li>
+                                <a href="/productos/repuestos-y-accesorios">Repuestos y accesorios</a>
+                            </li>
+                            <li>
+                                <a href="/productos/herramientas-de-corte">Herramientas de Corte</a>
+                            </li>
+                            <li>
+                                <a href="/productos/tren-rodante">Tren Rodante</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class={`relative nav-item ${urlActual === '/servicios' ? 'underline underline-offset-4' : 'nav-item-underline-slide'}`}>
+                        <a href="/servicios" title="Servicios">Servicios<i class="fa-solid fa-chevron-down text-xs ml-2"></i></a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="/servicios/plataformas-de-elevacion">Plataformas de elevación</a>
+                            </li>
+                            <li>
+                                <a href="/servicios/manipuladores-telescopicos">Manipuladores telescópicos</a>
+                            </li>
+                            <li>
+                                <a href="/servicios/equipos-varios">Equipos varios</a>
+                            </li>
+                            <li>
+                                <a href="/servicios/grupos-electrogenos">Grupos electrógenos</a>
+                            </li>
+                            <li>
+                                <a href="/servicios/accesorios">Accesorios</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class={`relative nav-item ${urlActual === '/nosotros' ? 'underline underline-offset-4' : 'nav-item-underline-slide'}`}>
+                        <a href="/nosotros" title="Nosotros">Nosotros<i class="fa-solid fa-chevron-down text-xs ml-2"></i></a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="/nosotros/nuestra-historia">Nuestra historia</a>
+                            </li>
+                            <li>
+                                <a href="/nosotros/ferias-y-eventos">Ferias y eventos</a>
+                            </li>
+                            <li>
+                                <a href="/nosotros/trabaja-con-nosotros">Trabaja con nosotros</a>
+                            </li>
+                            <li>
+                                <a href="/">Programa de beneficios</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/blog" title="Inicio">Blog</a>
+                    </li>
+                    <li>
+                        <a href="/contacto" title="Inicio">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="flex justify-end gap-5 relative">
+                <a class="btn-primary">
+                    Portal
+                </a>
+                <input type="text" 
+                placeholder="Código" 
+                class="bg-inherit rounded-lg outline-none indent-4 border border-solid border-[#DBDBDB] transition-colors duration-300 focus:border-sv-blue relative" />
+                <i class="fa-solid fa-magnifying-glass absolute right-3 top-4 cursor-pointer"></i>
+            </div>
+        </div>
+    </div>
+</header>
+<HeaderMobile />
+<style>
+    .btn-primary {
+        @apply bg-sv-blue text-white font-medium px-8 py-3 rounded-full transition-colors duration-300 cursor-pointer
+    }
+    .btn-primary:hover {
+        @apply bg-sv-negro
+    }
+    .submenu {
+        @apply invisible opacity-0 absolute left-0 top-8 transition-all duration-300 bg-white px-8 py-3 w-max shadow-xl flex flex-col gap-5 rounded-md z-10
+    }
+    .submenu>li>a{
+        @apply text-sv-negro transition-colors duration-300
+    }
+    .submenu>li>a:hover{
+        @apply text-sv-blue
+    }
+    .nav-item-underline-slide::after {
+        @apply content-[''] absolute h-[1px] left-0 bottom-[2px] w-0 bg-sv-blue ease-in-out duration-300
+    }
+    .nav-item-underline-slide:hover::after {
+        @apply w-full
+    }
+    .nav-item:hover .submenu {
+        @apply visible opacity-100
+    }
+</style>

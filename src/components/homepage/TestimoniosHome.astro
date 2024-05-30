@@ -1,0 +1,111 @@
+<section
+    class="w-full py-32 relative flex justify-center items-center bg-[#F9F9F9] overflow-hidden"
+>
+    <div class="swiper-container w-full px-4 lg:px-0">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <i
+                    class="fa-solid fa-quote-right text-6xl text-black opacity-25 mt-5"
+                ></i>
+                <p class="text-white text-lg mt-10">
+                    Servicios Viales me provee apoyo constante, buenos precios y
+                    calidad. Cuento con un gran proveedor para seguir haciendo
+                    crecer mi negocio. Sin duda recomendaría esta empresa.
+                    Saludos y Muchas gracias!
+                </p>
+            </div>
+
+            <div class="swiper-slide">
+                <i
+                    class="fa-solid fa-quote-right text-6xl text-black opacity-25 mt-5"
+                ></i>
+                <p class="text-white text-lg mt-10">
+                    Juntos logramos superar uno de los mayores problemas que
+                    tenemos en esta industria. El tener nuestro equipo parado.
+                    Servicios Viales ha estado a la altura de la circunstancia y
+                    a podido responder a nuestra alta demanda con rapidez.
+                    ¡Muchas gracias!
+                </p>
+            </div>
+
+            <div class="swiper-slide">
+                <i
+                    class="fa-solid fa-quote-right text-6xl text-black opacity-25 mt-5"
+                ></i>
+                <p class="text-white text-lg mt-10">
+                    Estoy satisfecho y tranquilo trabajando con Servicios
+                    Viales. Se que cualquier problema que tenga podremos
+                    resolverlo en conjunto. Vamos por más. Saludos.
+                </p>
+            </div>
+
+            <div class="swiper-slide">
+                <i
+                    class="fa-solid fa-quote-right text-6xl text-black opacity-25 mt-5"
+                ></i>
+                <p class="text-white text-lg mt-10">
+                    Servicios Viales me provee apoyo constante, buenos precios y
+                    calidad. Cuento con un gran proveedor para seguir haciendo
+                    crecer mi negocio. Sin duda recomendaría esta empresa.
+                    Saludos y Muchas gracias!
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <i
+                    class="fa-solid fa-quote-right text-6xl text-black opacity-25 mt-5"
+                ></i>
+                <p class="text-white text-lg mt-10">
+                    Juntos logramos superar uno de los mayores problemas que
+                    tenemos en esta industria. El tener nuestro equipo parado.
+                    Servicios Viales ha estado a la altura de la circunstancia y
+                    a podido responder a nuestra alta demanda con rapidez.
+                    ¡Muchas gracias!
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <i
+                    class="fa-solid fa-quote-right text-6xl text-black opacity-25 mt-5"
+                ></i>
+                <p class="text-white text-lg mt-10">
+                    Estoy satisfecho y tranquilo trabajando con Servicios
+                    Viales. Se que cualquier problema que tenga podremos
+                    resolverlo en conjunto. Vamos por más. Saludos.
+                </p>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+<style>
+    .swiper-slide {
+        @apply w-full lg:w-96 min-h-[400px] bg-sv-blue text-center px-10 py-5 flex flex-col rounded-xl mb-20;
+    }
+    .swiper-pagination {
+        @apply mt-36
+    }
+</style>
+<script>
+    import Swiper from "swiper";
+    import "swiper/css";
+    import "swiper/css/effect-coverflow";
+    import "swiper/css/pagination";
+    import { Pagination, EffectCoverflow } from "swiper/modules";
+    new Swiper(".swiper-container", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        modules: [Pagination, EffectCoverflow],
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        loop: true,
+    });
+</script>
