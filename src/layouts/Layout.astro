@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
 interface Props {
 	title: string;
 	description: string;
@@ -16,17 +17,17 @@ const { title, description } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon-sv.webp" />
+		<ViewTransitions />
 		<title>{title}</title>
 		<meta name="description" content={description} />
 	</head>
-	<body>
+	<body class="scroll-smooth">
 		<Header />
-		<main>
+		<main class="relative">
 			<slot />
 		</main>
 
 		<Footer />
-		<script src="https://kit.fontawesome.com/94b7263109.js" crossorigin="anonymous"></script> <!-- Fontawesome icons -->
 	</body>
 </html>
 <style is:global>

@@ -1,0 +1,16 @@
+---
+interface Props {
+    bgImage:string;
+    span:string;
+    titleBold:string;
+    titleNormal:string
+}
+const { bgImage,span,titleBold,titleNormal } = Astro.props;
+---
+<section class={`${bgImage} w-full min-h-[600px] bg-cover bg-center relative bg-blend-color bg-black/60`}>
+    <div class="w-full xl:container px-4 xl:px-0 xl:mx-auto min-h-[600px] flex flex-col justify-center text-white">
+       <span class="text-lg lg:text-xl font-semibold">{ span }</span>
+       <h1 class="text-[1.5rem] md:text-[3.5rem] font-black">{ titleBold }</h1>
+       <h2 class="text-[1.5rem] md:text-[3.5rem] font-normal leading-tight md:leading-10">{ titleNormal }</h2>
+    </div>
+</section>

@@ -90,7 +90,9 @@
     import "swiper/css/effect-coverflow";
     import "swiper/css/pagination";
     import { Pagination, EffectCoverflow } from "swiper/modules";
-    new Swiper(".swiper-container", {
+    document.addEventListener('astro:page-load',() => {
+
+        new Swiper(".swiper-container", {
         effect: "coverflow",
         grabCursor: true,
         centeredSlides: true,
@@ -108,4 +110,7 @@
         },
         loop: true,
     });
+
+    })
+  
 </script>

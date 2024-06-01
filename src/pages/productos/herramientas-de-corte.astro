@@ -1,0 +1,122 @@
+---
+import CardProductos from "../../components/productosPage/CardProductos.astro";
+import SectionHero from "../../components/productosPage/SectionHero.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+    title="Herramientas de Corte - Servicios Viales"
+    description="HERRAMIENTASDE CORTE Uñas y Porta-Uñas Aumenta la eficiencia de excavación con nuestras uñas robustas y afiladas. Diseñadas para resistir terrenos difíciles, aseguran un rendimiento duradero en equipos de construcción y maquinaria pesada. Contactanos Cuchillas y Bajo Cuchillas Diseñadas para resistir el desgaste y proporcionar un rendimiento óptimo en operaciones de excavación y nivelación, son ideales […]"
+>
+    <SectionHero
+        titleBold="HERRAMIENTAS"
+        subtitle="DE CORTE"
+        bgImage="bg-[url('/assets/background-sections/Herramienta-de-Corte.webp')]"
+    >
+        <div
+            slot="images"
+            class="flex flex-wrap justify-center items-center gap-5 md:gap-10 mt-10"
+        >
+            <img
+                src="/assets/icons-productos/logo-blumaq.svg"
+                class="w-16 h-16 md:w-20 md:h-20"
+            />
+
+            <img
+                src="/assets/icons-productos/logo-ktn.svg"
+                class="w-16 h-16 md:w-20 md:h-20"
+            />
+
+            <img
+                src="/assets/icons-productos/logo-ctp.svg"
+                class="w-16 h-16 md:w-20 md:h-20"
+            />
+
+            <img
+                src="/assets/icons-productos/logo-itr.svg"
+                class="w-16 h-16 md:w-20 md:h-20"
+            />
+            <img
+                src="/assets/icons-productos/logo-cgr.svg"
+                class="w-16 h-16 md:w-20 md:h-20"
+            />
+        </div>
+    </SectionHero>
+    <section class="w-full bg-sv-gris-light">
+        <div class="px-4 w-full xl:px-0 xl:max-w-6xl xl:mx-auto flex flex-col">
+            <CardProductos
+                imageUrl="/assets/herramientas-de-corte/unas-y-porta-01-1.webp"
+                title="Uñas y Porta-Uñas"
+            >
+                <p slot="texto" class="text-base">
+                    Aumenta la <strong>eficiencia de excavación</strong> con nuestras
+                    uñas robustas y afiladas. Diseñadas para resistir terrenos difíciles,
+                    aseguran un rendimiento duradero en equipos de construcción y
+                    maquinaria pesada.
+                </p>
+            </CardProductos>
+
+            <CardProductos
+                imageUrl="/assets/herramientas-de-corte/cuchillas-y-bajo-01.webp"
+                title="Cuchillas y Bajo Cuchillas"
+            >
+                <p slot="texto" class="text-base">
+                    Diseñadas para <strong
+                        >resistir el desgaste y proporcionar un rendimiento
+                        óptimo</strong
+                    > en operaciones de excavación y nivelación, son ideales para
+                    equipos de construcción.
+                </p>
+            </CardProductos>
+
+            <CardProductos
+                imageUrl="/assets/herramientas-de-corte/escarificador-01-2-1.webp"
+                title="Escarificadores"
+            >
+                <p slot="texto" class="text-base">
+                    Prepara el suelo de manera eficiente con nuestros
+                    escarificadores <strong
+                        >resistentes y de alta calidad.</strong
+                    > Diseñados para romper cualquier tipo de suelo, mejoran la calidad
+                    del terreno y facilitan proyectos.
+                </p>
+            </CardProductos>
+
+            <CardProductos
+                imageUrl="/assets/herramientas-de-corte/puntas-01-01-1.webp"
+                title="Puntas de Martillo"
+            >
+                <p slot="texto" class="text-base">
+                    <strong>Maximiza la eficiencia</strong> con nuestras puntas de
+                    martillos de alta resistencia. Diseñadas para soportar golpes
+                    intensos,ofrecen un rendimiento fiable y duradero en proyectos
+                    de demolición y construcción.
+                </p>
+            </CardProductos>
+            <CardProductos
+                imageUrl="/assets/herramientas-de-corte/bulones-01-1-1.webp"
+                title="Elementos de Fijación"
+            >
+                <p slot="texto" class="text-base">
+                    Asegura una <strong>conexión segura y duradera</strong> con nuestra
+                    bulonería de alta calidad. Diseñada para resistir tensiones y
+                    vibraciones, garantiza la integridad estructural en aplicaciones
+                    industriales y de construcción.
+                </p>
+            </CardProductos>
+            <CardProductos
+                imageUrl="/assets/herramientas-de-corte/balde-01-1-1.webp"
+                title="Baldes y Protecciones"
+            >
+                <p slot="texto" class="text-base">
+                    Optimiza la manipulación, carga y protección de materiales
+                    con nuestros baldes resistentes y duraderos. <strong
+                        >Diseñados para soportar cargas pesadas, resistir el
+                        desgaste y equipados con protecciones para baldes</strong
+                    >, son ideales para excavación, transporte y manipulación en
+                    obras de construcción y proyectos de minería.
+                </p>
+            </CardProductos>
+        </div>
+    </section>
+</Layout>

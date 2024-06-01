@@ -1,0 +1,112 @@
+---
+import SectionHero from "../../components/nosotrosPage/SectionHero.astro";
+import TabSection from "../../components/nosotrosPage/TabSection.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+    title="Nosotros - Servicios Viales"
+    description="SOMOS DIFERENTES — LIDERANDO JUNTOS LA INDUSTRIA CONOCE — NUESTRA HISTORIA Nuestra marca es la reputación que hemos construido durante años y estamos comprometidos a diferenciarnos brindando un servicio superior para nuestros clientes. 1986 2000 2010 2015 2017 2019 2021 2024 Nuestro viaje comenzó humildemente en 1986 como taller de reparación de camiones y maquinaria […]"
+>
+    <SectionHero
+        bgImage="bg-[url('/assets/nosotros/bg-nosotros.webp')]"
+        span="SOMOS DIFERENTES —"
+        titleBold="LIDERANDO JUNTOS"
+        titleNormal="LA INDUSTRIA"
+    />
+    <section class="w-full py-20">
+        <div
+            class="w-full px-4 xl:container xl:px-0 xl:mx-auto bg-red-300 flex flex-col"
+        >
+            <div
+                class="flex flex-col md:flex-row items-start gap-2 md:gap-0 md:items-center"
+            >
+                <div class="text-sv-blue w-full md:w-2/4">
+                    <span class="text-xs font-semibold ml-1">CONOCE —</span>
+                    <h3 class="font-black text-5xl">NUESTRA</h3>
+                    <h3 class="text-5xl">HISTORIA</h3>
+                </div>
+                <div class="w-full md:w-2/4">
+                    <p class="text-xl">
+                        Nuestra marca es la reputación que hemos construido
+                        durante años y estamos comprometidos a diferenciarnos
+                        brindando un servicio superior para nuestros clientes.
+                    </p>
+                </div>
+            </div>
+
+            <TabSection />
+        </div>
+    </section>
+    <section
+        class="w-full bg-sv-blue flex flex-col text-start md:text-center items-start md:items-center py-20 text-white px-4 lg:px-0"
+    >
+        <h4 class="text-2xl md:text-5xl">ENFRENTANDO</h4>
+        <h4 class="text-2xl md:text-5xl md:leading-[4rem]">
+            LOS <strong>DESAFÍOS JUNTOS</strong>
+        </h4>
+        <div class="text-xl max-w-xl mt-5">
+            <p class="font-black">
+                Contamos con más de 35 años de experiencia en el mercado de
+                repuestos y accesorios para equipos pesados.
+            </p>
+            <p>
+                Nos enorgullece ser la elección de las marcas más reconocidas a
+                nivel mundial y garantizar alta calidad en productos
+                alternativos a nivel nacional.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-5 min-h-[280px] max-w-7xl">
+            <div
+                class="flex flex-col items-center text-center justify-center px-10 h-full rounded-3xl shadow-2xl md:w-2/4 md:mx-auto lg:w-full py-5 lg:py-0"
+            >
+                <img
+                    src="/assets/compromiso.png"
+                    alt="logo compromiso"
+                    width="60"
+                    height="60"
+                />
+                <span class="text-xl font-black mt-5">COMPROMISO</span>
+                <p class="text-base font-normal min-h-32">
+                    Nuestras promesas son sinónimos de cumplimiento. A lo largo
+                    de nuestra trayectoria, hemos podido satisfacer a nuestros
+                    clientes.
+                </p>
+            </div>
+
+            <div
+                class="flex flex-col items-center text-center justify-center px-10 h-full rounded-3xl shadow-2xl md:w-2/4 md:mx-auto lg:w-full py-5 lg:py-0"
+            >
+                <img
+                    src="/assets/responsabilidad.png"
+                    alt="logo compromiso"
+                    width="60"
+                    height="60"
+                />
+                <span class="text-xl font-black mt-5">RESPONSABILIDAD</span>
+                <p class="text-base font-normal min-h-32">
+                    Tomamos cada operación como única, ya que nuestros productos
+                    son parte fundamental para el crecimiento y desarrollo de
+                    nuestros clientes.
+                </p>
+            </div>
+
+            <div
+                class="flex flex-col items-center text-center justify-center px-10 h-full rounded-3xl shadow-2xl md:w-2/4 md:mx-auto lg:w-full py-5 lg:py-0"
+            >
+                <img
+                    src="/assets/honestidad.png"
+                    alt="logo compromiso"
+                    width="60"
+                    height="60"
+                />
+                <span class="text-xl font-black mt-5">HONESTIDAD</span>
+                <p class="text-base font-normal min-h-32">
+                    Creemos que es de suma importancia ser sinceros con nuestros
+                    clientes, asesorarlos pensando en su mejor beneficio.
+                </p>
+            </div>
+        </div>
+    </section>
+</Layout>

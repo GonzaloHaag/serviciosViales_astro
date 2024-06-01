@@ -1,0 +1,62 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const productsItem = [
+    {
+        id:1,
+        titleBold:'Filtros +',
+        titleNormal:'accesorios',
+        icon:'/assets/icons-productos/iconos-seccion-productos-05-1.svg',
+        href:'/productos/filtros-y-accesorios'
+    },
+    {
+        id:2,
+        titleBold:'Repuestos +',
+        titleNormal:'accesorios',
+        icon:'/assets/icons-productos/iconos-seccion-productos-06.svg',
+        href:'/productos/repuestos-y-accesorios'
+    },
+    {
+        id:3,
+        titleBold:'Herramientas',
+        titleNormal:'de corte',
+        icon:'/assets/icons-productos/iconos-seccion-productos-07.svg',
+        href:'/productos/herramientas-de-corte'
+    },
+    {
+        id:4,
+        titleBold:'Tren',
+        titleNormal:'Rodante',
+        icon:'/assets/icons-productos/rodajes-08-08.svg',
+        href:'/productos/filtros-y-accesorios'
+    },
+
+]
+---
+
+<Layout
+    title="Productos - Servicios Viales"
+    description="Explorá la amplia gama deproductos que tenemos Filtros +accesorios Repuestos +accesorios Herramientasde corte TrenRodante"
+>
+    <section
+        class="w-full min-h-[25rem] bg-sv-blue relative flex flex-col justify-center -z-10"
+    >
+        <div class="text-white flex flex-col text-center text-2xl md:text-[2.8125rem]">
+            <h2>Explorá la amplia gama de</h2>
+            <h2 class="leading-snug"><strong>productos</strong> que tenemos</h2>
+        </div>
+    </section>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-[75rem] mx-auto -mt-24 z-10 mb-20 xl:mb-32 px-4 xl:px-0">
+        {
+            productsItem.map((productItem) => (
+                <a href={ productItem.href } title={ productItem.titleBold } class="bg-white flex flex-col items-center text-center justify-center  min-h-[15.625rem] rounded-xl transition-colors duration-300 hover:bg-sv-gris-regular shadow-xl">
+                    <img src={ productItem.icon } alt={ productItem.titleBold } width="150" height="150" />
+                    <div class="flex flex-col text-2xl">
+                        <span class="font-black">{ productItem.titleBold }</span>
+                        <span class="leading-5">{ productItem.titleNormal }</span>
+                    </div>
+                </a>
+            ))
+        }
+    </div>
+</Layout>

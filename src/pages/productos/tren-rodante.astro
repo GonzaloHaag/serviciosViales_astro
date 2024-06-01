@@ -1,0 +1,91 @@
+---
+import CardProductos from "../../components/productosPage/CardProductos.astro";
+import SectionHero from "../../components/productosPage/SectionHero.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+    title="Tren Rodante - Servicios Viales"
+    description="TRENRODANTE Cadenas Diseñadas para resistir condiciones extremas, un rendimiento confiable y duradero en aplicaciones industriales y de construcción. Tracción y resistencia garantizada en tus equipos. Contactanos Rolos Mantén un desplazamiento suave y eficiente en tus equipos con nuestros rodillos de calidad premium. Diseñados para resistir el desgaste y soportar cargas pesadas, garantizan un funcionamiento confiable […]"
+>
+    <SectionHero
+        titleBold="HERRAMIENTAS"
+        subtitle="DE CORTE"
+        bgImage="bg-[url('/assets/background-sections/Herramienta-de-Corte.webp')]"
+    >
+        <div
+            slot="images"
+            class="flex flex-wrap justify-center items-center gap-5 md:gap-10 mt-10"
+        >
+            <img
+                src="/assets/icons-productos/logo-blumaq.svg"
+                class="w-16 h-16 md:w-20 md:h-20"
+            />
+
+            <img
+                src="/assets/icons-productos/logo-ktn.svg"
+                class="w-16 h-16 md:w-20 md:h-20"
+            />
+
+            <img
+                src="/assets/icons-productos/logo-ctp.svg"
+                class="w-16 h-16 md:w-20 md:h-20"
+            />
+
+            <img
+                src="/assets/icons-productos/logo-itr.svg"
+                class="w-16 h-16 md:w-20 md:h-20"
+            />
+            <img
+                src="/assets/icons-productos/logo-cgr.svg"
+                class="w-16 h-16 md:w-20 md:h-20"
+            />
+        </div>
+    </SectionHero>
+    <section class="w-full bg-sv-gris-light">
+        <div class="px-4 w-full xl:px-0 xl:max-w-6xl xl:mx-auto flex flex-col">
+            <CardProductos
+                imageUrl="/assets/tren-rodante/cadena-01-1-1.webp"
+                title="Cadenas"
+            >
+                <p slot="texto" class="text-base">
+                    Diseñadas para resistir condiciones extremas, un rendimiento confiable y duradero en aplicaciones industriales y de construcción. <strong>Tracción y resistencia garantizada en tus equipos.</strong>
+                </p>
+            </CardProductos>
+            <CardProductos
+            imageUrl="/assets/tren-rodante/rolos-01-1.webp"
+            title="Rolos"
+        >
+            <p slot="texto" class="text-base">
+                Mantén un desplazamiento <strong>suave y eficiente</strong> en tus equipos con nuestros rodillos de calidad premium. Diseñados para resistir el desgaste y soportar cargas pesadas, garantizan un funcionamiento confiable y una larga vida útil en excavadoras y compactadoras.
+            </p>
+        </CardProductos>
+        <CardProductos
+        imageUrl="/assets/tren-rodante/rueda-01-1-1.webp"
+        title="Ruedas Guía"
+    >
+        <p slot="texto" class="text-base">
+            Optimiza la <strong>precisión y estabilidad de tu maquinaria</strong> con nuestras ruedas guía de precisión. Diseñadas para resistir impactos y proporcionar un control seguro en terrenos difíciles, aseguran un rendimiento óptimo en grúas y equipos de movimiento de tierra.
+        </p>
+    </CardProductos>
+    <CardProductos
+    imageUrl="/assets/tren-rodante/cabilla-01-1-1.webp"
+    title="Rueda Cabilla"
+>
+    <p slot="texto" class="text-base">
+        <strong>Maximiza la tracción y la fuerza</strong> con nuestras ruedas cabilla robustas y duraderas. Diseñadas para asegurar el movimiento de las cadenas, soportan cargas pesadas y resisten el desgaste.
+    </p>
+</CardProductos>
+<CardProductos
+imageUrl="/assets/tren-rodante/accesorios-01-3-1.webp"
+title="Otros y accesorios"
+>
+<p slot="texto" class="text-base">
+    Ofrecemos una amplia gama de productos complementarios para mejorar tu experiencia. <strong>Desde zapatas especializadas para un mejor agarre hasta elementos de fijación y tensores</strong> para garantizar la estabilidad y precisión de tus cortes.
+</p>
+</CardProductos>
+
+            
+        </div>
+    </section>
+</Layout>

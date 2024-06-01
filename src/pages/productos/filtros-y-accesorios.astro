@@ -1,0 +1,103 @@
+---
+import CardProductos from "../../components/productosPage/CardProductos.astro";
+import SectionHero from "../../components/productosPage/SectionHero.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+    title="Filtros y accesorios - Servicios Viales"
+    description="FILTROS +ACCESORIOS Filtros de Aire Asegura un rendimiento óptimo del motor al filtrar partículas y contaminantes del aire. Nuestros filtros de aire proporcionan una calidad de filtración superior para mantener tu motor en su mejor forma. Contactanos Filtros de Aceite Nuestros filtros de aceite ayudan a prolongar la vida útil del motor al atrapar partículas"
+>
+    <SectionHero
+        titleBold="FILTROS +"
+        subtitle="ACCESORIOS"
+        bgImage="bg-[url('/assets/background-sections/portada-filtros-1.webp')]"
+    >
+      <div slot="images" class="flex justify-center items-center gap-5 md:gap-10 mt-10">
+            <img
+            src="/assets/icons-productos/logo-donaldson-1.svg"
+            class="w-16 h-16 md:w-20 md:h-20"
+        />
+
+        <img
+            src="/assets/icons-productos/logo-ktn.svg"
+            class="w-16 h-16 md:w-20 md:h-20"
+        />
+
+        <img
+            src="/assets/icons-productos/logo-turbo.svg"
+            class="w-16 h-16 md:w-20 md:h-20"
+        />
+
+        <img
+            src="/assets/icons-productos/logo-hifi.svg"
+            class="w-16 h-16 md:w-20 md:h-20"
+        />
+        </div>
+    </SectionHero>
+    <section class="w-full bg-sv-gris-light">
+        <div class="px-4 w-full xl:px-0 xl:max-w-6xl xl:mx-auto flex flex-col">
+            <CardProductos imageUrl="/assets/filtros-accesorios/FILTROS-AIRE-01.webp" title="Filtros de Aire">
+                <p slot="texto" class="text-base">
+                    Asegura un rendimiento óptimo del motor al <strong
+                        >filtrar partículas y contaminantes del aire.</strong
+                    > Nuestros filtros de aire proporcionan una calidad de filtración
+                    superior para mantener tu motor en su mejor forma.
+                </p>
+            </CardProductos>
+            <CardProductos imageUrl="/assets/filtros-accesorios/FILTROS-aceite-01.webp" title="Filtros de Aceite">
+                <p slot="texto" class="text-base">
+                    Nuestros filtros de aceite ayudan a prolongar la vida útil
+                    del motor al <strong
+                        >atrapar partículas indeseadas resguardando la pureza
+                        del aceite.</strong
+                    > La eficiente filtración garantiza una protección confiable
+                    contra el desgaste, contribuyendo a la longevidad de tu equipo.
+                </p>
+            </CardProductos>
+            <CardProductos imageUrl="/assets/filtros-accesorios/filtros-combustible-01.webp" title="Filtros de Combustible">
+                <p slot="texto" class="text-base">
+                    Optimiza el rendimiento del sistema de combustible al
+                    <strong
+                        >eliminar sedimentos que podrían afectar la inyección y
+                        la eficiencia del motor.</strong
+                    > Con nuestros filtros de combustible podrás reducir el riesgo
+                    de daños costosos.
+                </p>
+            </CardProductos>
+            <CardProductos imageUrl="/assets/filtros-accesorios/filtro-hidraulico-01.webp" title="Filtros Hidráulicos">
+                <p slot="texto" class="text-base">
+                    Nuestros filtros hidráulicos <strong
+                        >ayudan a mantener la integridad de los fluidos,
+                        evitando la contaminación que podría comprometer la
+                        eficiencia y durabilidad de los componentes.</strong
+                    >
+                    Ofrecemos soluciones confiables para garantizar un rendimiento
+                    hidráulico óptimo.
+                </p>
+            </CardProductos>
+            <CardProductos imageUrl="/assets/filtros-accesorios/otros-filtros-01-1.webp" title="Otros Filtros">
+                <p slot="texto" class="text-base">
+                    Desde <strong>filtros de urea</strong> para reducción de emisiones
+                    hasta
+                    <strong>filtros respiradero</strong> para mantener la calidad
+                    del aire. Además, ofrecemos <strong
+                        >filtros secadores de freno/aire</strong
+                    > para garantizar un rendimiento óptimo del sistema de frenado
+                    y aire comprimido. Nuestra selección de filtros especializados
+                    permite cubrir diversas necesidades.
+                </p>
+            </CardProductos>
+            <CardProductos imageUrl="/assets/filtros-accesorios/accesorios-01-1.webp" title="Accesorios para Filtros">
+                <p slot="texto" class="text-base">
+                    Amplía la funcionalidad y eficiencia de tus filtros con
+                    nuestra gama de accesorios especializados. Desde bases,
+                    visores hasta sensores. Nuestros accesorios <strong
+                        >aseguran una integración perfecta y un rendimiento
+                        óptimo de tus filtros.</strong
+                    >
+                </p>
+            </CardProductos>
+        </div>
+    </section>
+</Layout>
