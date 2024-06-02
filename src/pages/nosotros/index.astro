@@ -15,9 +15,7 @@ import Layout from "../../layouts/Layout.astro";
         titleNormal="LA INDUSTRIA"
     />
     <section class="w-full py-20">
-        <div
-            class="w-full px-4 xl:container xl:px-0 xl:mx-auto bg-red-300 flex flex-col"
-        >
+        <div class="w-full px-4 xl:container xl:px-0 xl:mx-auto flex flex-col">
             <div
                 class="flex flex-col md:flex-row items-start gap-2 md:gap-0 md:items-center"
             >
@@ -57,7 +55,9 @@ import Layout from "../../layouts/Layout.astro";
             </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-5 min-h-[280px] max-w-7xl">
+        <div
+            class="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-5 min-h-[280px] max-w-7xl"
+        >
             <div
                 class="flex flex-col items-center text-center justify-center px-10 h-full rounded-3xl shadow-2xl md:w-2/4 md:mx-auto lg:w-full py-5 lg:py-0"
             >
@@ -109,4 +109,151 @@ import Layout from "../../layouts/Layout.astro";
             </div>
         </div>
     </section>
+
+    <!-- section seguimos extendiendo -->
+    <section class="w-full py-20">
+        <div class="px-4 xl:px-0 w-full xl:container xl:mx-auto">
+            <h4 class="text-4xl font-semibold text-sv-blue">
+                Seguimos extendiendo
+            </h4>
+            <h4 class="text-4xl font-black text-sv-blue">
+                nuestro legado en Argentina
+            </h4>
+            <p class="text-xl text-black mt-5 max-w-3xl">
+                Nuestra casa central y nuestras sucursales están ubicadas de
+                manera estratégica para estar cerca de ti y brindarte soluciones
+                de calidad en todo momento.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 mt-5">
+                <div class="flex flex-col">
+                    <img src="/assets/nosotros/2010.webp" />
+                    <h5 class="text-2xl font-semibold mt-5">Santa Fe</h5>
+                    <input type="checkbox" hidden id="sucursal_santafe" />
+                    <label for="sucursal_santafe" class="flex items-center gap-2 text-xl cursor-pointer">
+                        <svg
+                            class="w-3 h-3"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"
+                            >
+                            <path
+                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                            ></path></svg
+                        >
+                        Rosa Carmen All 1551
+                    </label>
+                    <div class="content mt-2">
+                        <p class="text-sv-gris-bold">En nuestra sucursal de Santa Fe, contamos con un amplio espacio de 7.000 metros cuadrados y 18.000 códigos de una impresionante variedad.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <img src="/assets/nosotros/bsas.webp" />
+                    <h5 class="text-2xl font-semibold mt-5">Buenos aires</h5>
+                    <input type="checkbox" hidden id="sucursal_bsas" />
+                    <label for="sucursal_bsas" class="flex items-center gap-2 text-xl cursor-pointer">
+                        <svg
+                            class="w-3 h-3"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"
+                            >
+                            <path
+                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                            ></path></svg
+                        >
+                        Patagones 2455, CABA
+                    </label>
+                    <div class="content mt-2">
+                        <p class="text-sv-gris-bold">Nuestra sucursal en Buenos Aires es un rincón especial con 1.500 metros cuadrados que almacenan más de 5.000 códigos para satisfacer tus necesidades.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <img src="/assets/nosotros/2021.webp" />
+                    <h5 class="text-2xl font-semibold mt-5">Mendoza</h5>
+                    <input type="checkbox" hidden id="sucursal_mendoza" />
+                    <label for="sucursal_mendoza" class="flex items-center gap-2 text-xl cursor-pointer">
+                        <svg
+                            class="w-3 h-3"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"
+                            >
+                            <path
+                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                            ></path></svg
+                        >
+                        Carril Rodríguez Peña 2710
+                    </label>
+                    <div class="content mt-2">
+                        <p class="text-sv-gris-bold">En Mendoza, nuestro espacio de 2.000 metros cuadrados alberga una selección de 4.000 códigos esenciales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- div ferias -->
+    <div class="grid grid-cols-1 md:grid-cols-2 min-h-screen">
+       <div class="bg-sv-blue flex flex-col justify-center text-white py-4">
+           <div class="flex flex-col items-start max-w-3xl mx-auto px-4 md:px-0 md:pl-4">
+            <span>SV PRESENTE —</span>
+            <h4 class="text-4xl md:text-5xl font-black">FERIAS Y EVENTOS DE</h4>
+            <h4 class="text-4xl md:text-5xl font-semibold">DE LA INDUSTRIA</h4>
+            <p class="text-xl mt-10 md:max-w-lg">
+                Explora nuestra participación en ferias y eventos. Mantenete al día con las últimas novedades y noticias de nuestra empresa...
+            </p> 
+        <a href="/nosotros/ferias-y-eventos" title="Agenda" class="bg-white text-sv-blue font-semibold px-10 py-4 rounded-full mt-10 text-lg transition-colors duration-300 hover:bg-sv-negro hover:text-white">
+            Ver agenda
+        </a>
+           </div>
+       </div>
+       <div class="bg-[url('/assets/nosotros/IMG_Agroactiva_2022-1920.webp')] bg-center bg-cover min-h-[50vh] md:min-h-screen"></div>
+    </div>
+    <!-- div acompaña -->
+    <div class="grid grid-cols-1 md:grid-cols-2 min-h-screen">
+        <div class="bg-[url('/assets/nosotros/camiseta-union.webp')] bg-center bg-cover min-h-[50vh] md:min-h-screen"></div>
+        <div class="bg-sv-blue flex flex-col justify-center text-white py-4">
+            <div class="flex flex-col items-start max-w-3xl mx-auto px-4 md:px-0 md:pl-4">
+             <span>SV ACOMPAÑA —</span>
+             <h4 class="text-4xl md:text-5xl font-semibold">NUESTRA PARTICIPACIÓN</h4>
+             <h4 class="text-4xl md:text-5xl font-black">COMO SPONSOR</h4>
+             <p class="text-xl mt-10 md:max-w-lg">
+                Estamos orgullosos de anunciar que somos patrocinadores de Unión de Santa Fe. Apoyando al equipo y a sus fans en los diferentes logros y desafíos.
+             </p> 
+         <a href="https://www.clubaunion.com.ar/" target="_blank" rel="noreferrer" title="Agenda" class="bg-white text-sv-blue font-semibold px-10 py-4 rounded-full mt-10 text-lg transition-colors duration-300 hover:bg-sv-negro hover:text-white">
+             Conoce a unión
+         </a>
+            </div>
+        </div>
+     </div>
 </Layout>
+
+<style>
+    .content {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.4s;
+    }
+    #sucursal_santafe:checked ~ .content {
+        max-height: 300px;
+    }
+    #sucursal_bsas:checked ~ .content {
+        max-height: 300px;
+    }
+    #sucursal_mendoza:checked ~ .content {
+        max-height: 300px;
+    }
+
+    #sucursal_santafe:checked + label svg{
+        transform: rotate(180deg);
+        fill: blue;
+    }
+    #sucursal_bsas:checked + label svg{
+        transform: rotate(180deg);
+        fill: blue;
+    }
+    #sucursal_mendoza:checked + label svg{
+        transform: rotate(180deg);
+        fill: blue;
+    }
+</style>

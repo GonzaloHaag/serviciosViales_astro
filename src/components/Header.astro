@@ -52,22 +52,22 @@ const urlActual = Astro.url.pathname;
                         </a>
                         <ul class="submenu">
                             <li>
-                                <a href="/productos/filtros-y-accesorios"
+                                <a href="/productos/filtros-y-accesorios" class={`transition-colors duration-300 ${urlActual === '/productos/filtros-y-accesorios' ? 'text-sv-blue' : 'text-sv-negro'}`}
                                     >Filtros y accesorios</a
                                 >
                             </li>
                             <li>
-                                <a href="/productos/repuestos-y-accesorios"
+                                <a href="/productos/repuestos-y-accesorios" class={`transition-colors duration-300 ${urlActual === '/productos/repuestos-y-accesorios' ? 'text-sv-blue' : 'text-sv-negro'}`}
                                     >Repuestos y accesorios</a
                                 >
                             </li>
                             <li>
-                                <a href="/productos/herramientas-de-corte"
+                                <a href="/productos/herramientas-de-corte" class={`transition-colors duration-300 ${urlActual === '/productos/herramientas-de-corte' ? 'text-sv-blue' : 'text-sv-negro'}`}
                                     >Herramientas de Corte</a
                                 >
                             </li>
                             <li>
-                                <a href="/productos/tren-rodante"
+                                <a href="/productos/tren-rodante" class={`transition-colors duration-300 ${urlActual === '/productos/tren-rodante' ? 'text-sv-blue' : 'text-sv-negro'}`}
                                     >Tren Rodante</a
                                 >
                             </li>
@@ -92,27 +92,27 @@ const urlActual = Astro.url.pathname;
                         >
                         <ul class="submenu">
                             <li>
-                                <a href="/servicios/#plataformas-de-elevacion"
+                                <a href="/servicios/#plataformas-de-elevacion" class={`transition-colors duration-300 ${urlActual === '/servicios/#plataformas-de-elevacion' ? 'text-sv-blue' : 'text-sv-negro'}`}
                                     >Plataformas de elevación</a
                                 >
                             </li>
                             <li>
-                                <a href="/servicios/#manipuladores-telescópicos"
+                                <a href="/servicios/#manipuladores-telescópicos" class={`transition-colors duration-300 ${urlActual === '/servicios/#manipuladores-telescópicos' ? 'text-sv-blue' : 'text-sv-negro'}`}
                                     >Manipuladores telescópicos</a
                                 >
                             </li>
                             <li>
-                                <a href="/servicios/#equipos-varios"
+                                <a href="/servicios/#equipos-varios" class={`transition-colors duration-300 ${urlActual === '/servicios/#equipos-varios' ? 'text-sv-blue' : 'text-sv-negro'}`}
                                     >Equipos varios</a
                                 >
                             </li>
                             <li>
-                                <a href="/servicios/#grupos-electrógenos"
+                                <a href="/servicios/#grupos-electrógenos" class={`transition-colors duration-300 ${urlActual === '/servicios/#grupos-electrógenos' ? 'text-sv-blue' : 'text-sv-negro'}`}
                                     >Grupos electrógenos</a
                                 >
                             </li>
                             <li>
-                                <a href="/servicios/#accesorios">Accesorios</a>
+                                <a href="/servicios/#accesorios" class={`transition-colors duration-300 ${urlActual === '/servicios/#accesorios' ? 'text-sv-blue' : 'text-sv-negro'}`}>Accesorios</a>
                             </li>
                         </ul>
                     </li>
@@ -135,22 +135,22 @@ const urlActual = Astro.url.pathname;
                         >
                         <ul class="submenu">
                             <li>
-                                <a href="/nosotros/nuestra-historia"
+                                <a href="/nosotros" class={`transition-colors duration-300 ${urlActual === '/nosotros' ? 'text-sv-blue' : 'text-sv-negro'}`}
                                     >Nuestra historia</a
                                 >
                             </li>
                             <li>
-                                <a href="/nosotros/ferias-y-eventos"
+                                <a href="/nosotros/ferias-y-eventos" class={`transition-colors duration-300 ${urlActual === '/nosotros/ferias-y-eventos' ? 'text-sv-blue' : 'text-sv-negro'}`}
                                     >Ferias y eventos</a
                                 >
                             </li>
                             <li>
-                                <a href="/nosotros/trabaja-con-nosotros"
+                                <a href="/nosotros/trabaja-con-nosotros" class={`transition-colors duration-300 ${urlActual === '/nosotros/trabaja-con-nosotros' ? 'text-sv-blue' : 'text-sv-negro'}`}
                                     >Trabaja con nosotros</a
                                 >
                             </li>
                             <li>
-                                <a href="/">Programa de beneficios</a>
+                                <a href="/programa-de-beneficios" class={`transition-colors duration-300 ${urlActual === '/programa-de-beneficios' ? 'text-sv-blue' : 'text-sv-negro'}`}>Programa de beneficios</a>
                             </li>
                         </ul>
                     </li>
@@ -166,7 +166,7 @@ const urlActual = Astro.url.pathname;
             <div
                 class="flex justify-end xl:flex-grow xl:basis-0 gap-5 relative"
             >
-                <a class="btn-primary"> Portal </a>
+                <a class="btn-primary" href="https://portal.sv.com.ar/buscadorpublico.aspx?" target="_blank" rel="noreferrer">Portal</a>
                 <input
                     type="text"
                     placeholder="Código"
@@ -190,12 +190,11 @@ const urlActual = Astro.url.pathname;
     .btn-primary:hover {
         @apply bg-sv-negro;
     }
+
     .submenu {
         @apply invisible opacity-0 absolute left-0 top-8 transition-all duration-300 bg-white px-8 py-3 w-max shadow-xl flex flex-col gap-5 rounded-md z-10;
     }
-    .submenu > li > a {
-        @apply text-sv-negro transition-colors duration-300;
-    }
+
     .submenu > li > a:hover {
         @apply text-sv-blue;
     }

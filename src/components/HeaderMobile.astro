@@ -1,4 +1,8 @@
-<header class="block w-full justify-between lg:hidden">
+---
+
+const urlActual = Astro.url.pathname;
+---
+<header class="flex flex-col w-full justify-between lg:hidden">
     <div
         class="w-full bg-sv-negro text-white text-xs sm:text-base min-h-8 flex items-center"
     >
@@ -6,7 +10,8 @@
             <p>+54 9 (342) 631-1894 | contacto@serviciosviales.com.ar</p>
         </div>
     </div>
-    <nav class="w-full px-4 min-h-16 flex items-center justify-between">
+    <nav class="w-full px-4 min-h-28 flex flex-col justify-center gap-5">
+        <div class="flex items-center justify-between">
         <div>
             <a href="/">
                 <img
@@ -43,12 +48,12 @@
                     >
                 </label>
                 <li>
-                    <a href="/">Inicio</a>
+                    <a href="/" class={`${urlActual === '/' && 'underline underline-offset-4'}`}>Inicio</a>
                 </li>
                 <li>
-                    <a href="/productos">Productos</a>
-                    <input type="checkbox" hidden id="despegable-productos" />
-                    <label for="despegable-productos">
+                    <a href="/productos" class={`${urlActual === '/productos' && 'underline underline-offset-4'}`}>Productos</a>
+                    <input type="checkbox" hidden id="despegable_productos" />
+                    <label for="despegable_productos">
                         <svg
                             class="w-5 h-5 fill-white inline-block ml-3 mb-1"
                             xmlns="http://www.w3.org/2000/svg"
@@ -59,12 +64,103 @@
                             ></path></svg
                         >
                     </label>
+                    <ul class="list_submenu text-white text-base pl-4 pr-4 flex flex-col gap-5">
+                        <li class="mt-5">
+                            <a href="/productos/filtros-y-accesorios" class={`transition-colors duration-300 ${urlActual === '/productos/filtros-y-accesorios' ? 'underline underline-offset-4' : ''}`}
+                                >Filtros y accesorios</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/productos/repuestos-y-accesorios" class={`transition-colors duration-300 ${urlActual === '/productos/repuestos-y-accesorios' ? 'underline underline-offset-4' : ''}`}
+                                >Repuestos y accesorios</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/productos/herramientas-de-corte" class={`transition-colors duration-300 ${urlActual === '/productos/herramientas-de-corte' ? 'underline underline-offset-4' : ''}`}
+                                >Herramientas de Corte</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/productos/tren-rodante" class={`transition-colors duration-300 ${urlActual === '/productos/tren-rodante' ? 'underline underline-offset-4' : ''}`}
+                                >Tren Rodante</a
+                            >
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="/servicios">Servicios</a>
+                    <a href="/servicios" class={`${urlActual === '/servicios' && 'underline underline-offset-4'}`}>Servicios</a>
+                    <input type="checkbox" hidden id="despegable_servicios" />
+                    <label for="despegable_servicios">
+                        <svg
+                            class="w-5 h-5 fill-white inline-block ml-3 mb-1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"
+                            >
+                            <path
+                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                            ></path></svg
+                        >
+                    </label>
+                    <ul class="list_submenu text-white text-base pl-4 pr-4 flex flex-col gap-5">
+                        <li class="mt-5">
+                            <a href="/servicios/#plataformas-de-elevacion" class={`transition-colors duration-300 ${urlActual === '/servicios/#plataformas-de-elevacion' ? 'underline underline-offset-4' : ''}`}
+                                >Plataformas de elevación</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/servicios/#manipuladores-telescópicos" class={`transition-colors duration-300 ${urlActual === '/servicios/#manipuladores-telescópicos' ? 'underline underline-offset-4' : ''}`}
+                                >Manipuladores telescópicos</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/servicios/#equipos-varios" class={`transition-colors duration-300 ${urlActual === '/servicios/#equipos-varios' ? 'underline underline-offset-4' : ''}`}
+                                >Equipos varios</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/servicios/#grupos-electrógenos" class={`transition-colors duration-300 ${urlActual === '/servicios/#grupos-electrógenos' ? 'underline underline-offset-4' : ''}`}
+                                >Grupos electrógenos</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/servicios/#accesorios" class={`transition-colors duration-300 ${urlActual === '/servicios/#accesorios' ? 'underline underline-offset-4' : ''}`}>Accesorios</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="/nosotros">Nosotros</a>
+                    <a href="/nosotros" class={`${urlActual === '/nosotros' && 'underline underline-offset-4'}`}>Nosotros</a>
+                    <input type="checkbox" hidden id="despegable_nosotros" />
+                    <label for="despegable_nosotros">
+                        <svg
+                            class="w-5 h-5 fill-white inline-block ml-3 mb-1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"
+                            >
+                            <path
+                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                            ></path></svg
+                        >
+                    </label>
+                    <ul class="list_submenu text-white text-base pl-4 pr-4 flex flex-col gap-5">
+                        <li class="mt-5">
+                            <a href="/nosotros" class={`transition-colors duration-300 ${urlActual === '/nosotros' ? 'underline underline-offset-4' : ''}`}
+                                >Nuestra historia</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/nosotros/ferias-y-eventos" class={`transition-colors duration-300 ${urlActual === '/nosotros/ferias-y-eventos' ? 'underline underline-offset-4' : ''}`}
+                                >Ferias y eventos</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/nosotros/trabaja-con-nosotros" class={`transition-colors duration-300 ${urlActual === '/nosotros/trabaja-con-nosotros' ? 'underline underline-offset-4' : ''}`}
+                                >Trabaja con nosotros</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/programa-de-beneficios" class={`transition-colors duration-300 ${urlActual === '/programa-de-beneficios' ? 'underline underline-offset-4' : ''}`}>Programa de beneficios</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <a href="/blog">Blog</a>
@@ -74,6 +170,21 @@
                 </li>
             </ul>
         </div>
+    </div>
+
+    <div class="w-full">
+        <input
+        type="text"
+        placeholder="Código"
+        class="bg-inherit w-full rounded-lg outline-none indent-4 py-2 border border-solid border-[#DBDBDB] transition-colors duration-300 focus:border-sv-blue relative"
+    />
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="absolute right-3 top-4 cursor-pointer w-4 h-4"
+        >
+        <path
+            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+        ></path></svg
+    >
+    </div>
     </nav>
 </header>
 <style>
@@ -82,6 +193,28 @@
     }
     #open-menu:checked ~ .menu-despegable-mobile {
         @apply visible translate-x-0 opacity-100;
+    }
+    .list_submenu {
+        @apply max-h-0 overflow-hidden;
+        transition: max-height 0.6s;
+    }
+    #despegable_productos:checked ~ .list_submenu {
+         @apply max-h-80
+    }
+    #despegable_productos:checked + label svg {
+        transform: rotate(180deg);
+    }
+    #despegable_servicios:checked ~ .list_submenu {
+        @apply max-h-80
+    }
+    #despegable_servicios:checked + label svg {
+        transform: rotate(180deg);
+    }
+    #despegable_nosotros:checked ~ .list_submenu {
+        @apply max-h-80
+    }
+    #despegable_nosotros:checked + label svg {
+        transform: rotate(180deg);
     }
     
 </style>
