@@ -1,7 +1,7 @@
 ---
-
 const urlActual = Astro.url.pathname;
 ---
+
 <header class="flex flex-col w-full justify-between lg:hidden">
     <div
         class="w-full bg-sv-negro text-white text-xs sm:text-base min-h-8 flex items-center"
@@ -12,211 +12,315 @@ const urlActual = Astro.url.pathname;
     </div>
     <nav class="w-full px-4 min-h-28 flex flex-col justify-center gap-5">
         <div class="flex items-center justify-between">
-        <div>
-            <a href="/">
-                <img
-                    src="/assets/LOGO-SV-COLOR.svg"
-                    alt="Logo Servicios Viales"
-                    width="140"
-                    height="140"
-                />
-            </a>
-        </div>
-        <div>
-            <input type="checkbox" id="open-menu" class="hidden" />
-            <label for="open-menu">
-                <svg
-                    class="fill-black w-8 h-8"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                >
-                    <path
-                        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM64 256c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
-                    ></path></svg
-                >
-            </label>
-            <ul class="menu-despegable-mobile">
+            <div>
+                <a href="/">
+                    <img
+                        src="/assets/LOGO-SV-COLOR.svg"
+                        alt="Logo Servicios Viales"
+                        width="140"
+                        height="140"
+                    />
+                </a>
+            </div>
+            <div>
+                <input type="checkbox" id="open-menu" class="hidden" />
                 <label for="open-menu">
                     <svg
-                        class="fill-white w-8 h-8 absolute top-12 right-4"
+                        class="fill-black w-8 h-8"
                         xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 384 512"
+                        viewBox="0 0 512 512"
                     >
                         <path
-                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM64 256c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
                         ></path></svg
                     >
                 </label>
-                <li>
-                    <a href="/" class={`${urlActual === '/' && 'underline underline-offset-4'}`}>Inicio</a>
-                </li>
-                <li>
-                    <a href="/productos" class={`${urlActual === '/productos/' && 'underline underline-offset-4'}`}>Productos</a>
-                    <input type="checkbox" hidden id="despegable_productos" />
-                    <label for="despegable_productos">
+                <ul class="menu-despegable-mobile">
+                    <label for="open-menu">
                         <svg
-                            class="w-5 h-5 fill-white inline-block ml-3 mb-1"
+                            class="fill-white w-8 h-8 absolute top-11 right-5"
                             xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 512 512"
-                            >
+                            viewBox="0 0 384 512"
+                        >
                             <path
-                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
                             ></path></svg
                         >
                     </label>
-                    <ul class="list_submenu text-white text-base pl-4 pr-4 flex flex-col gap-5">
-                        <li class="mt-5">
-                            <a href="/productos/filtros-y-accesorios" class={`transition-colors duration-300 ${urlActual === '/productos/filtros-y-accesorios/' ? 'underline underline-offset-4' : ''}`}
-                                >Filtros y accesorios</a
-                            >
-                        </li>
-                        <li>
-                            <a href="/productos/repuestos-y-accesorios" class={`transition-colors duration-300 ${urlActual === '/productos/repuestos-y-accesorios/' ? 'underline underline-offset-4' : ''}`}
-                                >Repuestos y accesorios</a
-                            >
-                        </li>
-                        <li>
-                            <a href="/productos/herramientas-de-corte" class={`transition-colors duration-300 ${urlActual === '/productos/herramientas-de-corte/' ? 'underline underline-offset-4' : ''}`}
-                                >Herramientas de Corte</a
-                            >
-                        </li>
-                        <li>
-                            <a href="/productos/tren-rodante" class={`transition-colors duration-300 ${urlActual === '/productos/tren-rodante/' ? 'underline underline-offset-4' : ''}`}
-                                >Tren Rodante</a
-                            >
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/servicios" class={`${urlActual === '/servicios/' && 'underline underline-offset-4'}`}>Servicios</a>
-                    <input type="checkbox" hidden id="despegable_servicios" />
-                    <label for="despegable_servicios">
-                        <svg
-                            class="w-5 h-5 fill-white inline-block ml-3 mb-1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 512 512"
-                            >
-                            <path
-                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
-                            ></path></svg
+                    <li>
+                        <a
+                            href="/"
+                            class={`${urlActual === "/" && "underline underline-offset-4"}`}
+                            >Inicio</a
                         >
-                    </label>
-                    <ul class="list_submenu text-white text-base pl-4 pr-4 flex flex-col gap-5">
-                        <li class="mt-5">
-                            <a href="/servicios/#plataformas-de-elevacion" class={`transition-colors duration-300 ${urlActual === '/servicios/#plataformas-de-elevacion' ? 'underline underline-offset-4' : ''}`}
-                                >Plataformas de elevación</a
-                            >
-                        </li>
-                        <li>
-                            <a href="/servicios/#manipuladores-telescópicos" class={`transition-colors duration-300 ${urlActual === '/servicios/#manipuladores-telescópicos' ? 'underline underline-offset-4' : ''}`}
-                                >Manipuladores telescópicos</a
-                            >
-                        </li>
-                        <li>
-                            <a href="/servicios/#equipos-varios" class={`transition-colors duration-300 ${urlActual === '/servicios/#equipos-varios' ? 'underline underline-offset-4' : ''}`}
-                                >Equipos varios</a
-                            >
-                        </li>
-                        <li>
-                            <a href="/servicios/#grupos-electrógenos" class={`transition-colors duration-300 ${urlActual === '/servicios/#grupos-electrógenos' ? 'underline underline-offset-4' : ''}`}
-                                >Grupos electrógenos</a
-                            >
-                        </li>
-                        <li>
-                            <a href="/servicios/#accesorios" class={`transition-colors duration-300 ${urlActual === '/servicios/#accesorios' ? 'underline underline-offset-4' : ''}`}>Accesorios</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/nosotros" class={`${urlActual === '/nosotros/' && 'underline underline-offset-4'}`}>Nosotros</a>
-                    <input type="checkbox" hidden id="despegable_nosotros" />
-                    <label for="despegable_nosotros">
-                        <svg
-                            class="w-5 h-5 fill-white inline-block ml-3 mb-1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 512 512"
-                            >
-                            <path
-                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
-                            ></path></svg
+                    </li>
+                    <li>
+                        <a
+                            href="/productos"
+                            class={`${urlActual === "/productos/" && "underline underline-offset-4"}`}
+                            >Productos</a
                         >
-                    </label>
-                    <ul class="list_submenu text-white text-base pl-4 pr-4 flex flex-col gap-5">
-                        <li class="mt-5">
-                            <a href="/nosotros" class={`transition-colors duration-300 ${urlActual === '/nosotros/' ? 'underline underline-offset-4' : ''}`}
-                                >Nuestra historia</a
+                        <input
+                            type="checkbox"
+                            hidden
+                            id="despegable_productos"
+                            class="peer"
+                        />
+                        <label for="despegable_productos">
+                            <svg
+                                class="w-5 h-5 fill-white inline-block ml-3 mb-1 rotate-0 transition-[transform] duration-300"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"
                             >
-                        </li>
-                        <li>
-                            <a href="/nosotros/ferias-y-eventos" class={`transition-colors duration-300 ${urlActual === '/nosotros/ferias-y-eventos/' ? 'underline underline-offset-4' : ''}`}
-                                >Ferias y eventos</a
+                                <path
+                                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                                ></path></svg
                             >
-                        </li>
-                        <li>
-                            <a href="/nosotros/trabaja-con-nosotros" class={`transition-colors duration-300 ${urlActual === '/nosotros/trabaja-con-nosotros/' ? 'underline underline-offset-4' : ''}`}
-                                >Trabaja con nosotros</a
+                        </label>
+                        <ul
+                            class="list_submenu text-white text-sm sm:text-base pl-4 pr-4 flex flex-col gap-5 max-h-0 overflow-hidden transition-[max-height] duration-300 peer-checked:max-h-[300px]"
+                        >
+                            <li class="mt-5">
+                                <a
+                                    href="/productos/filtros-y-accesorios"
+                                    class={`transition-colors duration-300 ${urlActual === "/productos/filtros-y-accesorios/" ? "underline underline-offset-4" : ""}`}
+                                    >Filtros y accesorios</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/productos/repuestos-y-accesorios"
+                                    class={`transition-colors duration-300 ${urlActual === "/productos/repuestos-y-accesorios/" ? "underline underline-offset-4" : ""}`}
+                                    >Repuestos y accesorios</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/productos/herramientas-de-corte"
+                                    class={`transition-colors duration-300 ${urlActual === "/productos/herramientas-de-corte/" ? "underline underline-offset-4" : ""}`}
+                                    >Herramientas de Corte</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/productos/tren-rodante"
+                                    class={`transition-colors duration-300 ${urlActual === "/productos/tren-rodante/" ? "underline underline-offset-4" : ""}`}
+                                    >Tren Rodante</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a
+                            href="/servicios"
+                            class={`${urlActual === "/servicios/" && "underline underline-offset-4"}`}
+                            >Servicios</a
+                        >
+                        <input
+                            type="checkbox"
+                            hidden
+                            id="despegable_servicios"
+                            class="peer"
+                        />
+                        <label for="despegable_servicios">
+                            <svg
+                                class="w-5 h-5 fill-white inline-block ml-3 mb-1 rotate-0 transition-[transform] duration-300"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"
                             >
-                        </li>
-                        <li>
-                            <a href="/programa-de-beneficios" class={`transition-colors duration-300 ${urlActual === '/programa-de-beneficios' ? 'underline underline-offset-4' : ''}`}>Programa de beneficios</a>
-                        </li>
-                    </ul>
-                </li>
-                <!-- <li>
+                                <path
+                                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                                ></path></svg
+                            >
+                        </label>
+                        <ul
+                            class="list_submenu text-white text-sm sm:text-base pl-4 pr-4 flex flex-col gap-5 max-h-0 overflow-hidden transition-[max-height] duration-300 peer-checked:max-h-[300px]"
+                        >
+                            <li class="mt-5">
+                                <a
+                                    href="/servicios/#plataformas-de-elevacion"
+                                    class={`transition-colors duration-300 ${urlActual === "/servicios/#plataformas-de-elevacion" ? "underline underline-offset-4" : ""}`}
+                                    >Plataformas de elevación</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/servicios/#manipuladores-telescópicos"
+                                    class={`transition-colors duration-300 ${urlActual === "/servicios/#manipuladores-telescópicos" ? "underline underline-offset-4" : ""}`}
+                                    >Manipuladores telescópicos</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/servicios/#equipos-varios"
+                                    class={`transition-colors duration-300 ${urlActual === "/servicios/#equipos-varios" ? "underline underline-offset-4" : ""}`}
+                                    >Equipos varios</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/servicios/#grupos-electrógenos"
+                                    class={`transition-colors duration-300 ${urlActual === "/servicios/#grupos-electrógenos" ? "underline underline-offset-4" : ""}`}
+                                    >Grupos electrógenos</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/servicios/#accesorios"
+                                    class={`transition-colors duration-300 ${urlActual === "/servicios/#accesorios" ? "underline underline-offset-4" : ""}`}
+                                    >Accesorios</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a
+                            href="/nosotros"
+                            class={`${urlActual === "/nosotros/" && "underline underline-offset-4"}`}
+                            >Nosotros</a
+                        >
+                        <input
+                            type="checkbox"
+                            hidden
+                            id="despegable_nosotros"
+                            class="peer"
+                        />
+                        <label for="despegable_nosotros">
+                            <svg
+                                class="w-5 h-5 fill-white inline-block ml-3 mb-1 rotate-0 transition-[transform] duration-300"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"
+                            >
+                                <path
+                                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                                ></path></svg
+                            >
+                        </label>
+                        <ul
+                            class="list_submenu text-white text-sm sm:text-base pl-4 pr-4 flex flex-col gap-5 max-h-0 overflow-hidden transition-[max-height] duration-300 peer-checked:max-h-[300px]"
+                        >
+                            <li class="mt-5">
+                                <a
+                                    href="/nosotros"
+                                    class={`transition-colors duration-300 ${urlActual === "/nosotros/" ? "underline underline-offset-4" : ""}`}
+                                    >Nuestra historia</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/nosotros/ferias-y-eventos"
+                                    class={`transition-colors duration-300 ${urlActual === "/nosotros/ferias-y-eventos/" ? "underline underline-offset-4" : ""}`}
+                                    >Ferias y eventos</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/nosotros/trabaja-con-nosotros"
+                                    class={`transition-colors duration-300 ${urlActual === "/nosotros/trabaja-con-nosotros/" ? "underline underline-offset-4" : ""}`}
+                                    >Trabaja con nosotros</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/programa-de-beneficios"
+                                    class={`transition-colors duration-300 ${urlActual === "/programa-de-beneficios" ? "underline underline-offset-4" : ""}`}
+                                    >Programa de beneficios</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- <li>
                     <a href="/blog">Blog</a>
                 </li> -->
-                <li>
-                    <a href="/contacto" class={`${urlActual === '/contacto/' && 'underline underline-offset-4'}`}>Contacto</a>
-                    <input type="checkbox" hidden id="despegable_contacto" />
-                    <label for="despegable_contacto">
+                    <li>
+                        <a
+                            href="/contacto"
+                            class={`${urlActual === "/contacto/" && "underline underline-offset-4"}`}
+                            >Contacto</a
+                        >
+                        <input
+                            type="checkbox"
+                            hidden
+                            id="despegable_contacto"
+                            class="peer"
+                        />
+                        <label for="despegable_contacto">
+                            <svg
+                                class="w-5 h-5 fill-white inline-block ml-3 mb-1 rotate-0 transition-[transform] duration-300"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"
+                            >
+                                <path
+                                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                                ></path></svg
+                            >
+                        </label>
+                        <ul
+                            class="list_submenu text-white text-sm sm:text-base pl-4 pr-4 flex flex-col gap-5 max-h-0 overflow-hidden transition-[max-height] duration-300 peer-checked:max-h-[300px]"
+                        >
+                            <li class="mt-5">
+                                <a
+                                    href="/contacto/preguntas-frecuentes"
+                                    class={`transition-colors duration-300 ${urlActual === "/contacto/preguntas-frecuentes/" ? "underline underline-offset-4" : ""}`}
+                                    >Preguntas frecuentes</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/contacto/#atención-al-cliente"
+                                    class={`transition-colors duration-300 ${urlActual === "/contacto/#atención-al-cliente" ? "underline underline-offset-4" : ""}`}
+                                    >Atención al cliente</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/contacto/#solicitud-de-piezas"
+                                    class={`transition-colors duration-300 ${urlActual === "/contacto/#solicitud-de-piezas" ? "underline underline-offset-4" : ""}`}
+                                    >Solicitud de piezas</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/contacto/#encuesta-de-satisfacción"
+                                    class={`transition-colors duration-300 ${urlActual === "/programa-de-beneficios" ? "underline underline-offset-4" : ""}`}
+                                    >Encuesta de satisfacción</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <a href="https://portal.sv.com.ar/buscadorpublico.aspx?" target="_blank" rel="noreferrer" class="bg-white text-sv-blue max-w-fit py-3 px-8 flex items-center justify-center rounded-full mt-5 text-lg gap-2 font-semibold transition-colors duration-300 hover:bg-sv-blue hover:text-white hover:fill-white">
                         <svg
-                            class="w-5 h-5 fill-white inline-block ml-3 mb-1"
-                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"
                             viewBox="0 0 512 512"
                             >
                             <path
-                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
                             ></path></svg
                         >
-                    </label>
-                    <ul class="list_submenu text-white text-base pl-4 pr-4 flex flex-col gap-5">
-                        <li class="mt-5">
-                            <a href="/contacto/preguntas-frecuentes" class={`transition-colors duration-300 ${urlActual === '/contacto/preguntas-frecuentes' ? 'underline underline-offset-4' : ''}`}
-                                >Preguntas frecuentes</a
-                            >
-                        </li>
-                        <li>
-                            <a href="/contacto/#atención-al-cliente" class={`transition-colors duration-300 ${urlActual === '/contacto/#atención-al-cliente' ? 'underline underline-offset-4' : ''}`}
-                                >Atención al cliente</a
-                            >
-                        </li>
-                        <li>
-                            <a href="/contacto/#solicitud-de-piezas" class={`transition-colors duration-300 ${urlActual === '/contacto/#solicitud-de-piezas' ? 'underline underline-offset-4' : ''}`}
-                                >Solicitud de piezas</a
-                            >
-                        </li>
-                        <li>
-                            <a href="/contacto/#encuesta-de-satisfacción" class={`transition-colors duration-300 ${urlActual === '/programa-de-beneficios' ? 'underline underline-offset-4' : ''}`}>Encuesta de satisfacción</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+                        Portal
+                    </a>
+                </ul>
+            </div>
         </div>
-    </div>
-
-    <div class="w-full">
-        <input
-        type="text"
-        placeholder="Código"
-        class="bg-inherit w-full rounded-lg outline-none indent-4 py-2 border border-solid border-[#DBDBDB] transition-colors duration-300 focus:border-sv-blue relative"
-    />
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="absolute right-3 top-4 cursor-pointer w-4 h-4"
-        >
-        <path
-            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
-        ></path></svg
-    >
-    </div>
+        <form method="post" id="form_buscador_mobile" class="relative">
+            <input
+                type="text"
+                name="codigomobile"
+                placeholder="Código"
+                class="bg-inherit w-full rounded-lg outline-none indent-4 py-2 border border-solid border-[#DBDBDB] transition-colors duration-300 focus:border-sv-blue relative"
+            />
+            <button type="submit" class="absolute right-3 top-3 cursor-pointer">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    class="w-4 h-4 transition-colors duration-300 hover:fill-sv-blue"
+                >
+                    <path
+                        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                    ></path></svg
+                >
+            </button>
+        </form>
     </nav>
 </header>
 <style>
@@ -226,30 +330,19 @@ const urlActual = Astro.url.pathname;
     #open-menu:checked ~ .menu-despegable-mobile {
         @apply visible translate-x-0 opacity-100;
     }
-    .list_submenu {
-        @apply max-h-0 overflow-hidden;
-        transition: max-height 0.6s;
-    }
-    #despegable_productos:checked ~ .list_submenu {
-         @apply max-h-80
-    }
+
     #despegable_productos:checked + label svg {
         transform: rotate(180deg);
     }
-    #despegable_servicios:checked ~ .list_submenu {
-        @apply max-h-80
-    }
+
     #despegable_servicios:checked + label svg {
         transform: rotate(180deg);
     }
-    #despegable_nosotros:checked ~ .list_submenu {
-        @apply max-h-80
+    #despegable_nosotros:checked + label svg {
+        transform: rotate(180deg);
     }
-    #despegable_contacto:checked ~ .list_submenu {
-        @apply max-h-80
-    }
+
     #despegable_contacto:checked + label svg {
         transform: rotate(180deg);
     }
-    
 </style>

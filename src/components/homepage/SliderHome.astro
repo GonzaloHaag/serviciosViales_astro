@@ -7,7 +7,7 @@ import HomeSliderBgImage from "./HomeSliderBgImage.astro";
         <div class="swiper-slide w-full min-h-[calc(100vh-6rem)] lg:min-h-[calc(100vh-8rem)] relative">
             <div class='bg-blend-color bg-black/40 bg-fixed bg-cover bg-center w-full h-full absolute bg-no-repeat'>
                 <!-- ... -->
-                <video src="/assets/video/SV-WEB.mp4" autoplay muted loop class="absolute h-full w-full object-cover -z-10" id="video-sv" />
+                <video src="/assets/video/SV-WEB.webm" autoplay muted loop class="absolute h-full w-full object-cover -z-10" id="video-sv" poster="/assets/nosotros/2010.webp"  />
                 <div class="text-white text-xl w-full h-full xl:container xl:mx-auto flex flex-col justify-center px-4 xl:px-0">
                     <div class="flex flex-col text-start lg:gap-2">
                         <h2 class="text-2xl lg:text-6xl font-black ">TU SOCIO</h2>
@@ -62,27 +62,35 @@ import HomeSliderBgImage from "./HomeSliderBgImage.astro";
     <div class="swiper-pagination-home-slide"></div>
   </div>
 
-<script>
+  <script>
     import Swiper from 'swiper';
     import 'swiper/css';
-    import { Pagination,Autoplay,EffectFade} from 'swiper/modules';
+    import { Pagination,Autoplay,EffectFade, EffectCreative} from 'swiper/modules';
     import 'swiper/css/pagination';
     import 'swiper/css/autoplay';
     import 'swiper/css/effect-fade';
+    import 'swiper/css/effect-creative';
     
     document.addEventListener('astro:page-load',() => {
         new Swiper('.mySwiperHome',{
-        modules:[Pagination,Autoplay,EffectFade],
+        modules:[Pagination,Autoplay,EffectFade,EffectCreative],
         pagination : {
             el: ".swiper-pagination-home-slide",
         },
         autoplay:{
             delay:6000
         },
-        effect:'fade',
-        fadeEffect:{
-            crossFade:true
+        effect:'creative',
+        creativeEffect:{
+            prev: {
+            shadow: true,
+            translate: ['-20%', 0, -1],
+          },
+          next: {
+            translate: ['100%', 0, 0],
+          },
         },
+        grabCursor:true,
         loop:true
     })
     })
