@@ -162,11 +162,43 @@ const urlActual = Astro.url.pathname;
                         </li>
                     </ul>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="/blog">Blog</a>
-                </li>
+                </li> -->
                 <li>
-                    <a href="/contacto">Contacto</a>
+                    <a href="/contacto" class={`${urlActual === '/contacto' && 'underline underline-offset-4'}`}>Contacto</a>
+                    <input type="checkbox" hidden id="despegable_contacto" />
+                    <label for="despegable_contacto">
+                        <svg
+                            class="w-5 h-5 fill-white inline-block ml-3 mb-1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"
+                            >
+                            <path
+                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                            ></path></svg
+                        >
+                    </label>
+                    <ul class="list_submenu text-white text-base pl-4 pr-4 flex flex-col gap-5">
+                        <li class="mt-5">
+                            <a href="/contacto/preguntas-frecuentes" class={`transition-colors duration-300 ${urlActual === '/contacto/preguntas-frecuentes' ? 'underline underline-offset-4' : ''}`}
+                                >Preguntas frecuentes</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/contacto/#atención-al-cliente" class={`transition-colors duration-300 ${urlActual === '/contacto/#atención-al-cliente' ? 'underline underline-offset-4' : ''}`}
+                                >Atención al cliente</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/contacto/#solicitud-de-piezas" class={`transition-colors duration-300 ${urlActual === '/contacto/#solicitud-de-piezas' ? 'underline underline-offset-4' : ''}`}
+                                >Solicitud de piezas</a
+                            >
+                        </li>
+                        <li>
+                            <a href="/contacto/#encuesta-de-satisfacción" class={`transition-colors duration-300 ${urlActual === '/programa-de-beneficios' ? 'underline underline-offset-4' : ''}`}>Encuesta de satisfacción</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -213,7 +245,10 @@ const urlActual = Astro.url.pathname;
     #despegable_nosotros:checked ~ .list_submenu {
         @apply max-h-80
     }
-    #despegable_nosotros:checked + label svg {
+    #despegable_contacto:checked ~ .list_submenu {
+        @apply max-h-80
+    }
+    #despegable_contacto:checked + label svg {
         transform: rotate(180deg);
     }
     

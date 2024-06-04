@@ -1,0 +1,98 @@
+<div
+    class="form z-10 fixed flex items-center justify-center px-4 lg:px-0 bg-black/70 inset-0 w-full h-full transition-all duration-300 translate-y-[200%] opacity-0 invisible peer-checked:translate-y-0 peer-checked:opacity-100 peer-checked:visible peer-checked:backdrop-opacity-100"
+>
+    <form class="bg-white w-full lg:w-3/5 h-4/5 relative rounded-lg p-6 flex flex-col gap-3 text-start overflow-y-scroll">
+        <label for="encuesta_satisfaccion" class="absolute right-2 top-2 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-8 h-8"
+                >
+                <path
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"
+                ></path></svg
+            >
+        </label>
+        <h4 class="text-sv-blue font-semibold text-2xl mb-2">Encuesta de satisfacción</h4>
+        <div class="flex flex-col gap-3">
+           <input type="text" placeholder="Nombre y apellido" required />
+           <input type="email" placeholder="Email" required />
+        </div>
+        <div class="flex flex-col md:flex-row gap-3">
+            <input type="text" placeholder="Provincia" required />
+            <input type="text" placeholder="Ciudad" required />
+         </div>
+         <div class="flex flex-col md:flex-row gap-3">
+            <input type="number" placeholder="CUIT" required />
+            <select>
+                <option selected value="consumidor-final">Consumidor final</option>
+                <option value="revendedor">Revendedor</option>
+            </select>
+            <select>
+                <option selected value="consumidor-final">Agro</option>
+                <option value="revendedor">Construcción</option>
+                <option value="revendedor">Transporte</option>
+                <option value="revendedor">Oil & Gas</option>
+                <option value="revendedor">Minería</option>
+            </select>
+         </div>
+         <div class="flex flex-col gap-1">
+            <p class="text-lg">¿Cuánto tiempo llevas siendo cliente de Servicios Viales?</p>
+            <select>
+                <option selected>Menos de 6 meses</option>
+                <option>6 meses a 1 año</option>
+                <option>1 a 3 años</option>
+                <option>Más de 3 años</option>
+            </select>
+         </div>
+         <div class="flex flex-col gap-1">
+            <p class="text-lg">¿Qué es lo que más valoras de Servicios Viales?</p>
+            <select>
+                <option selected>Su amplia variedad de productos</option>
+                <option>Su amplia disponibilidad de productos</option>
+                <option>Su velocidad de entrega</option>
+                <option>Otro...</option>
+            </select>
+         </div>
+         <div class="flex flex-col gap-1">
+            <p class="text-lg">Por favor calificá tu experiencia general con Servicios Viales</p>
+            <select>
+                <option selected>Muy insatisfecho</option>
+                <option>insatisfecho</option>
+                <option>Neutral</option>
+                <option>Satisfecho</option>
+                <option>Muy satisfecho</option>
+            </select>
+         </div>
+         <div class="flex flex-col gap-1">
+            <p class="text-lg">¿Cuánto recomendarías nuestros productos/servicios a otra persona?</p>
+            <select>
+                <option selected>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </select>
+         </div>
+         <div class="flex flex-col gap-1">
+            <p class="text-lg">¿Te gustaría destacar algun aspecto específico de tu experiencia con nosotros?</p>
+            <textarea rows="6" />
+         </div>
+        
+         <button type="submit" class="block w-max px-8 py-3 text-white rounded-full bg-sv-negro transition-colors duration-300 hover:bg-sv-blue">Enviar</button>
+    </form>
+</div>
+<style>
+    input {
+        @apply w-full;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    textarea,
+    select {
+        @apply outline-none transition-colors duration-300 focus:border-sv-blue border border-solid border-[#DBDBDB] rounded-lg p-4;
+    }
+</style>

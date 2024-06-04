@@ -1,7 +1,7 @@
 <section
     class="w-full py-32 relative flex justify-center items-center bg-[#F9F9F9] overflow-hidden"
 >
-    <div class="swiper-container w-full px-4 lg:px-0">
+    <div class="swiper-container-testimonios w-full px-4 lg:px-0">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <i
@@ -85,14 +85,14 @@
     }
 </style>
 <script>
-    import Swiper from "swiper";
+    import Swiper from 'swiper';
     import "swiper/css";
     import "swiper/css/effect-coverflow";
     import "swiper/css/pagination";
     import { Pagination, EffectCoverflow } from "swiper/modules";
     document.addEventListener('astro:page-load',() => {
 
-        new Swiper(".swiper-container", {
+        new Swiper(".swiper-container-testimonios", {
         effect: "coverflow",
         grabCursor: true,
         centeredSlides: true,

@@ -67,7 +67,7 @@ import Layout from "../../layouts/Layout.astro";
             <img
                 src="/assets/nosotros/bienestar/fotos-bienestar-02-scaled-1.webp"
             />
-            <input type="checkbox" hidden id="bienestar_social" />
+            <input type="checkbox" hidden id="bienestar_social" class="peer" />
             <label
                 for="bienestar_social"
                 class="font-semibold text-xl cursor-pointer flex items-center gap-2"
@@ -75,7 +75,7 @@ import Layout from "../../layouts/Layout.astro";
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
-                    class="w-4 h-4"
+                    class="w-4 h-4 transition-all duration-300"
                 >
                     <path
                         d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
@@ -83,7 +83,7 @@ import Layout from "../../layouts/Layout.astro";
                 >
                 BIENESTAR SOCIAL
             </label>
-            <ul class="content list-disc pl-10 text-base">
+            <ul class="list-disc pl-14 text-base max-h-0 overflow-hidden peer-checked:max-h-[300px] transition-all duration-300">
                 <li>Experiencias</li>
                 <li>SUM Disponible</li>
                 <li>Celebraciones</li>
@@ -94,7 +94,7 @@ import Layout from "../../layouts/Layout.astro";
             <img
                 src="/assets/nosotros/bienestar/fotos-bienestar-01-scaled-1.webp"
             />
-            <input type="checkbox" hidden id="bienestar_laboral" />
+            <input type="checkbox" hidden id="bienestar_laboral" class="peer" />
             <label
                 for="bienestar_laboral"
                 class="font-semibold text-xl cursor-pointer flex items-center gap-2"
@@ -102,7 +102,7 @@ import Layout from "../../layouts/Layout.astro";
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
-                    class="w-4 h-4"
+                    class="w-4 h-4 transition-all duration-300"
                 >
                     <path
                         d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
@@ -110,7 +110,7 @@ import Layout from "../../layouts/Layout.astro";
                 >
                 BIENESTAR LABORAL
             </label>
-            <ul class="content list-disc pl-10 text-base">
+            <ul class="list-disc pl-14 text-base max-h-0 overflow-hidden peer-checked:max-h-[300px] transition-all duration-300">
                 <li>Flexibilidad horaria</li>
                 <li>Capacitaciones</li>
                 <li>Vouchers y regalos</li>
@@ -121,7 +121,7 @@ import Layout from "../../layouts/Layout.astro";
             <img
                 src="/assets/nosotros/bienestar/fotos-bienestar-03-scaled-1.webp"
             />
-            <input type="checkbox" hidden id="bienestar_economico" />
+            <input type="checkbox" hidden id="bienestar_economico" class="peer" />
             <label
                 for="bienestar_economico"
                 class="font-semibold text-xl cursor-pointer flex items-center gap-2"
@@ -129,7 +129,7 @@ import Layout from "../../layouts/Layout.astro";
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
-                    class="w-4 h-4"
+                    class="w-4 h-4 transition-all duration-300"
                 >
                     <path
                         d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
@@ -137,7 +137,7 @@ import Layout from "../../layouts/Layout.astro";
                 >
                 BIENESTAR ECONÓMICO
             </label>
-            <ul class="content list-disc pl-10 text-base">
+            <ul class="list-disc pl-14 text-base max-h-0 overflow-hidden peer-checked:max-h-[300px] transition-all duration-300">
                 <li>Revisión Salarial</li>
                 <li>Reconocimientos</li>
                 <li>Vouchers Familiares</li>
@@ -151,21 +151,7 @@ import Layout from "../../layouts/Layout.astro";
 </Layout>
 
 <style>
-    .content {
-        max-height: 0;
-        overflow: hidden;
-        padding-left: 4rem;
-        transition: max-height 0.2s;
-    }
-    #bienestar_social:checked ~ .content {
-        max-height: 200px;
-    }
-    #bienestar_laboral:checked ~ .content {
-        max-height: 200px;
-    }
-    #bienestar_economico:checked ~ .content {
-        max-height: 200px;
-    }
+  
 
     #bienestar_social:checked + label svg {
         transform: rotate(180deg);

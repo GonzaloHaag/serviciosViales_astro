@@ -50,7 +50,7 @@ const productsItem = [
         {
             productsItem.map((productItem) => (
                 <a href={ productItem.href } title={ productItem.titleBold } class="bg-white flex flex-col items-center text-center justify-center  min-h-[15.625rem] rounded-xl transition-colors duration-300 hover:bg-sv-gris-regular shadow-xl">
-                    <img src={ productItem.icon } alt={ productItem.titleBold } width="150" height="150" />
+                    <img src={ productItem.icon } alt={ productItem.titleBold } width="150" height="150" loading="lazy" />
                     <div class="flex flex-col text-2xl">
                         <span class="font-black">{ productItem.titleBold }</span>
                         <span class="leading-5">{ productItem.titleNormal }</span>

@@ -1,0 +1,55 @@
+---
+import FormAtencionAlCliente from "./FormAtencionAlCliente.astro";
+import FormEncuestaSatisfaccion from "./FormEncuestaSatisfaccion.astro";
+import FormSolicitudDePiezas from "./FormSolicitudDePiezas.astro";
+---
+
+<section class="bg-sv-gris-light w-full py-20">
+    <div class="w-full xl:container px-4 xl:px-0 xl:mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div id="atención-al-cliente" class="bg-white rounded-2xl flex flex-col items-center text-center justify-center p-8 gap-8 scroll-mt-32">
+            <div class="text-sv-blue font-semibold text-3xl">
+                <h3>Atención</h3>
+                <h3 class="leading-6">al cliente</h3>
+            </div>
+            <p class="text-base font-normal text-black min-h-20">
+                Completa el formulario a continuación y nuestro equipo de soporte te brindará la asistencia que necesitas.
+            </p>
+            <input type="checkbox" hidden id="contactar_ahora" class="peer"/>
+            <label for="contactar_ahora" class="bg-sv-negro text-white py-4 px-8 rounded-full transition-colors duration-300 hover:bg-sv-blue cursor-pointer">
+                Contactar ahora
+            </label>
+           
+            <FormAtencionAlCliente />
+        </div>
+        <div id="solicitud-de-piezas" class="bg-white rounded-2xl flex flex-col items-center text-center justify-center p-8 gap-8 scroll-mt-32">
+            <div class="text-sv-blue font-semibold text-3xl">
+                <h3>Solicitud de</h3>
+                <h3 class="leading-6">piezas especiales</h3>
+            </div>
+            <p class="text-base font-normal text-black min-h-20">
+                Por favor, completa este formulario para que podamos atender tu solicitud y proporcionar la solución que requieres.
+            </p>
+            <input type="checkbox" hidden id="solicitar_piezas" class="peer"/>
+            <label for="solicitar_piezas" class="bg-sv-negro text-white py-4 px-8 rounded-full transition-colors duration-300 hover:bg-sv-blue cursor-pointer">
+                Solicitar piezas
+            </label>
+           
+            <FormSolicitudDePiezas />
+        </div>
+        <div id="encuesta-de-satisfacción" class="bg-white rounded-2xl flex flex-col items-center text-center justify-center p-8 gap-8 scroll-mt-32">
+            <div class="text-sv-blue font-semibold text-3xl">
+                <h3>Encuesta</h3>
+                <h3 class="leading-6">de satisfacción</h3>
+            </div>
+            <p class="text-base font-normal text-black min-h-20">
+                Tu opinión es fundamental para nosotros y nos ayudará a mejorar. Por favor, responde con honestidad y franqueza.
+            </p>
+            <input type="checkbox" hidden id="encuesta_satisfaccion" class="peer"/>
+            <label for="encuesta_satisfaccion" class="bg-sv-negro text-white py-4 px-8 rounded-full transition-colors duration-300 hover:bg-sv-blue cursor-pointer">
+                Encuesta de satisfacción
+            </label>
+           
+            <FormEncuestaSatisfaccion />
+        </div>
+    </div>
+</section>

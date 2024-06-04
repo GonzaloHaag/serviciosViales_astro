@@ -1,0 +1,57 @@
+<div
+    class="form z-10 fixed flex items-center justify-center px-4 lg:px-0 bg-black/70 inset-0 w-full h-full transition-all duration-300 translate-y-[200%] opacity-0 invisible peer-checked:translate-y-0 peer-checked:opacity-100 peer-checked:visible peer-checked:backdrop-opacity-100"
+>
+    <form class="bg-white w-full lg:w-3/5 h-auto relative rounded-lg p-6 flex flex-col gap-3 text-start">
+        <label for="solicitar_piezas" class="absolute right-2 top-2 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-8 h-8"
+                >
+                <path
+                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"
+                ></path></svg
+            >
+        </label>
+        <h4 class="text-sv-blue font-semibold text-2xl mb-2">Solicitud de piezas especiales</h4>
+        <div class="flex flex-col md:flex-row gap-3">
+           <input type="text" placeholder="Nombre y apellido" required />
+           <input type="text" placeholder="Razón social" required />
+        </div>
+        <div class="flex flex-row gap-3">
+            <input type="number" placeholder="CUIT" required />
+            <input type="email" placeholder="Email" required />
+         </div>
+        <div class="flex flex-col gap-1 mt-5">
+            <p class="text-lg">¿Ya sos cliente de Servicios Viales?</p>
+            <select>
+                <option selected value="Si">Si</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+        <div class="flex flex-col gap-1 mt-5">
+            <p class="text-lg">Categoría del producto</p>
+            <select>
+                <option selected value="filtros-y-accesorios">Filtros y accesorios</option>
+                <option value="repuestos-y-accesorios">Repuestos y accesorios</option>
+                <option value="herramientas-de-corte">Herramientas de corte</option>
+                <option value="tren-rodante">Tren Rodante</option>
+            </select>
+        </div>
+        <div class="flex flex-col gap-1 mt-5">
+            <p class="text-lg">Descripción de pieza/s</p>
+            <textarea rows="6" placeholder="Si no conoce el número de piezas y/o si no se trata de una pieza, sino de un artículo general (herramienta y/o mercancía) utilice este campo para describirlo. " />
+        </div>
+      
+         <button type="submit" class="block w-max px-8 py-3 text-white rounded-full bg-sv-negro transition-colors duration-300 hover:bg-sv-blue">Enviar</button>
+    </form>
+</div>
+<style>
+    input {
+        @apply w-full;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    textarea,
+    select {
+        @apply outline-none transition-colors duration-300 focus:border-sv-blue border border-solid border-[#DBDBDB] rounded-lg p-4;
+    }
+</style>
