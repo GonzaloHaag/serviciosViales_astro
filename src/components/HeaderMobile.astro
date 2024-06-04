@@ -51,7 +51,7 @@ const urlActual = Astro.url.pathname;
                     <a href="/" class={`${urlActual === '/' && 'underline underline-offset-4'}`}>Inicio</a>
                 </li>
                 <li>
-                    <a href="/productos" class={`${urlActual === '/productos' && 'underline underline-offset-4'}`}>Productos</a>
+                    <a href="/productos" class={`${urlActual === '/productos/' && 'underline underline-offset-4'}`}>Productos</a>
                     <input type="checkbox" hidden id="despegable_productos" />
                     <label for="despegable_productos">
                         <svg
@@ -66,29 +66,29 @@ const urlActual = Astro.url.pathname;
                     </label>
                     <ul class="list_submenu text-white text-base pl-4 pr-4 flex flex-col gap-5">
                         <li class="mt-5">
-                            <a href="/productos/filtros-y-accesorios" class={`transition-colors duration-300 ${urlActual === '/productos/filtros-y-accesorios' ? 'underline underline-offset-4' : ''}`}
+                            <a href="/productos/filtros-y-accesorios" class={`transition-colors duration-300 ${urlActual === '/productos/filtros-y-accesorios/' ? 'underline underline-offset-4' : ''}`}
                                 >Filtros y accesorios</a
                             >
                         </li>
                         <li>
-                            <a href="/productos/repuestos-y-accesorios" class={`transition-colors duration-300 ${urlActual === '/productos/repuestos-y-accesorios' ? 'underline underline-offset-4' : ''}`}
+                            <a href="/productos/repuestos-y-accesorios" class={`transition-colors duration-300 ${urlActual === '/productos/repuestos-y-accesorios/' ? 'underline underline-offset-4' : ''}`}
                                 >Repuestos y accesorios</a
                             >
                         </li>
                         <li>
-                            <a href="/productos/herramientas-de-corte" class={`transition-colors duration-300 ${urlActual === '/productos/herramientas-de-corte' ? 'underline underline-offset-4' : ''}`}
+                            <a href="/productos/herramientas-de-corte" class={`transition-colors duration-300 ${urlActual === '/productos/herramientas-de-corte/' ? 'underline underline-offset-4' : ''}`}
                                 >Herramientas de Corte</a
                             >
                         </li>
                         <li>
-                            <a href="/productos/tren-rodante" class={`transition-colors duration-300 ${urlActual === '/productos/tren-rodante' ? 'underline underline-offset-4' : ''}`}
+                            <a href="/productos/tren-rodante" class={`transition-colors duration-300 ${urlActual === '/productos/tren-rodante/' ? 'underline underline-offset-4' : ''}`}
                                 >Tren Rodante</a
                             >
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="/servicios" class={`${urlActual === '/servicios' && 'underline underline-offset-4'}`}>Servicios</a>
+                    <a href="/servicios" class={`${urlActual === '/servicios/' && 'underline underline-offset-4'}`}>Servicios</a>
                     <input type="checkbox" hidden id="despegable_servicios" />
                     <label for="despegable_servicios">
                         <svg
@@ -128,7 +128,7 @@ const urlActual = Astro.url.pathname;
                     </ul>
                 </li>
                 <li>
-                    <a href="/nosotros" class={`${urlActual === '/nosotros' && 'underline underline-offset-4'}`}>Nosotros</a>
+                    <a href="/nosotros" class={`${urlActual === '/nosotros/' && 'underline underline-offset-4'}`}>Nosotros</a>
                     <input type="checkbox" hidden id="despegable_nosotros" />
                     <label for="despegable_nosotros">
                         <svg
@@ -143,17 +143,17 @@ const urlActual = Astro.url.pathname;
                     </label>
                     <ul class="list_submenu text-white text-base pl-4 pr-4 flex flex-col gap-5">
                         <li class="mt-5">
-                            <a href="/nosotros" class={`transition-colors duration-300 ${urlActual === '/nosotros' ? 'underline underline-offset-4' : ''}`}
+                            <a href="/nosotros" class={`transition-colors duration-300 ${urlActual === '/nosotros/' ? 'underline underline-offset-4' : ''}`}
                                 >Nuestra historia</a
                             >
                         </li>
                         <li>
-                            <a href="/nosotros/ferias-y-eventos" class={`transition-colors duration-300 ${urlActual === '/nosotros/ferias-y-eventos' ? 'underline underline-offset-4' : ''}`}
+                            <a href="/nosotros/ferias-y-eventos" class={`transition-colors duration-300 ${urlActual === '/nosotros/ferias-y-eventos/' ? 'underline underline-offset-4' : ''}`}
                                 >Ferias y eventos</a
                             >
                         </li>
                         <li>
-                            <a href="/nosotros/trabaja-con-nosotros" class={`transition-colors duration-300 ${urlActual === '/nosotros/trabaja-con-nosotros' ? 'underline underline-offset-4' : ''}`}
+                            <a href="/nosotros/trabaja-con-nosotros" class={`transition-colors duration-300 ${urlActual === '/nosotros/trabaja-con-nosotros/' ? 'underline underline-offset-4' : ''}`}
                                 >Trabaja con nosotros</a
                             >
                         </li>
@@ -166,7 +166,7 @@ const urlActual = Astro.url.pathname;
                     <a href="/blog">Blog</a>
                 </li> -->
                 <li>
-                    <a href="/contacto" class={`${urlActual === '/contacto' && 'underline underline-offset-4'}`}>Contacto</a>
+                    <a href="/contacto" class={`${urlActual === '/contacto/' && 'underline underline-offset-4'}`}>Contacto</a>
                     <input type="checkbox" hidden id="despegable_contacto" />
                     <label for="despegable_contacto">
                         <svg
