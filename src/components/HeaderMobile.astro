@@ -5,7 +5,7 @@ import BuscadorPorCodigoMobile from "./BuscadorPorCodigoMobile.astro";
 const urlActual = Astro.url.pathname;
 ---
 
-<header class="flex flex-col w-full justify-between lg:hidden">
+<header class="flex flex-col w-full justify-between sticky top-0 z-10 lg:hidden">
     <div
         class="w-full bg-sv-negro text-white text-xs sm:text-base min-h-8 flex items-center"
     >
@@ -13,7 +13,7 @@ const urlActual = Astro.url.pathname;
             <p>+54 9 (342) 631-1894 | contacto@serviciosviales.com.ar</p>
         </div>
     </div>
-    <nav class="w-full px-4 min-h-28 flex flex-col justify-center gap-5">
+    <nav class="w-full bg-white px-4 min-h-28 flex flex-col justify-center gap-5">
         <div class="flex items-center justify-between">
             <div>
                 <a href="/">

@@ -4,7 +4,7 @@ import BuscadorPorCodigo from "./BuscadorPorCodigo.astro";
 const urlActual = Astro.url.pathname;
 ---
 
-<header id="header_desktop" class="hidden lg:block">
+<header class="hidden lg:flex flex-col sticky w-full z-10 top-0">
     <div class="w-full bg-sv-negro text-white min-h-8 flex items-center">
         <div class="w-full px-4 xl:container xl:px-0 xl:mx-auto">
             <p>+54 9 (342) 631-1894 | contacto@serviciosviales.com.ar</p>
@@ -278,4 +278,5 @@ const urlActual = Astro.url.pathname;
     .nav-item:hover .submenu {
         @apply visible opacity-100;
     }
+   
 </style>
