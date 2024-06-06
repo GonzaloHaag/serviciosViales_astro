@@ -9,7 +9,7 @@ import Layout from "../../layouts/Layout.astro";
     description="SOMOS DIFERENTES — LIDERANDO JUNTOS LA INDUSTRIA CONOCE — NUESTRA HISTORIA Nuestra marca es la reputación que hemos construido durante años y estamos comprometidos a diferenciarnos brindando un servicio superior para nuestros clientes. 1986 2000 2010 2015 2017 2019 2021 2024 Nuestro viaje comenzó humildemente en 1986 como taller de reparación de camiones y maquinaria […]"
 >
     <SectionHero
-        bgImage="/assets/nosotros/bg-nosotros.webp"
+        bgImage="bg-[url('/assets/nosotros/bg-nosotros.webp')]"
         span="SOMOS DIFERENTES —"
         titleBold="LIDERANDO JUNTOS"
         titleNormal="LA INDUSTRIA"
@@ -210,11 +210,15 @@ import Layout from "../../layouts/Layout.astro";
         </a>
            </div>
        </div>
-       <div class="bg-[url('/assets/nosotros/IMG_Agroactiva_2022-1920.webp')] bg-center bg-cover min-h-[50vh] md:min-h-screen"></div>
+       <div class="min-h-[50vh] md:min-h-screen relative">
+        <img src="/assets/nosotros/IMG_Agroactiva_2022-1920.webp" alt="agroactiva" class="absolute w-full h-full inset-0 object-cover object-center" loading="lazy" />
+      </div>
     </div>
     <!-- div acompaña -->
     <div class="grid grid-cols-1 md:grid-cols-2 min-h-screen">
-        <div class="bg-[url('/assets/nosotros/camiseta-union.webp')] bg-center bg-cover min-h-[50vh] md:min-h-screen"></div>
+        <div class="min-h-[50vh] md:min-h-screen relative">
+            <img src="/assets/nosotros/camiseta-union.webp" alt="imagen union" class="absolute w-full h-full inset-0 object-cover object-center" loading="lazy" />
+        </div>
         <div class="bg-sv-blue flex flex-col justify-center text-white py-4">
             <div class="flex flex-col items-start max-w-3xl mx-auto px-4 md:px-0 md:pl-4">
              <span>SV ACOMPAÑA —</span>

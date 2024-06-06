@@ -11,37 +11,43 @@ import Layout from "../../layouts/Layout.astro";
     <SectionHero
         titleBold="FILTROS +"
         subtitle="ACCESORIOS"
-        bgImage="/assets/background-sections/portada-filtros-1.webp"
+        bgImage="bg-[url('/assets/background-sections/portada-filtros-1.webp')]"
     >
-      <div slot="images" class="flex justify-center items-center gap-5 md:gap-10 mt-10">
+        <div
+            slot="images"
+            class="flex flex-wrap justify-center items-center gap-x-5 md:gap-x-10 mt-5"
+        >
             <img
-            loading="lazy"
-            src="/assets/icons-productos/logo-donaldson-1.svg"
-            class="w-16 h-16 md:w-20 md:h-20"
-        />
+                loading="lazy"
+                src="/assets/icons-productos/logo-donaldson-1.webp"
+                class="w-16 h-16 md:w-20 md:h-20 object-contain"
+            />
 
-        <img
-        loading="lazy"
-            src="/assets/icons-productos/logo-ktn.svg"
-            class="w-16 h-16 md:w-20 md:h-20"
-        />
+            <img
+                loading="lazy"
+                src="/assets/icons-productos/logo-ktn.svg"
+                class="w-16 h-16 md:w-20 md:h-20 object-contain"
+            />
 
-        <img
-        loading="lazy"
-            src="/assets/icons-productos/logo-turbo.svg"
-            class="w-16 h-16 md:w-20 md:h-20"
-        />
+            <img
+                loading="lazy"
+                src="/assets/icons-productos/logo-turbo.webp"
+                class="w-16 h-16 md:w-20 md:h-20 object-contain"
+            />
 
-        <img
-        loading="lazy"
-            src="/assets/icons-productos/logo-hifi.svg"
-            class="w-16 h-16 md:w-20 md:h-20"
-        />
+            <img
+                loading="lazy"
+                src="/assets/icons-productos/logo-hifi.webp"
+                class="w-16 h-16 md:w-20 md:h-20 object-contain"
+            />
         </div>
     </SectionHero>
     <section class="w-full bg-sv-gris-light">
         <div class="px-4 w-full xl:px-0 xl:max-w-6xl xl:mx-auto flex flex-col">
-            <CardProductos imageUrl="/assets/filtros-accesorios/FILTROS-AIRE-01.webp" title="Filtros de Aire">
+            <CardProductos
+                imageUrl="/assets/filtros-accesorios/FILTROS-AIRE-01.webp"
+                title="Filtros de Aire"
+            >
                 <p slot="texto" class="text-base">
                     Asegura un rendimiento óptimo del motor al <strong
                         >filtrar partículas y contaminantes del aire.</strong
@@ -49,7 +55,10 @@ import Layout from "../../layouts/Layout.astro";
                     superior para mantener tu motor en su mejor forma.
                 </p>
             </CardProductos>
-            <CardProductos imageUrl="/assets/filtros-accesorios/FILTROS-aceite-01.webp" title="Filtros de Aceite">
+            <CardProductos
+                imageUrl="/assets/filtros-accesorios/FILTROS-aceite-01.webp"
+                title="Filtros de Aceite"
+            >
                 <p slot="texto" class="text-base">
                     Nuestros filtros de aceite ayudan a prolongar la vida útil
                     del motor al <strong
@@ -59,7 +68,10 @@ import Layout from "../../layouts/Layout.astro";
                     contra el desgaste, contribuyendo a la longevidad de tu equipo.
                 </p>
             </CardProductos>
-            <CardProductos imageUrl="/assets/filtros-accesorios/filtros-combustible-01.webp" title="Filtros de Combustible">
+            <CardProductos
+                imageUrl="/assets/filtros-accesorios/filtros-combustible-01.webp"
+                title="Filtros de Combustible"
+            >
                 <p slot="texto" class="text-base">
                     Optimiza el rendimiento del sistema de combustible al
                     <strong
@@ -69,7 +81,10 @@ import Layout from "../../layouts/Layout.astro";
                     de daños costosos.
                 </p>
             </CardProductos>
-            <CardProductos imageUrl="/assets/filtros-accesorios/filtro-hidraulico-01.webp" title="Filtros Hidráulicos">
+            <CardProductos
+                imageUrl="/assets/filtros-accesorios/filtro-hidraulico-01.webp"
+                title="Filtros Hidráulicos"
+            >
                 <p slot="texto" class="text-base">
                     Nuestros filtros hidráulicos <strong
                         >ayudan a mantener la integridad de los fluidos,
@@ -80,7 +95,10 @@ import Layout from "../../layouts/Layout.astro";
                     hidráulico óptimo.
                 </p>
             </CardProductos>
-            <CardProductos imageUrl="/assets/filtros-accesorios/otros-filtros-01-1.webp" title="Otros Filtros">
+            <CardProductos
+                imageUrl="/assets/filtros-accesorios/otros-filtros-01-1.webp"
+                title="Otros Filtros"
+            >
                 <p slot="texto" class="text-base">
                     Desde <strong>filtros de urea</strong> para reducción de emisiones
                     hasta
@@ -92,7 +110,10 @@ import Layout from "../../layouts/Layout.astro";
                     permite cubrir diversas necesidades.
                 </p>
             </CardProductos>
-            <CardProductos imageUrl="/assets/filtros-accesorios/accesorios-01-1.webp" title="Accesorios para Filtros">
+            <CardProductos
+                imageUrl="/assets/filtros-accesorios/accesorios-01-1.webp"
+                title="Accesorios para Filtros"
+            >
                 <p slot="texto" class="text-base">
                     Amplía la funcionalidad y eficiencia de tus filtros con
                     nuestra gama de accesorios especializados. Desde bases,

@@ -8,24 +8,16 @@ interface Props {
     text: string;
     buttonText: string;
     buttonHref?: string;
-    imageUrl: string;
+    bgImage: string;
+    target_blank:number;
 }
-const { titleBold, titleNormal, text, buttonText, imageUrl, buttonHref } =
+const { titleBold, titleNormal, text, buttonText, bgImage, buttonHref,target_blank } =
     Astro.props;
 ---
 
 <div
-    class="swiper-slide w-full min-h-[calc(100vh-9rem)] lg:min-h-[calc(100vh-8rem)] relative flex flex-col justify-center"
+    class={`swiper-slide w-full min-h-[calc(100vh-9rem)] lg:min-h-[calc(100vh-8rem)] ${bgImage} bg-blend-color bg-black/40 bg-cover bg-center relative flex flex-col justify-center`}
 >
-    <img
-        src={imageUrl}
-        alt={titleBold}
-        class="absolute w-full h-full inset-0 -z-10 object-cover object-center"
-        loading="lazy"
-    />
-    <div
-        class={`bg-blend-color bg-black/40 bg-fixed bg-cover bg-center w-full h-full absolute bg-no-repeat`}
-    >
         <!-- ... -->
         <div
             class="text-white text-xl w-full min-h-[calc(100vh-9rem)] lg:min-h-[calc(100vh-8rem)] xl:container xl:mx-auto flex flex-col justify-center px-4 xl:px-0"
@@ -37,11 +29,10 @@ const { titleBold, titleNormal, text, buttonText, imageUrl, buttonHref } =
             <p class="mt-6 max-w-[540px]">{text}</p>
             <a
                 href={buttonHref}
-                target="_blank"
+                target={target_blank === 1 ? '_blank' : undefined}
                 class="mt-6 px-10 py-3 lg:px-10 lg:py-5 bg-sv-blue text-white rounded-full w-max transition-colors duration-300 hover:bg-sv-negro"
             >
                 {buttonText}
             </a>
         </div>
     </div>
-</div>

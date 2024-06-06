@@ -11,78 +11,124 @@ import Layout from "../../layouts/Layout.astro";
     <SectionHero
         titleBold="REPUESTOS +"
         subtitle="ACCESORIOS"
-        bgImage="/assets/background-sections/bg-repuestos.webp"
+        bgImage="bg-[url('/assets/background-sections/bg-repuestos.webp')]"
     >
         <div
             slot="images"
-            class="flex flex-wrap justify-center items-center gap-5 md:gap-10 mt-10"
+            class="flex flex-wrap justify-center items-center gap-x-5 md:gap-x-10 mt-5"
         >
-            <img loading="lazy"
-                src="/assets/icons-productos/logo-blumaq.svg"
-                class="w-16 h-16 md:w-20 md:h-20"
+            <img
+                loading="lazy"
+                src="/assets/icons-productos/logo-blumaq.webp"
+                class="w-16 h-16 md:w-20 md:h-20 object-contain"
             />
 
-            <img loading="lazy"
+            <img
+                loading="lazy"
                 src="/assets/icons-productos/logo-ktn.svg"
-                class="w-16 h-16 md:w-20 md:h-20"
+                class="w-16 h-16 md:w-20 md:h-20 object-contain"
             />
 
-            <img loading="lazy"
+            <img
+                loading="lazy"
                 src="/assets/icons-productos/logo-ctp.svg"
-                class="w-16 h-16 md:w-20 md:h-20"
+                class="w-16 h-16 md:w-20 md:h-20 object-contain"
             />
 
-            <img loading="lazy"
-                src="/assets/icons-productos/logo-itr.svg"
-                class="w-16 h-16 md:w-20 md:h-20"
+            <img
+                loading="lazy"
+                src="/assets/icons-productos/logo-itr.webp"
+                class="w-16 h-16 md:w-20 md:h-20 object-contain"
             />
             <img
-                src="/assets/icons-productos/logo-itm.svg"
-                class="w-16 h-16 md:w-20 md:h-20"
+                src="/assets/icons-productos/logo-itm.webp"
+                class="w-16 h-16 md:w-20 md:h-20 object-contain"
             />
-            <img loading="lazy"
+            <img
+                loading="lazy"
                 src="/assets/icons-productos/logo-nordic-lights.svg"
-                class="w-16 h-16 md:w-20 md:h-20"
+                class="w-16 h-16 md:w-20 md:h-20 object-contain"
             />
-            <img loading="lazy"
+            <img
+                loading="lazy"
                 src="/assets/icons-productos/logo-mr.svg"
-                class="w-16 h-16 md:w-20 md:h-20"
+                class="w-16 h-16 md:w-20 md:h-20 object-contain"
             />
         </div>
     </SectionHero>
     <section class="w-full bg-sv-gris-light">
         <div class="px-4 w-full xl:px-0 xl:max-w-6xl xl:mx-auto flex flex-col">
-            <CardProductos imageUrl="/assets/repuestos-accesorios/repuestos-motor-01.webp" title="Repuestos de Motor">
+            <CardProductos
+                imageUrl="/assets/repuestos-accesorios/repuestos-motor-01.webp"
+                title="Repuestos de Motor"
+            >
                 <p slot="texto" class="text-base">
-                    Optimiza el rendimiento con <strong>repuestos de alta calidad,</strong> asegurando durabilidad y eficiencia. Desde pistones hasta juntas, nuestra gama de productos cubre todas las necesidades de tu motor.
+                    Optimiza el rendimiento con <strong
+                        >repuestos de alta calidad,</strong
+                    > asegurando durabilidad y eficiencia. Desde pistones hasta juntas,
+                    nuestra gama de productos cubre todas las necesidades de tu motor.
                 </p>
             </CardProductos>
 
-            <CardProductos imageUrl="/assets/repuestos-accesorios/trasmision-01-1.webp" title="Sistema de Trasmisión">
+            <CardProductos
+                imageUrl="/assets/repuestos-accesorios/trasmision-01-1.webp"
+                title="Sistema de Trasmisión"
+            >
                 <p slot="texto" class="text-base">
-                    <strong>Maximiza la eficiencia y la potencia</strong> con repuestos para el sistema de transmisión. Desde embragues hasta ejes, nuestra selección de repuestos garantiza un rendimiento óptimo y duradero en cualquier terreno.
+                    <strong>Maximiza la eficiencia y la potencia</strong> con repuestos
+                    para el sistema de transmisión. Desde embragues hasta ejes, nuestra
+                    selección de repuestos garantiza un rendimiento óptimo y duradero
+                    en cualquier terreno.
                 </p>
             </CardProductos>
 
-            <CardProductos imageUrl="/assets/repuestos-accesorios/hidraulico-01-1.webp" title="Sistema Hidráulico">
+            <CardProductos
+                imageUrl="/assets/repuestos-accesorios/hidraulico-01-1.webp"
+                title="Sistema Hidráulico"
+            >
                 <p slot="texto" class="text-base">
-                    Mantené la armonía del sistema con <strong>componentes hidráulicos de primera categoría.</strong> Desde bombas hasta enfriadores, nuestras piezas aseguran un funcionamiento sin problemas.
+                    Mantené la armonía del sistema con <strong
+                        >componentes hidráulicos de primera categoría.</strong
+                    > Desde bombas hasta enfriadores, nuestras piezas aseguran un
+                    funcionamiento sin problemas.
                 </p>
             </CardProductos>
 
-            <CardProductos imageUrl="/assets/repuestos-accesorios/electrico-01-1.webp" title="Sistema Eléctrico">
+            <CardProductos
+                imageUrl="/assets/repuestos-accesorios/electrico-01-1.webp"
+                title="Sistema Eléctrico"
+            >
                 <p slot="texto" class="text-base">
-                    Potenciá tu equipo con <strong>componentes eléctricos confiables.</strong> Desde motores de arranque hasta alternadores avanzados, nuestro amplio catálogo ofrece soluciones eficientes para mantener tu equipo en marcha.
+                    Potenciá tu equipo con <strong
+                        >componentes eléctricos confiables.</strong
+                    > Desde motores de arranque hasta alternadores avanzados, nuestro
+                    amplio catálogo ofrece soluciones eficientes para mantener tu
+                    equipo en marcha.
                 </p>
             </CardProductos>
-            <CardProductos imageUrl="/assets/repuestos-accesorios/turbo-inyeccion-01-1.webp" title="Inyección y Turbo">
+            <CardProductos
+                imageUrl="/assets/repuestos-accesorios/turbo-inyeccion-01-1.webp"
+                title="Inyección y Turbo"
+            >
                 <p slot="texto" class="text-base">
-                    Amplia gama de productos innovadores diseñados para mejorar y potenciar el rendimiento de tu motor. Desde <strong>inyectores de última generación hasta sistemas de turbo alimentación de alta eficiencia.</strong>
+                    Amplia gama de productos innovadores diseñados para mejorar
+                    y potenciar el rendimiento de tu motor. Desde <strong
+                        >inyectores de última generación hasta sistemas de turbo
+                        alimentación de alta eficiencia.</strong
+                    >
                 </p>
             </CardProductos>
-            <CardProductos imageUrl="/assets/repuestos-accesorios/electrico-01-1.webp" title="Otros y Accesorios">
+            <CardProductos
+                imageUrl="/assets/repuestos-accesorios/electrico-01-1.webp"
+                title="Otros y Accesorios"
+            >
                 <p slot="texto" class="text-base">
-                    <strong>Dale calidad a tu equipo y confía en nuestra experiencia para mantener tu equipo en óptimas condiciones.</strong> Desde pernos y bujes hasta rodamientos, luminaria, correas y repuestos de cabina.
+                    <strong
+                        >Dale calidad a tu equipo y confía en nuestra
+                        experiencia para mantener tu equipo en óptimas
+                        condiciones.</strong
+                    > Desde pernos y bujes hasta rodamientos, luminaria, correas
+                    y repuestos de cabina.
                 </p>
             </CardProductos>
         </div>
