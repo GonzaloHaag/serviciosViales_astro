@@ -1,4 +1,4 @@
-<form method="post" id="form_buscador" autocomplete="off" transition:persist> <!-- Para que persista el valor en las transiciones -->
+<form class="relative" method="post" id="form_buscador" autocomplete="off" transition:persist> <!-- Para que persista el valor en las transiciones -->
     <input
         id="codigo"
         type="text"
@@ -17,22 +17,24 @@
             ></path></svg
         >
     </button>
+    <p id="text-error" class="text-red-500 text-sm absolute -bottom-6 left-5"></p>
 </form>
 <script>
     const formulario = document.getElementById("form_buscador");
-   
+    const textError = document.getElementById("text-error");
         formulario?.addEventListener("submit", (event: Event) => {
         event.preventDefault();
         let codigo = (event.target as HTMLFormElement).codigo.value;
         codigo = codigo.trim();
 
         if (codigo === "") {
-            return;
+            textError!.innerText = 'Por favor, ingrese un código'
         } else {
             window.open(
                 `https://portal.sv.com.ar/buscadorpublico.aspx?${codigo}`,
                 "_blank",
             );
+            textError!.innerText="";
         }
     });
 

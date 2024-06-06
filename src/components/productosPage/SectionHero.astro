@@ -7,8 +7,9 @@ interface Props {
 const {titleBold,subtitle,bgImage} = Astro.props;
 ---
 <section
-class={`min-h-[25rem] w-full ${bgImage} bg-blend-color bg-black/65 bg-center bg-cover flex flex-col justify-center items-center relative`}
+class={`min-h-[25rem] w-full ${bgImage} bg-cover bg-center bg-blend-color bg-black/60 flex flex-col justify-center items-center relative`}
 >
+
 <div class="flex flex-col text-white text-4xl md:text-6xl text-center">
     <h2 class="font-black leading-tight">{ titleBold }</h2>
     <h2 class="font-semibold">{ subtitle }</h2>
