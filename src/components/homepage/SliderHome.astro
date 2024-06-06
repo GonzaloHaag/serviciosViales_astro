@@ -7,7 +7,7 @@ import HomeSliderBgImage from "./HomeSliderBgImage.astro";
         <div class="swiper-slide w-full min-h-[calc(100vh-9rem)] lg:min-h-[calc(100vh-8rem)] relative">
             <div class='bg-blend-color bg-black/40 bg-fixed bg-cover bg-center w-full h-full absolute bg-no-repeat'>
                 <!-- ... -->
-                <video src="/assets/video/SV-WEB.webm" autoplay muted loop class="h-full w-full object-cover absolute -z-10" id="video-sv" />
+                <video src="/assets/video/SV-WEB.mp4" autoplay muted loop class="h-full w-full object-cover absolute -z-10" id="video-sv" poster="/assets/background-sections/poster-video.webp" />
                 <div class="text-white text-xl w-full h-full xl:container xl:mx-auto flex flex-col justify-center px-4 xl:px-0">
                     <div class="flex flex-col text-start lg:gap-2">
                         <h2 class="text-2xl lg:text-6xl font-black ">TU SOCIO</h2>
@@ -23,7 +23,7 @@ import HomeSliderBgImage from "./HomeSliderBgImage.astro";
           
          </div>
             <HomeSliderBgImage 
-            className="bg-[url('/assets/Banner-portal-SV.webp')]" 
+            imageUrl="/assets/Banner-portal-SV.webp" 
             titleBold="LO QUE NECESITAS," 
             titleNormal="FÁCIL Y RAPIDO" 
             text="Registrate ahora y accede a precios especiales dentro de nuestro portal de compras." 
@@ -32,7 +32,7 @@ import HomeSliderBgImage from "./HomeSliderBgImage.astro";
             />
          
              <HomeSliderBgImage 
-             className="bg-[url('/assets/banner-productos-home.webp')]" 
+             imageUrl="/assets/banner-productos-home.webp" 
              titleBold="AMPLIA VARIEDAD" 
              titleNormal="DE PRODUCTOS" 
              text="Descubrí la mejor calidad en filtros, repuestos, herramientas de corte, tren rodante y accesorios." 
@@ -41,7 +41,7 @@ import HomeSliderBgImage from "./HomeSliderBgImage.astro";
              />
 
              <HomeSliderBgImage 
-             className="bg-[url('/assets/SLIDER-crecemos.webp')]" 
+             imageUrl="/assets/SLIDER-crecemos.webp" 
              titleBold="CRECEMOS JUNTOS" 
              titleNormal="HACIA EL ÉXITO" 
              text="Son el motor fundamental de nuestro crecimiento, avanzamos gracias a su dedicación y compromiso." 
@@ -50,7 +50,7 @@ import HomeSliderBgImage from "./HomeSliderBgImage.astro";
              />
 
              <HomeSliderBgImage 
-             className="bg-[url('/assets/banner-programa-de-beneficios-scaled-1.webp')]" 
+             imageUrl="/assets/banner-programa-de-beneficios-scaled-1.webp" 
              titleBold="PROGRAMA DE" 
              titleNormal="BENEFICIOS" 
              text="En SV entendemos el valor de tu esfuerzo, sumate a nuestro programa y recibí grandes beneficios." 
@@ -65,15 +65,14 @@ import HomeSliderBgImage from "./HomeSliderBgImage.astro";
   <script>
     import Swiper from 'swiper';
     import 'swiper/css';
-    import { Pagination,Autoplay,EffectFade, EffectCreative} from 'swiper/modules';
+    import { Pagination,Autoplay, EffectCreative} from 'swiper/modules';
     import 'swiper/css/pagination';
     import 'swiper/css/autoplay';
-    import 'swiper/css/effect-fade';
     import 'swiper/css/effect-creative';
     
     document.addEventListener('astro:page-load',() => {
         new Swiper('.mySwiperHome',{
-        modules:[Pagination,Autoplay,EffectFade,EffectCreative],
+        modules:[Pagination,Autoplay,EffectCreative],
         pagination : {
             el: ".swiper-pagination-home-slide",
         },
