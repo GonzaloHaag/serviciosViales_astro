@@ -6,8 +6,6 @@ import CardItemHome from "../components/homepage/CardItemHome.astro";
 import TestimoniosHome from "../components/homepage/TestimoniosHome.astro";
 import FormContactoHome from "../components/homepage/FormContactoHome.astro";
 
-import maquinaBg from '../images/MAQUINA-C-1.webp';
-import { Image } from "astro:assets";
 ---
 
 <Layout
@@ -19,7 +17,8 @@ import { Image } from "astro:assets";
 	<section
 		class="relative w-full min-h-[calc(100vh-9rem)] lg:min-h-[calc(100vh-8rem)] flex px-4 lg:px-40 bg-blend-color lg:bg-blend-normal bg-gradient-to-b from-black/20 to-black/0"
 	>
-	<Image src={ maquinaBg } alt="maquina" class="absolute w-full h-full inset-0 -z-10 object-cover object-center" />
+	<img src="/assets/background-sections/MAQUINA-C-1.webp" alt="maquina" class="absolute hidden md:block w-full h-full inset-0 -z-10 object-cover object-center" loading="lazy"/>
+	<img src="/assets/background-sections/mobile/MAQUINA-mobile-C-1.webp" alt="maquina" class="absolute block md:hidden w-full h-full inset-0 -z-10 object-cover object-center" loading="lazy"/>
 		<div
 			class="w-full lg:max-w-[800px] flex flex-col text-center items-center justify-between lg:items-start lg:text-start min-h-full mt-10 mb-20"
 		>

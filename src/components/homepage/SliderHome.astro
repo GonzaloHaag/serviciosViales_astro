@@ -7,7 +7,7 @@ import HomeSliderBgImage from "./HomeSliderBgImage.astro";
         <div class="swiper-slide w-full min-h-[calc(100vh-9rem)] lg:min-h-[calc(100vh-8rem)] relative">
             <div class='bg-blend-color bg-black/40 bg-fixed bg-cover bg-center w-full h-full absolute bg-no-repeat'>
                 <!-- ... -->
-                <video src="/assets/video/SV-WEB-opti.mp4" autoplay muted loop class="h-full w-full object-cover absolute -z-10" id="video-sv" poster="/assets/background-sections/poster-video.webp" />
+                <video src="/assets/video/SV-WEB-opti.mp4" autoplay muted loop class="h-full w-full object-cover absolute -z-10 aspect-video" id="video-sv" poster="/assets/background-sections/poster-video.webp" />
                 <div class="text-white text-xl w-full h-full xl:container xl:mx-auto flex flex-col justify-center px-4 xl:px-0">
                     <div class="flex flex-col text-start lg:gap-2">
                         <h2 class="text-2xl lg:text-6xl font-black ">TU SOCIO</h2>
@@ -24,7 +24,6 @@ import HomeSliderBgImage from "./HomeSliderBgImage.astro";
          </div>
             <HomeSliderBgImage 
             bgImage="bg-[url('/assets/banners-home-slide/Banner-portal-SV.webp')]" 
-            bgImageMobile="bg-[url('/assets/banners-home-slide/mobile/Banner-portal-SV.webp')"
             titleBold="LO QUE NECESITAS," 
             titleNormal="FÁCIL Y RAPIDO" 
             text="Registrate ahora y accede a precios especiales dentro de nuestro portal de compras." 
@@ -35,7 +34,6 @@ import HomeSliderBgImage from "./HomeSliderBgImage.astro";
          
              <HomeSliderBgImage 
              bgImage="bg-[url('/assets/banners-home-slide/banner-productos-home.webp')]" 
-          
              titleBold="AMPLIA VARIEDAD" 
              titleNormal="DE PRODUCTOS" 
              text="Descubrí la mejor calidad en filtros, repuestos, herramientas de corte, tren rodante y accesorios." 
