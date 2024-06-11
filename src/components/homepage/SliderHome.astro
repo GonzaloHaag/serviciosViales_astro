@@ -1,70 +1,60 @@
 ---
-import HomeSliderBgImage from "./HomeSliderBgImage.astro";
+import { Image } from 'astro:assets';
 import bannerPortal from '../../images/banners-home-slide/Banner-portal-SV.webp';
 import bannerProductos from '../../images/banners-home-slide/banner-productos-home.webp';
 import bannerCrecemos from '../../images/banners-home-slide/SLIDER-crecemos.webp';
-import { Image } from "astro:assets";
+import bannerPortalMobile from '../../images/banners-home-slide/mobile/Banner-portal-SV.webp';
+import bannerProductosMobile from '../../images/banners-home-slide/mobile/banner-productos-home.webp';
+import bannerCrecemosMobile from '../../images/banners-home-slide/mobile/SLIDER-crecemos.webp';
+import HomeSliderBgImage from './HomeSliderBgImage.astro';
 ---
+<section class="slider">
+ <!-- <Image src={bannerPortal} alt='banner portal' draggable="false" />
+ <Image src={bannerProductos} alt='banner productos' draggable="false" />
+ <Image src={bannerCrecemos} alt='banner crecemos' draggable="false" />
+ <Image src={bannerProductos} alt='banner productos' draggable="false" /> -->
+ <div class="w-full h-full bg-blend-color bg-black/40 ">
+    <video autoplay muted loop class="h-full w-full object-cover absolute -z-10 aspect-video" poster="/assets/background-sections/poster-video.webp">
+        <source src="/assets/video/SV-WEB-opti.mp4" type="video/mp4" />
+    </video>
+    <HomeSliderBgImage 
+               titleBold="TU SOCIO" 
+               titleNormal="CONFIABLE" 
+               text="Ofrecemos excelencia y una amplia gama de productos para el óptimo funcionamiento de tu equipo." 
+               buttonText="Conoce a SV"
+               target_blank={parseInt('0')}
+               buttonHref="/nosotros"
+   />
+</div>
 
-<section class="slider relative w-full hidden lg:block lg:h-[calc(100vh - 8rem)] overflow-hidden">
-    <div class="tabs">
-        <input id="one" type="radio" name="slider" checked />
-        <input id="two" type="radio" name="slider" />
-        <input id="three" type="radio" name="slider" />
-        <input id="four" type="radio" name="slider" />
-        
-        <div class="buttons">
-            <label for="one"></label>
-            <label for="two"></label>
-            <label for="three"></label>
-            <label for="four"></label>
-        </div>
-        
-        <div class="content relative w-[400vw] flex transition-all duration-300">
-            <div class="box one bg-blend-color bg-black/40 bg-center bg-cover bg-no-repeat">
-                <video src="/assets/video/SV-WEB-opti.mp4" autoplay muted loop class="h-full w-full object-cover absolute -z-10 aspect-video" id="video-sv" poster="/assets/background-sections/poster-video.webp" />
-                <div
-                class="text-white text-xl w-full min-h-[calc(100vh-9rem)] lg:min-h-[calc(100vh-8rem)] xl:container xl:mx-auto flex flex-col justify-center px-4 xl:px-0"
-            >
-                <div class="flex flex-col text-start lg:gap-2">
-                    <h2 class="text-2xl lg:text-6xl font-black">TU SOCIO</h2>
-                    <h3 class="text-2xl lg:text-6xl font-normal">CONFIABLE</h3>
-                </div>
-                <p class="mt-6 max-w-[540px]">Ofrecemos excelencia y una amplia gama de productos para el óptimo funcionamiento de tu equipo.</p>
-                <a
-                    href='/nosotros'
-                    
-                    class="mt-6 px-10 py-3 lg:px-10 lg:py-5 bg-sv-blue text-white rounded-full w-max transition-colors duration-300 hover:bg-sv-negro"
-                >
-                Conoce a SV
-                </a>
-            </div>
-            </div>
-            <div class="box two bg-blend-color bg-black/40 relative">
-                <Image src={bannerPortal} alt="banner portal" class="absolute w-full h-full inset-0 -z-10 object-cover object-center" />
-                <HomeSliderBgImage 
+ <div class="w-full h-full bg-blend-color bg-black/40 ">
+     <Image src={ bannerPortal } alt='banner portal' draggable="false" class='absolute w-full h-full inset-0 -z-10' draggable="false" />
+     <Image src={bannerPortalMobile} alt="banner portal" class="block lg:hidden absolute w-full h-full inset-0 -z-10 object-cover object-center" draggable="false" />
+     <HomeSliderBgImage 
                 titleBold="LO QUE NECESITAS," 
                 titleNormal="FÁCIL Y RAPIDO" 
                 text="Registrate ahora y accede a precios especiales dentro de nuestro portal de compras." 
                 buttonText="Registrarse"
                 target_blank={parseInt('1')}
                 buttonHref="https://portal.sv.com.ar/crearusuario.aspx"
-                />
-            </div>
-            <div class="box three bg-blend-color bg-black/40 relative">
-                <Image src={bannerProductos} alt="banner productos" class="absolute w-full h-full inset-0 -z-10 object-cover object-center" />
-                <HomeSliderBgImage 
-                titleBold="AMPLIA VARIEDAD" 
-                titleNormal="DE PRODUCTOS" 
-                text="Descubrí la mejor calidad en filtros, repuestos, herramientas de corte, tren rodante y accesorios." 
-                buttonText="Nuestros productos"
-                target_blank={parseInt('0')}
-                buttonHref="/productos"
-                />
-            </div>
-            <div class="box four bg-blend-color bg-black/40 relative">
-            <Image src={bannerCrecemos} alt="banner crecemos" loading="lazy" class="absolute w-full h-full inset-0 -z-10 object-cover object-center" />
-            <HomeSliderBgImage 
+    />
+ </div>
+ <div class="w-full h-full bg-blend-color bg-black/40 ">
+    <Image src={ bannerProductos } alt='banner productos' draggable="false" class='absolute w-full h-full inset-0 -z-10' draggable="false" />
+    <Image src={bannerProductosMobile} alt="banner portal" class="block lg:hidden absolute w-full h-full inset-0 -z-10 object-cover object-center" draggable="false" />
+    <HomeSliderBgImage 
+    titleBold="AMPLIA VARIEDAD" 
+    titleNormal="DE PRODUCTOS" 
+    text="Descubrí la mejor calidad en filtros, repuestos, herramientas de corte, tren rodante y accesorios." 
+    buttonText="Nuestros productos"
+    target_blank={parseInt('0')}
+    buttonHref="/productos"
+    />
+</div>
+<div class="w-full h-full bg-blend-color bg-black/40 ">
+    <Image src={ bannerCrecemos } alt='banner portal' draggable="false" class='absolute w-full h-full inset-0 -z-10' draggable="false" />
+    <Image src={ bannerCrecemosMobile } alt="banner portal" class="block lg:hidden absolute w-full h-full inset-0 -z-10 object-cover object-center" draggable="false" />
+    <HomeSliderBgImage 
              titleBold="CRECEMOS JUNTOS" 
              titleNormal="HACIA EL ÉXITO" 
              text="Son el motor fundamental de nuestro crecimiento, avanzamos gracias a su dedicación y compromiso." 
@@ -72,66 +62,134 @@ import { Image } from "astro:assets";
              target_blank={parseInt('0')}
              buttonHref="/nosotros/trabaja-con-nosotros"
              />
-            </div>
-        </div>
-    </div>
+</div>
+
 </section>
+    <div class="dots">
+        <div class="dots1"></div>
+        <div class="dots2"></div>
+        <div class="dots3"></div>
+        <div class="dots4"></div>
+    </div>
 
 <style>
-
-   .tabs input {
-    visibility: hidden;
-    display: none
-   }
-   .buttons {
-    display: inline-block;
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-    z-index: 100;
-   }
-   .buttons label {
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    opacity: 0.6;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.3s;
+    .slider {
+        width: 100%;
+        height: calc(100vh - 9rem);
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        cursor: grab;
+        user-select: none;
     }
-    .tabs input:nth-child(1):checked ~ .buttons label:nth-child(1),
-    .tabs input:nth-child(2):checked ~ .buttons label:nth-child(2),
-    .tabs input:nth-child(3):checked ~ .buttons label:nth-child(3),
-    .tabs input:nth-child(4):checked ~ .buttons label:nth-child(4)
-     {
-        width: 40px;
+    .slider div{
+        position: relative;
+        width: 100%;
+        flex: 0 0 100%;
+        left: 0;
+        transition: 1.2s;
+    }
+    .dots {
+        display: flex;
+        position: absolute;
+        bottom: 2rem;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .dots div {
+        height: 20px;
+        width: 20px;
+        border-radius: 20px;
+        transition: 0.7s;
+        position: relative;
+        background-color: white;
+        opacity: 0.6;
+    }
+    .dots div:nth-child(1) {
+        scale: 1.2;
+        border: 1px solid white;
         opacity: 1;
     }
-    
-    .content .box {
-        position: relative;
-        width: 100vw;
+    @media (min-width:1024px) {
+        .slider {
+        width: 100%;
         height: calc(100vh - 8rem);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        user-select: none;
-        
     }
-    
-    .tabs input:nth-child(1):checked ~ .content {
-        left: 0;
-    }
-    .tabs input:nth-child(2):checked ~ .content {
-        left: -100vw;
-    }
-    .tabs input:nth-child(3):checked ~ .content {
-        left: -200vw;
-    }
-    .tabs input:nth-child(4):checked ~ .content {
-        left: -300vw;
     }
 </style>
+<script is:inline>
+
+    document.addEventListener('astro:page-load',() => {
+        let count = 1;
+    let customChange = false;
+    const sliding = (x) => {
+        let left = `${-x*100}%`;
+        let allSlide = document.querySelector('.slider').querySelectorAll('div');
+        let allDots = document.querySelector('.dots').querySelectorAll('div');
+
+        allSlide.forEach((element) => {
+            element.style.left=left;
+        })
+        allDots.forEach((dots) => {
+             dots.style.border = "unset";
+             dots.style.scale = "1";
+             dots.style.opacity = 0.6;
+        });
+        // active dot
+        allDots[x].style.transition = '0.7s';
+        allDots[x].style.scale='1.2';
+        allDots[x].style.opacity='1';
+    }
+
+    setInterval(() => {
+        if(customChange != true ) {
+            if(count === 4) {
+                sliding(0);
+                count = 1;
+            }
+            else {
+                sliding(count);
+                count +=1;
+            }
+        }
+    }, 8000);
+
+    // Deslizamiento hacia la izquierda
+    const leftSwipe = () => {
+        customChange = true;
+        setTimeout(() => {customChange=false},6000);
+        if(count === 1) {
+            sliding(3);
+            count = 4;
+        }
+        else {
+            count -= 1;
+            sliding(count - 1);
+        }
+    }
+
+    //Deslizamiento hacia la derecha 
+    const rightSwipe = () => {
+        customChange = true;
+        setTimeout(() => {customChange=false},6000);
+        if(count === 4) {
+            sliding(0);
+            count = 1;
+        }
+        else {
+            sliding(count);
+            count += 1;
+        }
+    }
+    document.querySelector('.slider').onpointerdown=(e) => {
+        let initX = e.clientX;
+        document.querySelector('.slider').onpointerup=(up) => {
+            let finalX = up.clientX;
+            finalX - initX > 0 ? leftSwipe() : rightSwipe();
+        }
+    }
+    })
+   
+</script>
