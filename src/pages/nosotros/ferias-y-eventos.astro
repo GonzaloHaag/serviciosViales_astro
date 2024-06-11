@@ -186,34 +186,4 @@ import Layout from "../../layouts/Layout.astro";
         </div>
     </section>
 </Layout>
-<script>
-    import "@justinribeiro/lite-youtube";
-    import Swiper from "swiper";
-    import "swiper/css";
-    import { Navigation } from "swiper/modules";
-    import "swiper/css/navigation";
 
-    document.addEventListener("astro:page-load", () => {
-        new Swiper(".swiper-container-eventos", {
-            slidesPerView: 1,
-            modules: [Navigation],
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            loop:true
-        });
-    });
-</script>
-<style>
-    .swiper-button-next::after,.swiper-button-prev::after{
-        font-size: 20px !important;
-        font-weight: 900 !important;
-    }
-    .swiper-container-eventos .swiper-slide {
-        margin: 0 auto !important;
-       display: flex;
-       justify-content: center;
-    }
-   
-</style>

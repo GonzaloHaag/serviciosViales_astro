@@ -1,0 +1,175 @@
+---
+import bannerPortal from '../../images/banners-home-slide/mobile/Banner-portal-SV.webp';
+import bannerProductos from '../../images/banners-home-slide/mobile/banner-productos-home.webp';
+import bannerCrecemos from '../../images/banners-home-slide/mobile/SLIDER-crecemos.webp';
+import { Image } from "astro:assets";
+---
+<section class="relative block lg:hidden">
+    <div class="slider">
+        <button name="img_1" class="flex items-center relative bg-blend-color bg-black/40">
+            <video src="/assets/video/SV-WEB-opti.mp4" autoplay muted loop class="h-full w-full object-cover absolute -z-10 aspect-video" id="video-sv" poster="/assets/background-sections/mobile/poster-video.webp" />
+            <div class="px-4 w-full text-white flex flex-col text-start">
+                <div class="flex flex-col text-start">
+                    <h2 class="text-2xl font-black">TU SOCIO</h2>
+                    <h3 class="text-2xl font-normal">CONFIABLE</h3>
+                </div>
+                <p class="mt-4 max-w-[540px]">Ofrecemos excelencia y una amplia gama de productos para el óptimo funcionamiento de tu equipo.</p>
+                <a
+                href='/nosotros'
+                class="mt-6 px-10 py-3 bg-sv-blue text-white rounded-full w-max transition-colors duration-300 hover:bg-sv-negro"
+            >
+                Conoce a SV
+            </a>
+            </div>
+           
+        </button>
+        <button name="img_2" class="flex items-center relative bg-blend-color bg-black/40">
+            <Image src={bannerPortal} alt='banner portal' class='absolute h-full w-full inset-0 -z-10 object-contain object-center' />
+            <div class="px-4 w-full text-white flex flex-col text-start">
+                <div class="flex flex-col text-start">
+                    <h2 class="text-2xl font-black">LO QUE NECESITAS,</h2>
+                    <h3 class="text-2xl font-normal">FÁCIL Y RÁPIDO</h3>
+                </div>
+                <p class="mt-4 max-w-[540px]">Registrate ahora y accede a precios especiales dentro de nuestro portal de compras.</p>
+                <a
+                href='https://portal.sv.com.ar/crearusuario.aspx'
+                rel=noreferrer
+                target="_blank"
+                class="mt-6 px-10 py-3 bg-sv-blue text-white rounded-full w-max transition-colors duration-300 hover:bg-sv-negro"
+            >
+                Registrarse
+            </a>
+            </div>
+        </button>
+        <button name="img_3" class="flex items-center relative bg-blend-color bg-black/40">
+            <Image src={bannerProductos} alt='banner portal' class='absolute h-full w-full inset-0 -z-10 object-contain object-center' />
+            <div class="px-4 w-full text-white flex flex-col text-start">
+                <div class="flex flex-col text-start">
+                    <h2 class="text-2xl font-black">AMPLIA VARIEDAD</h2>
+                    <h3 class="text-2xl font-normal">DE PRODUCTOS</h3>
+                </div>
+                <p class="mt-4 max-w-[540px]">Descubrí la mejor calidad en filtros, repuestos, herramientas de corte, tren rodante y accesorios.</p>
+                <a
+                href='/productos'
+                class="mt-6 px-10 py-3 bg-sv-blue text-white rounded-full w-max transition-colors duration-300 hover:bg-sv-negro"
+            >
+                Nuestros productos
+            </a>
+            </div>
+        </button>
+        <button name="img_4" class="flex items-center relative bg-blend-color bg-black/40">
+            <Image src={bannerCrecemos} alt='banner portal' class='absolute h-full w-full inset-0 -z-10 object-contain object-center' />
+            <div class="px-4 w-full text-white flex flex-col text-start">
+                <div class="flex flex-col text-start">
+                    <h2 class="text-2xl font-black">CRECEMOS JUNTOS</h2>
+                    <h3 class="text-2xl font-normal">HACIA EL ÉXITO</h3>
+                </div>
+                <p class="mt-4 max-w-[540px]">Son el motor fundamental de nuestro crecimiento, avanzamos gracias a su dedicación y compromiso.</p>
+                <a
+                href='/nosotros/trabaja-con-nosotros'
+                class="mt-6 px-10 py-3 bg-sv-blue text-white rounded-full w-max transition-colors duration-300 hover:bg-sv-negro"
+            >
+                Trabajá con nosotros
+            </a>
+            </div>
+        </button>
+    </div>
+
+    <div
+        style="background: radial-gradient(ellipse 80% 80% at 50% -20%,#7877c64d,#fff0); position: absolute; top: 0; width: 100%; height: 100%; left:0; z-index: -1"
+    >
+    </div>
+
+    <ul class="markers">
+        <li><a href="#img_1"></a></li>
+        <li><a href="#img_2"></a></li>
+        <li><a href="#img_3"></a></li>
+        <li><a href="#img_4"></a></li>
+    </ul>
+</section>
+<style>
+    section {
+        timeline-scope: --carousel;
+    }
+
+    .markers li:nth-child(1) {
+        --i: 1;
+    }
+
+    .markers li:nth-child(2) {
+        --i: 2;
+    }
+
+    .markers li:nth-child(3) {
+        --i: 3;
+    }
+
+    .markers li:nth-child(4) {
+        --i: 4;
+    }
+
+    .slider {
+        scroll-timeline: --carousel x;
+        display: flex;
+        flex-direction: row;
+        border-radius: 4px;
+        width: 100%;
+        height: calc(100vh - 9rem);
+        aspect-ratio: 16/9;
+
+        scroll-snap-type: x mandatory;
+        overscroll-behavior: contain;
+        scroll-behavior: smooth;
+
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        box-shadow: 0px 0px 50px 10px rgba(255, 255, 255, 0.1);
+    }
+
+    .markers a {
+        display: block;
+        width: 16px;
+        aspect-ratio: 1;
+        background: white;
+        opacity: 0.7;
+        border-radius: 50%;
+
+        animation: activate linear;
+        animation-timeline: --carousel;
+        animation-range: calc((var(--i) - 1) * 25%) calc(var(--i) * 25% + 1px);
+    }
+
+    @keyframes activate {
+        0%,
+        100% {
+            background: #09f;
+            opacity: 1;
+        }
+    }
+
+    .slider button {
+        flex: 0 0 100%;
+        width: 100%;
+
+        scroll-snap-align: center;
+    }
+
+    .slider img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .markers {
+        display: flex;
+        flex-direction: row;
+        gap: 0.25em;
+        list-style: none;
+        font-size: 2em;
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        translate: -50% 0;
+    }
+</style>

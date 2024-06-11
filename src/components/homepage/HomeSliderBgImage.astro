@@ -8,17 +8,12 @@ interface Props {
     text: string;
     buttonText: string;
     buttonHref?: string;
-    bgImage: string;
     target_blank:number;
 }
-const { titleBold, titleNormal, text, buttonText, bgImage, buttonHref,target_blank } =
+const { titleBold, titleNormal, text, buttonText, buttonHref,target_blank } =
     Astro.props;
 ---
 
-<div
-    class={`swiper-slide w-full min-h-[calc(100vh-9rem)] lg:min-h-[calc(100vh-8rem)] ${bgImage} bg-blend-color bg-black/40 bg-cover bg-center relative flex flex-col justify-center`}
->
-        <!-- ... -->
         <div
             class="text-white text-xl w-full min-h-[calc(100vh-9rem)] lg:min-h-[calc(100vh-8rem)] xl:container xl:mx-auto flex flex-col justify-center px-4 xl:px-0"
         >
@@ -35,4 +30,4 @@ const { titleBold, titleNormal, text, buttonText, bgImage, buttonHref,target_bla
                 {buttonText}
             </a>
         </div>
-    </div>
+

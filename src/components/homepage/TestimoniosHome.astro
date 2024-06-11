@@ -112,38 +112,5 @@
         <div class="swiper-pagination"></div>
     </div>
 </section>
-<style>
-    .swiper-slide {
-        @apply w-full lg:w-96 min-h-[400px] bg-sv-blue text-center px-10 py-5 flex flex-col rounded-xl mb-20;
-    }
-    .swiper-pagination {
-        @apply mt-36;
-    }
-</style>
-<script>
-    import Swiper from "swiper";
-    import "swiper/css";
-    import "swiper/css/effect-coverflow";
-    import "swiper/css/pagination";
-    import { Pagination, EffectCoverflow } from "swiper/modules";
-    document.addEventListener("astro:page-load", () => {
-        new Swiper(".swiper-container-testimonios", {
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: "auto",
-            modules: [Pagination, EffectCoverflow],
-            coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-            },
-            loop: true,
-        });
-    });
-</script>
+
+
