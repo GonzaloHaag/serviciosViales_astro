@@ -9,10 +9,6 @@ import bannerCrecemosMobile from '../../images/banners-home-slide/mobile/SLIDER-
 import HomeSliderBgImage from './HomeSliderBgImage.astro';
 ---
 <section class="slider">
- <!-- <Image src={bannerPortal} alt='banner portal' draggable="false" />
- <Image src={bannerProductos} alt='banner productos' draggable="false" />
- <Image src={bannerCrecemos} alt='banner crecemos' draggable="false" />
- <Image src={bannerProductos} alt='banner productos' draggable="false" /> -->
  <div class="w-full h-full bg-blend-color bg-black/40 ">
     <video autoplay muted loop class="h-full w-full object-cover absolute -z-10 aspect-video" poster="/assets/background-sections/poster-video.webp">
         <source src="/assets/video/SV-WEB-opti.mp4" type="video/mp4" />
@@ -28,7 +24,7 @@ import HomeSliderBgImage from './HomeSliderBgImage.astro';
 </div>
 
  <div class="w-full h-full bg-blend-color bg-black/40 ">
-     <Image src={ bannerPortal } alt='banner portal' draggable="false" class='absolute w-full h-full inset-0 -z-10' draggable="false" />
+     <Image src={ bannerPortal } alt='banner portal' draggable="false" class='absolute w-full h-full inset-0 -z-10' />
      <Image src={bannerPortalMobile} alt="banner portal" class="block lg:hidden absolute w-full h-full inset-0 -z-10 object-cover object-center" draggable="false" />
      <HomeSliderBgImage 
                 titleBold="LO QUE NECESITAS," 
@@ -40,7 +36,7 @@ import HomeSliderBgImage from './HomeSliderBgImage.astro';
     />
  </div>
  <div class="w-full h-full bg-blend-color bg-black/40 ">
-    <Image src={ bannerProductos } alt='banner productos' draggable="false" class='absolute w-full h-full inset-0 -z-10' draggable="false" />
+    <Image src={ bannerProductos } alt='banner productos' draggable="false" class='absolute w-full h-full inset-0 -z-10' />
     <Image src={bannerProductosMobile} alt="banner portal" class="block lg:hidden absolute w-full h-full inset-0 -z-10 object-cover object-center" draggable="false" />
     <HomeSliderBgImage 
     titleBold="AMPLIA VARIEDAD" 
@@ -52,7 +48,7 @@ import HomeSliderBgImage from './HomeSliderBgImage.astro';
     />
 </div>
 <div class="w-full h-full bg-blend-color bg-black/40 ">
-    <Image src={ bannerCrecemos } alt='banner portal' draggable="false" class='absolute w-full h-full inset-0 -z-10' draggable="false" />
+    <Image src={ bannerCrecemos } alt='banner portal' draggable="false" class='absolute w-full h-full inset-0 -z-10' />
     <Image src={ bannerCrecemosMobile } alt="banner portal" class="block lg:hidden absolute w-full h-full inset-0 -z-10 object-cover object-center" draggable="false" />
     <HomeSliderBgImage 
              titleBold="CRECEMOS JUNTOS" 
@@ -63,7 +59,6 @@ import HomeSliderBgImage from './HomeSliderBgImage.astro';
              buttonHref="/nosotros/trabaja-con-nosotros"
              />
 </div>
-
 </section>
     <div class="dots">
         <div class="dots1"></div>
@@ -82,7 +77,7 @@ import HomeSliderBgImage from './HomeSliderBgImage.astro';
         cursor: grab;
         user-select: none;
     }
-    .slider div{
+    .slider div {
         position: relative;
         width: 100%;
         flex: 0 0 100%;
@@ -108,9 +103,9 @@ import HomeSliderBgImage from './HomeSliderBgImage.astro';
         opacity: 0.6;
     }
     .dots div:nth-child(1) {
-        scale: 1.2;
-        border: 1px solid white;
+        scale: 1;
         opacity: 1;
+        width: 40px;
     }
     @media (min-width:1024px) {
         .slider {
@@ -120,76 +115,99 @@ import HomeSliderBgImage from './HomeSliderBgImage.astro';
     }
 </style>
 <script is:inline>
-
-    document.addEventListener('astro:page-load',() => {
-        let count = 1;
+document.addEventListener('astro:page-load', () => {
+    let count = 1;
     let customChange = false;
+
     const sliding = (x) => {
-        let left = `${-x*100}%`;
+        let left = `${-x * 100}%`;
         let allSlide = document.querySelector('.slider').querySelectorAll('div');
         let allDots = document.querySelector('.dots').querySelectorAll('div');
 
         allSlide.forEach((element) => {
-            element.style.left=left;
-        })
-        allDots.forEach((dots) => {
-             dots.style.border = "unset";
-             dots.style.scale = "1";
-             dots.style.opacity = 0.6;
+            element.style.left = left;
         });
-        // active dot
+        allDots.forEach((dots) => {
+            dots.style.border = "unset";
+            dots.style.scale = "1";
+            dots.style.opacity = 0.6;
+            dots.style.width='20px';
+        });
         allDots[x].style.transition = '0.7s';
-        allDots[x].style.scale='1.2';
-        allDots[x].style.opacity='1';
-    }
+        allDots[x].style.scale = '1';
+        allDots[x].style.opacity = '1';
+        allDots[x].style.width = '40px';
+    };
 
     setInterval(() => {
-        if(customChange != true ) {
-            if(count === 4) {
+        if (!customChange) {
+            if (count === 4) {
                 sliding(0);
                 count = 1;
-            }
-            else {
+            } else {
                 sliding(count);
-                count +=1;
+                count += 1;
             }
         }
     }, 8000);
 
-    // Deslizamiento hacia la izquierda
     const leftSwipe = () => {
         customChange = true;
-        setTimeout(() => {customChange=false},6000);
-        if(count === 1) {
+        setTimeout(() => { customChange = false }, 6000);
+        if (count === 1) {
             sliding(3);
             count = 4;
-        }
-        else {
+        } else {
             count -= 1;
             sliding(count - 1);
         }
-    }
+    };
 
-    //Deslizamiento hacia la derecha 
     const rightSwipe = () => {
         customChange = true;
-        setTimeout(() => {customChange=false},6000);
-        if(count === 4) {
+        setTimeout(() => { customChange = false }, 6000);
+        if (count === 4) {
             sliding(0);
             count = 1;
-        }
-        else {
+        } else {
             sliding(count);
             count += 1;
         }
-    }
-    document.querySelector('.slider').onpointerdown=(e) => {
-        let initX = e.clientX;
-        document.querySelector('.slider').onpointerup=(up) => {
-            let finalX = up.clientX;
-            finalX - initX > 0 ? leftSwipe() : rightSwipe();
+    };
+
+    let startX, startY;
+    const handleDragStart = (e) => {
+        startX = e.touches ? e.touches[0].clientX : e.clientX;
+        startY = e.touches ? e.touches[0].clientY : e.clientY;
+    };
+
+    const handleDragMove = (e) => {
+        if (e.touches) {
+            const deltaX = e.touches[0].clientX - startX;
+            const deltaY = e.touches[0].clientY - startY;
+            
+            // Solo prevenir el desplazamiento predeterminado si el movimiento horizontal es significativo
+            if (Math.abs(deltaX) > Math.abs(deltaY)) {
+                e.preventDefault();  // Evita que la página se desplace horizontalmente
+            }
         }
-    }
-    })
-   
+    };
+
+    const handleDragEnd = (e) => {
+        let endX = e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
+        if (startX > endX + 50) {
+            rightSwipe();
+        } else if (startX < endX - 50) {
+            leftSwipe();
+        }
+    };
+
+    const slider = document.querySelector('.slider');
+    slider.addEventListener('mousedown', handleDragStart);
+    slider.addEventListener('touchstart', handleDragStart);
+    slider.addEventListener('mousemove', handleDragMove);
+    slider.addEventListener('touchmove', handleDragMove);
+    slider.addEventListener('mouseup', handleDragEnd);
+    slider.addEventListener('touchend', handleDragEnd);
+});
 </script>
