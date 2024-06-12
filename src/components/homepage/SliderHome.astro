@@ -115,99 +115,112 @@ import HomeSliderBgImage from './HomeSliderBgImage.astro';
     }
 </style>
 <script is:inline>
-document.addEventListener('astro:page-load', () => {
-    let count = 1;
-    let customChange = false;
-
-    const sliding = (x) => {
-        let left = `${-x * 100}%`;
-        let allSlide = document.querySelector('.slider').querySelectorAll('div');
-        let allDots = document.querySelector('.dots').querySelectorAll('div');
-
-        allSlide.forEach((element) => {
+    (() => {
+      const initializeSlider = () => {
+        let count = 1;
+        let customChange = false;
+  
+        const sliding = (x) => {
+          let left = `${-x * 100}%`;
+          let allSlide = document.querySelector('.slider').querySelectorAll('div');
+          let allDots = document.querySelector('.dots').querySelectorAll('div');
+  
+          allSlide.forEach((element) => {
             element.style.left = left;
-        });
-        allDots.forEach((dots) => {
+          });
+          allDots.forEach((dots) => {
             dots.style.border = "unset";
             dots.style.scale = "1";
             dots.style.opacity = 0.6;
-            dots.style.width='20px';
-        });
-        allDots[x].style.transition = '0.7s';
-        allDots[x].style.scale = '1';
-        allDots[x].style.opacity = '1';
-        allDots[x].style.width = '40px';
-    };
-
-    setInterval(() => {
-        if (!customChange) {
+            dots.style.width = '20px';
+          });
+          allDots[x].style.transition = '0.7s';
+          allDots[x].style.scale = '1';
+          allDots[x].style.opacity = '1';
+          allDots[x].style.width = '40px';
+        };
+  
+        const intervalId = setInterval(() => {
+          if (!customChange) {
             if (count === 4) {
-                sliding(0);
-                count = 1;
+              sliding(0);
+              count = 1;
             } else {
-                sliding(count);
-                count += 1;
+              sliding(count);
+              count += 1;
             }
-        }
-    }, 8000);
-
-    const leftSwipe = () => {
-        customChange = true;
-        setTimeout(() => { customChange = false }, 6000);
-        if (count === 1) {
+          }
+        }, 8000);
+  
+        const leftSwipe = () => {
+          customChange = true;
+          setTimeout(() => { customChange = false }, 6000);
+          if (count === 1) {
             sliding(3);
             count = 4;
-        } else {
+          } else {
             count -= 1;
             sliding(count - 1);
-        }
-    };
-
-    const rightSwipe = () => {
-        customChange = true;
-        setTimeout(() => { customChange = false }, 6000);
-        if (count === 4) {
+          }
+        };
+  
+        const rightSwipe = () => {
+          customChange = true;
+          setTimeout(() => { customChange = false }, 6000);
+          if (count === 4) {
             sliding(0);
             count = 1;
-        } else {
+          } else {
             sliding(count);
             count += 1;
-        }
-    };
-
-    let startX, startY;
-    const handleDragStart = (e) => {
-        startX = e.touches ? e.touches[0].clientX : e.clientX;
-        startY = e.touches ? e.touches[0].clientY : e.clientY;
-    };
-
-    const handleDragMove = (e) => {
-        if (e.touches) {
+          }
+        };
+  
+        let startX, startY;
+        const handleDragStart = (e) => {
+          startX = e.touches ? e.touches[0].clientX : e.clientX;
+          startY = e.touches ? e.touches[0].clientY : e.clientY;
+        };
+  
+        const handleDragMove = (e) => {
+          if (e.touches) {
             const deltaX = e.touches[0].clientX - startX;
             const deltaY = e.touches[0].clientY - startY;
-            
-            // Solo prevenir el desplazamiento predeterminado si el movimiento horizontal es significativo
+  
             if (Math.abs(deltaX) > Math.abs(deltaY)) {
-                e.preventDefault();  // Evita que la página se desplace horizontalmente
+              e.preventDefault();
             }
-        }
-    };
-
-    const handleDragEnd = (e) => {
-        let endX = e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
-        if (startX > endX + 50) {
+          }
+        };
+  
+        const handleDragEnd = (e) => {
+          let endX = e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
+          if (startX > endX + 50) {
             rightSwipe();
-        } else if (startX < endX - 50) {
+          } else if (startX < endX - 50) {
             leftSwipe();
+          }
+        };
+  
+        const slider = document.querySelector('.slider');
+        slider.addEventListener('mousedown', handleDragStart);
+        slider.addEventListener('touchstart', handleDragStart);
+        slider.addEventListener('mousemove', handleDragMove);
+        slider.addEventListener('touchmove', handleDragMove);
+        slider.addEventListener('mouseup', handleDragEnd);
+        slider.addEventListener('touchend', handleDragEnd);
+  
+        return intervalId;
+      };
+  
+      const setupSlider = () => {
+        if (window.sliderIntervalId) {
+          clearInterval(window.sliderIntervalId);
         }
-    };
-
-    const slider = document.querySelector('.slider');
-    slider.addEventListener('mousedown', handleDragStart);
-    slider.addEventListener('touchstart', handleDragStart);
-    slider.addEventListener('mousemove', handleDragMove);
-    slider.addEventListener('touchmove', handleDragMove);
-    slider.addEventListener('mouseup', handleDragEnd);
-    slider.addEventListener('touchend', handleDragEnd);
-});
-</script>
+        window.sliderIntervalId = initializeSlider();
+      };
+  
+      document.addEventListener('astro:page-load', setupSlider);
+      document.addEventListener('astro:after-swap', setupSlider);
+    })();
+  </script>

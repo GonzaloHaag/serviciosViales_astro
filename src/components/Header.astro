@@ -5,13 +5,13 @@ const urlActual = Astro.url.pathname;
 ---
 
 <header class="hidden lg:flex flex-col sticky w-full z-10 top-0">
-    <div class="w-full bg-sv-negro text-white min-h-8 flex items-center">
+    <div class="w-full bg-sv-negro text-white h-8 flex items-center">
         <div class="w-full px-4 xl:container xl:px-0 xl:mx-auto">
             <p>+54 9 (342) 631-1894 | contacto@serviciosviales.com.ar</p>
         </div>
     </div>
 
-    <div class="bg-white w-full min-h-24 flex items-center">
+    <div class="bg-white w-full h-24 flex items-center">
         <div
             class="w-full px-4 xl:container xl:px-0 xl:mx-auto flex items-center justify-between"
         >
@@ -176,13 +176,7 @@ const urlActual = Astro.url.pathname;
                                     >Trabaja con nosotros</a
                                 >
                             </li>
-                            <li>
-                                <a
-                                    href="/programa-de-beneficios"
-                                    class={`transition-colors duration-300 ${urlActual === "/programa-de-beneficios" ? "text-sv-blue" : "text-sv-negro"}`}
-                                    >Programa de beneficios</a
-                                >
-                            </li>
+                          
                         </ul>
                     </li>
                     <!-- <li>
