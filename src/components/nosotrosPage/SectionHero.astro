@@ -1,13 +1,14 @@
 ---
 interface Props {
-    bgImage:string;
+    bgImageUrl:string;
     span:string;
     titleBold:string;
     titleNormal:string
 }
-const { bgImage,span,titleBold,titleNormal } = Astro.props;
+const { bgImageUrl,span,titleBold,titleNormal } = Astro.props;
 ---
-<section class={`w-full min-h-[600px] relative ${bgImage} bg-blend-color bg-black/60 bg-cover bg-center`}>
+<section class='w-full min-h-[600px] relative bg-blend-color bg-black/60'>
+    <img src={bgImageUrl} alt={titleBold} class="absolute w-full h-full inset-0 -z-10 object-cover object-center" loading="eager" />
     <div class="w-full xl:container px-4 xl:px-0 xl:mx-auto min-h-[600px] flex flex-col justify-center text-white">
        <span class="text-lg lg:text-xl font-semibold">{ span }</span>
        <h1 class="text-[1.5rem] md:text-[3.5rem] font-black">{ titleBold }</h1>

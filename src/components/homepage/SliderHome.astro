@@ -1,17 +1,10 @@
 ---
-import { Image } from 'astro:assets';
-import bannerPortal from '../../images/banners-home-slide/Banner-portal-SV.webp';
-import bannerProductos from '../../images/banners-home-slide/banner-productos-home.webp';
-import bannerCrecemos from '../../images/banners-home-slide/SLIDER-crecemos.webp';
-import bannerPortalMobile from '../../images/banners-home-slide/mobile/Banner-portal-SV.webp';
-import bannerProductosMobile from '../../images/banners-home-slide/mobile/banner-productos-home.webp';
-import bannerCrecemosMobile from '../../images/banners-home-slide/mobile/SLIDER-crecemos.webp';
 import HomeSliderBgImage from './HomeSliderBgImage.astro';
 ---
 <section class="slider">
  <div class="w-full h-full bg-blend-color bg-black/40 ">
-    <video autoplay muted loop class="h-full w-full object-cover absolute -z-10 aspect-video" poster="/assets/background-sections/poster-video.webp">
-        <source src="/assets/video/SV-WEB-opti.mp4" type="video/mp4" />
+    <video autoplay muted loop class="h-full w-full object-cover absolute -z-10 aspect-video" poster="/assets/banners-home-slide/poster-video.webp">
+        <source src="/assets/banners-home-slide/video/SV-WEB-opti.mp4" type="video/mp4" />
     </video>
     <HomeSliderBgImage 
                titleBold="TU SOCIO" 
@@ -24,8 +17,12 @@ import HomeSliderBgImage from './HomeSliderBgImage.astro';
 </div>
 
  <div class="w-full h-full bg-blend-color bg-black/40 ">
-     <Image src={ bannerPortal } alt='banner portal' draggable="false" class='absolute w-full h-full inset-0 -z-10' />
-     <Image src={bannerPortalMobile} alt="banner portal" class="block lg:hidden absolute w-full h-full inset-0 -z-10 object-cover object-center" draggable="false" />
+     <img srcset="/assets/banners-home-slide/mobile/Banner-portal-SV-mobile.webp 800w,
+     /assets/banners-home-slide/Banner-portal-SV.webp 1600w" 
+     src='/assets/banners-home-slide/Banner-portal-SV.webp' alt='banner portal' 
+     draggable="false" 
+     class='absolute w-full h-full inset-0 -z-10 object-cover object-center' loading={'eager'}  />
+    
      <HomeSliderBgImage 
                 titleBold="LO QUE NECESITAS," 
                 titleNormal="FÁCIL Y RAPIDO" 
@@ -36,8 +33,12 @@ import HomeSliderBgImage from './HomeSliderBgImage.astro';
     />
  </div>
  <div class="w-full h-full bg-blend-color bg-black/40 ">
-    <Image src={ bannerProductos } alt='banner productos' draggable="false" class='absolute w-full h-full inset-0 -z-10' />
-    <Image src={bannerProductosMobile} alt="banner portal" class="block lg:hidden absolute w-full h-full inset-0 -z-10 object-cover object-center" draggable="false" />
+  <img srcset="/assets/banners-home-slide/mobile/banner-productos-home-mobile.webp 800w,
+  /assets/banners-home-slide/banner-productos-home.webp 1600w" 
+  src='/assets/banners-home-slide/banner-productos-home.webp' alt='banner productos' 
+  draggable="false" 
+  class='absolute w-full h-full inset-0 -z-10 object-cover object-center' loading={'eager'}  />
+   
     <HomeSliderBgImage 
     titleBold="AMPLIA VARIEDAD" 
     titleNormal="DE PRODUCTOS" 
@@ -48,8 +49,12 @@ import HomeSliderBgImage from './HomeSliderBgImage.astro';
     />
 </div>
 <div class="w-full h-full bg-blend-color bg-black/40 ">
-    <Image src={ bannerCrecemos } alt='banner portal' draggable="false" class='absolute w-full h-full inset-0 -z-10' />
-    <Image src={ bannerCrecemosMobile } alt="banner portal" class="block lg:hidden absolute w-full h-full inset-0 -z-10 object-cover object-center" draggable="false" />
+  <img srcset="/assets/banners-home-slide/mobile/SLIDER-crecemos-mobile.webp 800w,
+  /assets/banners-home-slide/SLIDER-crecemos.webp 1600w" 
+  src='/assets/banners-home-slide/SLIDER-crecemos.webp' alt='banner trabajá con nosotros' 
+  draggable="false" 
+  class='absolute w-full h-full inset-0 -z-10 object-cover object-center' loading={'eager'}  />
+    
     <HomeSliderBgImage 
              titleBold="CRECEMOS JUNTOS" 
              titleNormal="HACIA EL ÉXITO" 

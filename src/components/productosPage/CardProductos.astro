@@ -5,13 +5,10 @@ interface Props {
 }
 const { imageUrl, title } = Astro.props;
 ---
-
-
-      
     <div
   class="grid grid-cols-1 md:grid-cols-2 gap-10 bg-transparent border-b border-solid border-slate-300 py-10"
 >
-  <img src={ imageUrl } class="w-full h-full rounded-xl" loading="lazy" />
+  <img src={ imageUrl } class="w-full h-full rounded-xl" loading="lazy" alt={title} />
 
   <div class="flex flex-col text-start justify-center gap-5 items-start">
     <h3 class="text-3xl text-sv-blue font-semibold">

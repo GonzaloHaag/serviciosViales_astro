@@ -7,8 +7,9 @@ import Layout from "../../layouts/Layout.astro";
     description="ALQUILER DE EQUIPOS Plataformas de elevación Descubrí nuestras plataformas de elevación: tijeras, elevadores articulados y telescópicos para trabajos en altura. Con equipos de última generación y seguridad garantizada. ¡Contáctanos para más información! Ver modelos disponibles GS1930/TIJERA GENIE S3219E/TIJERA SNORKEL GS2032/TIJERA GENIE S3226/TIJERA SNORKEL S4726/TIJERA SNORKEL GS3246C/TIJERA GENIE S4732/TIJERA SNORKEL GS3268RT/TIJERA GENIEE450A/BRAZO ART.TIPO “Z” JLG Z45JRT/BRAZO ART.TIPO […]"
 >
     <section
-        class="min-h-[25rem] w-full bg-[url('/assets/background-sections/banner-servicios.webp')] bg-cover bg-center bg-blend-color bg-black/65 flex flex-col justify-center items-center"
+        class="min-h-[25rem] w-full bg-blend-color bg-black/65 flex flex-col justify-center items-center relative"
     >
+    <img src="/assets/background-sections/banner-servicios.webp" class="absolute w-full h-full inset-0 object-center object-cover -z-10" loading="eager"/>
         <div class="flex flex-col text-white text-4xl md:text-6xl text-center">
             <h2 class="font-semibold leading-tight">ALQUILER</h2>
             <h2 class="font-black">DE EQUIPOS</h2>
@@ -23,8 +24,8 @@ import Layout from "../../layouts/Layout.astro";
                 id="plataformas-de-elevacion"
             >
                 <img
-                    class="rounded-xl w-full h-full"
-                    
+                    class="rounded-xl w-full"
+                    loading="eager"
                     src="/assets/servicios/Plataforma-de-elevacion.webp"
                     alt="Plataforma de elevacion"
                 />
@@ -89,8 +90,8 @@ import Layout from "../../layouts/Layout.astro";
                 id="manipuladores-telescópicos"
             >
                 <img
-                    class="rounded-xl w-full h-full"
-                    
+                    class="rounded-xl w-full"
+                    loading="lazy"
                     src="/assets/servicios/sin-marca-01-scaled-1.webp"
                     alt="Manipuladores telescópicos"
                 />
@@ -145,8 +146,8 @@ import Layout from "../../layouts/Layout.astro";
                 id="equipos-varios"
             >
                 <img
-                    class="rounded-xl w-full h-full"
-                    
+                    class="rounded-xl w-full"
+                    loading="lazy"
                     src="/assets/servicios/equipos-varios.webp"
                     alt="Equipos varios"
                 />
@@ -205,8 +206,8 @@ import Layout from "../../layouts/Layout.astro";
                 id="grupos-electrógenos"
             >
                 <img
-                    class="rounded-xl w-full h-full"
-                    
+                    class="rounded-xl w-full"
+                    loading="lazy"
                     src="/assets/servicios/grupo-01-scaled-1.webp"
                     alt="Grupos electrógenos"
                 />
@@ -262,8 +263,8 @@ import Layout from "../../layouts/Layout.astro";
                 id="accesorios"
             >
                 <img
-                    class="rounded-xl w-full h-full"
-                    
+                    class="rounded-xl w-full"
+                    loading="lazy"
                     src="/assets/servicios/accesorios.webp"
                     alt="accesorios"
                 />

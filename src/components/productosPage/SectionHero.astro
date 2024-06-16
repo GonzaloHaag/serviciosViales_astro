@@ -2,14 +2,14 @@
 interface Props {
     titleBold:string;
     subtitle:string;
-    bgImage:string; //Que me pasen el background image
+    bgImageUrl:string; //Que me pasen el background image
 }
-const {titleBold,subtitle,bgImage} = Astro.props;
+const {titleBold,subtitle,bgImageUrl} = Astro.props;
 ---
 <section
-class={`min-h-[25rem] w-full ${bgImage} bg-cover bg-center bg-blend-color bg-black/60 flex flex-col justify-center items-center relative`}
+class={`min-h-[25rem] w-full bg-blend-color bg-black/60 flex flex-col justify-center items-center relative`}
 >
-
+<img src={bgImageUrl} alt={titleBold} class="absolute w-full h-full -z-10 object-cover object-center aspect-video" loading="eager" />
 <div class="flex flex-col text-white text-4xl md:text-6xl text-center">
     <h2 class="font-black leading-tight">{ titleBold }</h2>
     <h2 class="font-semibold">{ subtitle }</h2>

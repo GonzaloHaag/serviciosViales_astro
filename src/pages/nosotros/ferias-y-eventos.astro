@@ -8,12 +8,16 @@ import Layout from "../../layouts/Layout.astro";
 >
     <section class="w-full min-h-[600px] relative">
         <video
-            src="/assets/nosotros/video_nosotros_ferias_y_eventos_opti.mp4"
             autoplay
             muted
             loop
             class="absolute w-full h-full object-cover object-center -z-10"
-        ></video>
+        >
+            <source
+                src="/assets/nosotros/video_nosotros_ferias_y_eventos_opti.mp4"
+                type="video/mp4"
+            />
+        </video>
         <div class="w-full h-full bg-black/60">
             <div
                 class="w-full xl:container px-4 xl:px-0 xl:mx-auto min-h-[600px] flex flex-col justify-center text-white"
@@ -37,26 +41,73 @@ import Layout from "../../layouts/Layout.astro";
                 <h3>QUE VAMOS A</h3>
                 <h3>PARTICIPAR</h3>
             </div>
-            <div class="swiper swiper-container-eventos w-full h-full flex items-center justify-center relative">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="/assets/nosotros/agro.webp" class="object-cover" />
+            <div class="carousel-container w-full">
+                <div class="carousel h-[200px] overflow-hidden relative">
+                    <div
+                        class="slider h-full w-[500%] flex [&>section]:basis-full [&>section]:flex [&>section]:justify-center [&>section]:items-center transition-all duration-300"
+                    >
+                        <section>
+                            <img
+                                src="/assets/nosotros/agro.webp"
+                                class="object-cover"
+                            />
+                        </section>
+
+                        <section>
+                            <img
+                                src="/assets/nosotros/expo-transporte.webp"
+                                class="object-cover"
+                            />
+                        </section>
+
+                        <section>
+                            <img
+                                src="/assets/nosotros/argentina-minning.webp"
+                                class="object-cover"
+                            />
+                        </section>
+
+                        <section>
+                            <img
+                                src="/assets/nosotros/expo-sanjuan.webp"
+                                class="object-cover"
+                            />
+                        </section>
+
+                        <section>
+                            <img
+                                src="/assets/nosotros/agroactiva.webp"
+                                class="object-cover"
+                            />
+                        </section>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="/assets/nosotros/expo-transporte.webp" class="object-cover" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/assets/nosotros/argentina-minning.webp" class="object-cover" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/assets/nosotros/expo-sanjuan.webp" class="object-cover" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/assets/nosotros/agroactiva.webp" class="object-cover" />
+                    <div
+                        class="controls [&>span]:absolute [&>span]:top-1/2 [&>span]:-translate-y-1/2 [&>span]:cursor-pointer"
+                    >
+                        <span class="arrow-left left-3">
+                            <svg
+                                class="w-6 h-6 fill-sv-blue"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 320 512"
+                            >
+                                <path
+                                    d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+                                ></path></svg
+                            >
+                        </span>
+                        <span class="arrow-right right-3">
+                            <svg
+                                class="w-6 h-6 fill-sv-blue"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 320 512"
+                                >
+                                <path
+                                    d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                                ></path></svg
+                            >
+                        </span>
                     </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
             </div>
         </section>
 
@@ -187,3 +238,19 @@ import Layout from "../../layouts/Layout.astro";
     </section>
 </Layout>
 
+<script>
+    import "@justinribeiro/lite-youtube";
+
+    const slider = document.querySelector(".slider") as HTMLElement;
+    const leftArrow = document.querySelector(".arrow-left");
+    const rightArrow = document.querySelector(".arrow-right");
+    let sectionIndex = 0;
+    leftArrow?.addEventListener("click", () => {
+        sectionIndex = sectionIndex > 0 ? sectionIndex - 1 : 0;
+        slider.style.transform = "translate(" + sectionIndex * -20 + "%)";
+    });
+    rightArrow?.addEventListener("click", () => {
+        sectionIndex = sectionIndex < 4 ? sectionIndex + 1 : 4;
+        slider.style.transform = "translate(" + sectionIndex * -20 + "%)";
+    });
+</script>
