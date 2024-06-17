@@ -4,7 +4,9 @@ import HomeSliderBgImage from './HomeSliderBgImage.astro';
 <section class="slider">
  <div class="w-full h-full bg-blend-color bg-black/40 ">
     <video autoplay muted loop class="h-full w-full object-cover absolute -z-10 aspect-video" poster="/assets/banners-home-slide/poster-video.webp">
-        <source src="/assets/banners-home-slide/video/SV-WEB-opti.mp4" type="video/mp4" />
+      <source type="video/mp4" src="/assets/banners-home-slide/video/SV-WEB-opti.mp4"  />
+      <source type="video/webm" src="/assets/banners-home-slide/video/SV-WEB-opti.webm"  />
+    
     </video>
     <HomeSliderBgImage 
                titleBold="TU SOCIO" 
@@ -53,7 +55,7 @@ import HomeSliderBgImage from './HomeSliderBgImage.astro';
   /assets/banners-home-slide/SLIDER-crecemos.webp 1600w" 
   src='/assets/banners-home-slide/SLIDER-crecemos.webp' alt='banner trabajá con nosotros' 
   draggable="false" 
-  class='absolute w-full h-full inset-0 -z-10 object-cover object-center' loading={'eager'}  />
+  class='absolute w-full h-full inset-0 -z-10 object-cover object-center' loading="lazy"  />
     
     <HomeSliderBgImage 
              titleBold="CRECEMOS JUNTOS" 
