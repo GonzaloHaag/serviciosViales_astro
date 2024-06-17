@@ -1,7 +1,7 @@
 <div
     class="form z-10 fixed flex items-center justify-center p-4 lg:p-0 bg-black/70 inset-0 w-full h-full transition-all duration-300 translate-y-[200%] opacity-0 invisible peer-checked:translate-y-0 peer-checked:opacity-100 peer-checked:visible peer-checked:backdrop-opacity-100"
 >
-    <form class="bg-white w-full lg:w-3/5 max-h-[90vh] relative rounded-lg p-6 flex flex-col gap-3 text-start overflow-y-auto">
+    <form action="https://formsubmit.co/gonzalohaag1311@gmail.com" method="POST" class="bg-white w-full lg:w-3/5 max-h-[90vh] relative rounded-lg p-6 flex flex-col gap-3 text-start overflow-y-auto">
         <label for="contactar_ahora" class="absolute right-2 top-2 cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-8 h-8"
                 >
@@ -12,24 +12,26 @@
         </label>
         <h4 class="text-sv-blue font-semibold text-2xl mb-2">Atención al cliente</h4>
         <div class="flex flex-col md:flex-row gap-3">
-           <input type="text" placeholder="Nombre y apellido" required />
-           <input type="number" placeholder="CUIT" required />
+           <input name="nombre y apellido" type="text" placeholder="Nombre y apellido" required />
+           <input name="cuit" type="number" placeholder="CUIT" required />
         </div>
         <div class="flex gap-3">
-            <input type="text" placeholder="Razón social" required />
-            <input type="text" placeholder="Rubro" required />
+            <input name="razón social" type="text" placeholder="Razón social" required />
+            <input name="rubro" type="text" placeholder="Rubro" required />
          </div>
          <div class="flex flex-col md:flex-row gap-3">
-            <input type="email" placeholder="Email" required />
-            <input type="number" placeholder="Teléfono" required />
-            <input type="text" placeholder="Ubicación" />
+            <input name="email" type="email" placeholder="Email" required />
+            <input type="hidden" name="_autoresponse" value="Gracias por rellenar el formulario, pronto nos comunicaremos con usted. Equipo de SV">
+            <input name="teléfono" type="number" placeholder="Teléfono" required />
+            <input name="ubicación" type="text" placeholder="Ubicación" />
          </div>
          <input type="text" placeholder="Motivo" />
          <div class="flex w-full">
-            <textarea rows="6" placeholder="Consulta" class="w-full" />
+            <textarea name="consulta" rows="6" placeholder="Consulta" class="w-full" />
          </div>
        
          <button type="submit" class="block w-max px-8 py-3 text-white rounded-full bg-sv-negro transition-colors duration-300 hover:bg-sv-blue">Enviar</button>
+         <input type="hidden" name="_subject" value="Nuevo formulario enviado desde la web de SV. Formulario de atención al cliente" >
     </form>
 </div>
 <style>

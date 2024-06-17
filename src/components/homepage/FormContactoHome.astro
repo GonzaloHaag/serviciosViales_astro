@@ -2,16 +2,18 @@
   <div class="bg-white w-full lg:w-2/3 rounded-2xl p-4 lg:p-20">
     <h5 class="text-2xl lg:text-5xl text-center">Contáctanos</h5>
     <p class="text-xl text-center mt-2">Puede dejarnos aquí su consulta y responderemos a la mayor brevedad posible</p>
-    <form class="w-full flex flex-col gap-10 mt-10">
+    <form action="https://formsubmit.co/gonzalohaag1311@gmail.com" method="POST" class="w-full flex flex-col gap-10 mt-10">
         <div class="flex flex-row gap-2 lg:gap-8">
-            <input type="text" placeholder="Nombre" class="w-full outline-none transition-colors duration-300 focus:border-sv-blue border border-solid border-[#DBDBDB] rounded-lg p-4" required />
-            <input type="text" placeholder="Empresa" class="w-full outline-none transition-colors duration-300 focus:border-sv-blue border border-solid border-[#DBDBDB] rounded-lg p-4" required />
+            <input name="nombre" type="text" placeholder="Nombre" class="w-full outline-none transition-colors duration-300 focus:border-sv-blue border border-solid border-[#DBDBDB] rounded-lg p-4" required />
+            <input name="empresa" type="text" placeholder="Empresa" class="w-full outline-none transition-colors duration-300 focus:border-sv-blue border border-solid border-[#DBDBDB] rounded-lg p-4" required />
         </div>
         <div>
-            <input type="email" placeholder="Email" class="w-full outline-none transition-colors duration-300 focus:border-sv-blue border border-solid border-[#DBDBDB] rounded-lg p-4" required />
+            <input name="email" type="email" placeholder="Email" class="w-full outline-none transition-colors duration-300 focus:border-sv-blue border border-solid border-[#DBDBDB] rounded-lg p-4" required />
+            <input type="hidden" name="_autoresponse" value="Hemos recibido tu formulario. Muchas gracias por contactarnos, el equipo de Servicios Viales se comunicará pronto.">
         </div>
-        <textarea rows="6" placeholder="Mensaje" class="w-full outline-none transition-colors duration-300 focus:border-sv-blue border border-solid border-[#DBDBDB] rounded-lg p-4" />
+        <textarea name="Mensaje" rows="6" placeholder="Mensaje" class="w-full outline-none transition-colors duration-300 focus:border-sv-blue border border-solid border-[#DBDBDB] rounded-lg p-4" />
         <input type="submit" value="Enviar" class="bg-sv-negro text-white block mx-auto py-3 px-10 rounded-full font-semibold transition-colors duration-300 hover:bg-sv-blue cursor-pointer" />
+        <input type="hidden" name="_subject" value="Nuevo formulario enviado desde la web de SV. Formulario de contáctanos" >
     </form>
   </div>
 </section>
