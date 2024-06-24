@@ -55,7 +55,7 @@ import HomeSliderBgImage from './HomeSliderBgImage.astro';
   /assets/banners-home-slide/SLIDER-crecemos.webp 1600w" 
   src='/assets/banners-home-slide/SLIDER-crecemos.webp' alt='banner trabajá con nosotros' 
   draggable="false" 
-  class='absolute w-full h-full inset-0 -z-10 object-cover object-center' loading="lazy"  />
+  class='absolute w-full h-full inset-0 -z-10 object-cover object-center' loading="eager" />
     
     <HomeSliderBgImage 
              titleBold="CRECEMOS JUNTOS" 
@@ -95,24 +95,25 @@ import HomeSliderBgImage from './HomeSliderBgImage.astro';
         display: flex;
         position: absolute;
         bottom: 2rem;
+        right: 8rem;
         width: 100%;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
         gap: 10px;
     }
     .dots div {
-        height: 20px;
-        width: 20px;
-        border-radius: 20px;
-        transition: 0.7s;
+        height: 12px;
+        width: 12px;
+        border-radius: 12px;
+        transition: 0.3s;
         position: relative;
-        background-color: white;
-        opacity: 0.6;
+        background-color: transparent;
+        border: 1px solid white;
+        opacity: 1;
     }
     .dots div:nth-child(1) {
-        scale: 1;
-        opacity: 1;
-        width: 40px;
+        width: 20px;
+        background-color: white;
     }
     @media (min-width:1024px) {
         .slider {
@@ -136,15 +137,15 @@ import HomeSliderBgImage from './HomeSliderBgImage.astro';
             element.style.left = left;
           });
           allDots.forEach((dots) => {
-            dots.style.border = "unset";
-            dots.style.scale = "1";
-            dots.style.opacity = 0.6;
-            dots.style.width = '20px';
+            dots.style.border = "solid 1px white";
+            dots.style.opacity = 1;
+            dots.style.width = '12px';
+            dots.style.height = '12px';
+            dots.style.backgroundColor = 'transparent';
           });
-          allDots[x].style.transition = '0.7s';
-          allDots[x].style.scale = '1';
-          allDots[x].style.opacity = '1';
-          allDots[x].style.width = '40px';
+          allDots[x].style.transition = '0.3s';
+          allDots[x].style.width = '20px';
+          allDots[x].style.backgroundColor = 'white';
         };
   
         const intervalId = setInterval(() => {

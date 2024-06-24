@@ -128,9 +128,9 @@ import Layout from "../../layouts/Layout.astro";
                 de calidad en todo momento.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 mt-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-16 mt-5">
                 <div class="flex flex-col">
-                    <img src="/assets/nosotros/2010.webp" loading="lazy" class="object-fill object-center" />
+                    <img src="/assets/nosotros/legado/santaFe.webp" loading="lazy" class="object-fill object-center" />
                     <h5 class="text-2xl font-semibold mt-5">Santa Fe</h5>
                     <input type="checkbox" hidden id="sucursal_santafe" class="peer" />
                     <label for="sucursal_santafe" class="flex items-center gap-2 text-xl cursor-pointer">
@@ -151,7 +151,7 @@ import Layout from "../../layouts/Layout.astro";
                 </div>
 
                 <div class="flex flex-col">
-                    <img src="/assets/nosotros/bsas.webp" loading="lazy" class="object-fill object-center" />
+                    <img src="/assets/nosotros/legado/bsas.webp" loading="lazy" class="object-fill object-center" />
                     <h5 class="text-2xl font-semibold mt-5">Buenos aires</h5>
                     <input type="checkbox" hidden id="sucursal_bsas" class="peer">
                     <label for="sucursal_bsas" class="flex items-center gap-2 text-xl cursor-pointer">
@@ -172,7 +172,7 @@ import Layout from "../../layouts/Layout.astro";
                 </div>
 
                 <div class="flex flex-col">
-                    <img src="/assets/nosotros/2021.webp" loading="lazy" class="object-fill object-center"/>
+                    <img src="/assets/nosotros/legado/mendoza.webp" loading="lazy" class="object-fill object-center"/>
                     <h5 class="text-2xl font-semibold mt-5">Mendoza</h5>
                     <input type="checkbox" hidden id="sucursal_mendoza" class="peer"/>
                     <label for="sucursal_mendoza" class="flex items-center gap-2 text-xl cursor-pointer">
@@ -189,6 +189,27 @@ import Layout from "../../layouts/Layout.astro";
                     </label>
                     <div class="mt-2 max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-[300px]">
                         <p class="text-sv-gris-bold">En Mendoza, nuestro espacio de 2.000 metros cuadrados alberga una selección de 4.000 códigos esenciales.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <img src="/assets/nosotros/legado/salta.webp" loading="lazy" class="object-fill object-center"/>
+                    <h5 class="text-2xl font-semibold mt-5">Salta</h5>
+                    <input type="checkbox" hidden id="sucursal_salta" class="peer"/>
+                    <label for="sucursal_salta" class="flex items-center gap-2 text-xl cursor-pointer">
+                        <svg
+                            class="w-3 h-3 transition-all duration-300"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"
+                            >
+                            <path
+                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                            ></path></svg
+                        >
+                        Av. Circunvalación Sureste Km 1.6
+                    </label>
+                    <div class="mt-2 max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-[300px]">
+                        <p class="text-sv-gris-bold">En nuestra sucursal de Salta contamos con 4000 metros cuadrados de depósito y más de 8000 códigos que abastecen al NOA.</p>
                     </div>
                 </div>
             </div>
@@ -246,6 +267,10 @@ import Layout from "../../layouts/Layout.astro";
         fill: blue;
     }
     #sucursal_mendoza:checked + label svg{
+        transform: rotate(180deg);
+        fill: blue;
+    }
+    #sucursal_salta:checked + label svg{
         transform: rotate(180deg);
         fill: blue;
     }
