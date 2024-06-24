@@ -2,8 +2,9 @@
 
 ## Clonar el proyecto 
 `git clone https://github.com/GonzaloHaag/serviciosViales_astro.git`
+## Dirigirse a la carpeta serviciosViales
+`cd serviciosViales`
 ## Instalar dependencias 
 `npm install`
-
-## Dirigirse a la carpeta serviciosViales y arrancar proyecto en desarrollo
+## Levantar proyecto
 `npm run dev`
