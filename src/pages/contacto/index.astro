@@ -35,7 +35,7 @@ import Layout from "../../layouts/Layout.astro";
     <SectionModalsForm />
     <section class="w-full bg-sv-gris-light py-20">
         <div class="w-full xl:container px-4 xl:px-0 xl:mx-auto flex flex-col gap-10 lg:gap-0 lg:flex-row">
-            <form class="bg-white rounded-2xl p-8 w-full lg:w-2/3">
+            <form class="bg-white rounded-2xl p-8 w-full lg:w-2/3" action="https://formsubmit.co/contacto@serviciosviales.com.ar" method="POST">
                 <h4 class="text-2xl sm:text-3xl font-bold">Contactá un Asesor</h4>
                 <div class="flex flex-col gap-5 w-full mt-5">
                     <input
@@ -46,19 +46,20 @@ import Layout from "../../layouts/Layout.astro";
                     <div class="flex flex-col sm:flex-row gap-5 sm:gap-3">
                         <input
                             type="text"
+                            name="Razón Social"
                             placeholder="Razón social"
                             required
                         />
-                        <input type="number" placeholder="CUIT" required />
-                        <select>
+                        <input type="number" placeholder="CUIT" name="Cuit" required />
+                        <select name="Tipo">
                             <option selected value="consumidor"
                                 >Consumidor Final</option
                             >
                             <option value="revendedor">Revendedor</option>
                         </select>
                     </div>
-                    <input type="text" placeholder="Empresa" />
-                    <textarea rows="6" placeholder="Consulta" required
+                    <input name="Empresa" type="text" placeholder="Empresa" />
+                    <textarea name="Consulta" rows="6" placeholder="Consulta" required
                     ></textarea>
                     <button
                         type="submit"
@@ -66,6 +67,9 @@ import Layout from "../../layouts/Layout.astro";
                         >Enviar</button
                     >
                 </div>
+                <input type="hidden" name="_subject" value="Nuevo formulario enviado desde la web de SV. Formulario de contactá con un asesor" >
+                <!-- Copia de email -->
+              <input type="hidden" name="_cc" value="marketing@serviciosviales.com.ar">
             </form>
 
             <div class="lg:p-8 flex flex-col gap-5">
