@@ -42,13 +42,13 @@ import Layout from "../../layouts/Layout.astro";
                     </p>
                     <!-- Accordion -->
                     <div>
-                        <input type="checkbox" hidden id="desplegar-modelos" />
+                        <input type="checkbox" hidden id="desplegar-modelos" class="peer" />
                         <label
                             for="desplegar-modelos"
-                            class="cursor-pointer transition-colors duration-300 flex items-center gap-1"
+                            class="cursor-pointer flex items-center gap-1 transition-colors duration-300 peer-checked:text-sv-blue"
                         >
                             <svg
-                                class="w-8 h-5"
+                                class="w-8 h-5 transition-transform duration-300"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 256 512"
                                 ><path
@@ -59,7 +59,7 @@ import Layout from "../../layouts/Layout.astro";
                         </label>
                         <ul
                             id="modelos"
-                            class="list-disc flex-col text-sv-gris-bold pl-12 py-2 hidden opacity-0 transition-opacity duration-500"
+                            class="list-disc flex-col text-sv-gris-bold pl-12 pt-1 max-h-0 transition-all duration-300 overflow-hidden peer-checked:max-h-80"
                         >
                             <li>GS1930/TIJERA GENIE</li>
                             <li>S3219E/TIJERA SNORKEL</li>
@@ -107,13 +107,13 @@ import Layout from "../../layouts/Layout.astro";
                     </p>
                     <!-- Accordion -->
                     <div>
-                        <input type="checkbox" hidden id="desplegar-modelos-2" />
+                        <input type="checkbox" hidden id="desplegar-modelos-2" class="peer"/>
                         <label
                             for="desplegar-modelos-2"
-                            class="cursor-pointer transition-colors duration-300 flex items-center gap-1"
+                            class="cursor-pointer transition-colors duration-300 peer-checked:text-sv-blue flex items-center gap-1"
                         >
                             <svg
-                                class="w-8 h-5"
+                                class="w-8 h-5 transition-transform duration-300"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 256 512"
                                 ><path
@@ -124,7 +124,7 @@ import Layout from "../../layouts/Layout.astro";
                         </label>
                         <ul
                             id="modelos-2"
-                            class="list-disc flex-col text-sv-gris-bold pl-12 py-2 hidden opacity-0 transition-opacity duration-500"
+                            class="list-disc flex-col text-sv-gris-bold pl-12 pt-1 max-h-0 transition-all duration-300 overflow-hidden peer-checked:max-h-80"
                         >
                             <li>TH255/MANIP.TELESCOP.CAT</li>
                             <li>943C/MANIP.TELESCOP.CAT</li>
@@ -164,13 +164,13 @@ import Layout from "../../layouts/Layout.astro";
                     </p>
                     <!-- Accordion -->
                     <div>
-                        <input type="checkbox" hidden id="desplegar-modelos-3" />
+                        <input type="checkbox" hidden id="desplegar-modelos-3" class="peer" />
                         <label
                             for="desplegar-modelos-3"
-                            class="cursor-pointer transition-colors duration-300 flex items-center gap-1"
+                            class="cursor-pointer flex items-center gap-1 transition-colors duration-300 peer-checked:text-sv-blue"
                         >
                             <svg
-                                class="w-8 h-5"
+                                class="w-8 h-5 transition-transform duration-300"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 256 512"
                                 ><path
@@ -181,7 +181,7 @@ import Layout from "../../layouts/Layout.astro";
                         </label>
                         <ul
                             id="modelos-3"
-                            class="list-disc flex-col text-sv-gris-bold pl-12 py-2 hidden opacity-0 transition-opacity duration-500"
+                            class="list-disc flex-col text-sv-gris-bold pl-12 pt-1 max-h-0 transition-all duration-300 overflow-hidden peer-checked:max-h-80"
                         >
                             <li>Excavadora s/orugas 320DL CAT</li>
                             <li>Cargador Frontal 938F CAT</li>
@@ -220,13 +220,13 @@ import Layout from "../../layouts/Layout.astro";
                     </p>
                     <!-- Accordion -->
                     <div>
-                        <input type="checkbox" hidden id="desplegar-modelos-4" />
+                        <input type="checkbox" hidden id="desplegar-modelos-4" class="peer" />
                         <label
                             for="desplegar-modelos-4"
-                            class="cursor-pointer transition-colors duration-300 flex items-center gap-1"
+                            class="cursor-pointer flex items-center gap-1 transition-colors duration-300 peer-checked:text-sv-blue"
                         >
                             <svg
-                                class="w-8 h-5"
+                                class="w-8 h-5 transition-transform duration-300"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 256 512"
                                 ><path
@@ -237,7 +237,7 @@ import Layout from "../../layouts/Layout.astro";
                         </label>
                         <ul
                             id="modelos-4"
-                            class="list-disc flex-col text-sv-gris-bold pl-12 py-2 hidden opacity-0 transition-opacity duration-500"
+                            class="list-disc flex-col text-sv-gris-bold pl-12 pt-1 max-h-0 transition-all duration-300 overflow-hidden peer-checked:max-h-80"
                         >
                             <li>Grupo Electrógeno Cummins 6CTA</li>
                             <li>Grupo Electrógeno Caterpillar 3306</li>
@@ -277,13 +277,13 @@ import Layout from "../../layouts/Layout.astro";
                     </p>
                     <!-- Accordion -->
                     <div>
-                        <input type="checkbox" hidden id="desplegar-modelos-5" />
+                        <input type="checkbox" hidden id="desplegar-modelos-5" class="peer"/>
                         <label
                             for="desplegar-modelos-5"
-                            class="cursor-pointer transition-colors duration-300 flex items-center gap-1"
+                            class="cursor-pointer flex items-center gap-1 transition-colors duration-300 peer-checked:text-sv-blue"
                         >
                             <svg
-                                class="w-8 h-5"
+                                class="w-8 h-5 transition-transform duration-300"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 256 512"
                                 ><path
@@ -294,7 +294,7 @@ import Layout from "../../layouts/Layout.astro";
                         </label>
                         <ul
                             id="modelos-5"
-                            class="list-disc flex-col text-sv-gris-bold pl-12 py-2 hidden opacity-0 transition-opacity duration-500"
+                            class="list-disc flex-col text-sv-gris-bold pl-12 pt-1 max-h-0 transition-all duration-300 overflow-hidden peer-checked:max-h-80"
                         >
                             <li>Balde Hormigonero Hidraulico  TDI</li>
                             <li>Balde con grampa para troncos CATERPILLAR</li>
@@ -331,56 +331,33 @@ import Layout from "../../layouts/Layout.astro";
         </div>
     </section>
     <style>
-    
-
-       #desplegar-modelos:checked ~ #modelos {
-            @apply flex opacity-100 visible;
-        }
         #desplegar-modelos:checked + label svg {
             @apply -rotate-90;
         }
-        #desplegar-modelos:checked + label {
-            @apply text-sv-blue;
-        }
+      
         /** two */
-        #desplegar-modelos-2:checked ~ #modelos-2 {
-            @apply flex opacity-100 visible;
-        }
+      
         #desplegar-modelos-2:checked + label svg {
             @apply -rotate-90;
         }
-        #desplegar-modelos-2:checked + label {
-            @apply text-sv-blue;
-        }
+      
          /** three */
-         #desplegar-modelos-3:checked ~ #modelos-3 {
-            @apply flex opacity-100 visible;
-        }
+        
         #desplegar-modelos-3:checked + label svg {
             @apply -rotate-90;
         }
-        #desplegar-modelos-3:checked + label {
-            @apply text-sv-blue;
-        }
+       
          /** four */
-         #desplegar-modelos-4:checked ~ #modelos-4 {
-            @apply flex opacity-100 visible;
-        }
+        
         #desplegar-modelos-4:checked + label svg {
             @apply -rotate-90;
         }
-        #desplegar-modelos-4:checked + label {
-            @apply text-sv-blue;
-        }
+       
          /** five */
-         #desplegar-modelos-5:checked ~ #modelos-5 {
-            @apply flex opacity-100 visible;
-        }
+       
         #desplegar-modelos-5:checked + label svg {
             @apply -rotate-90;
         }
-        #desplegar-modelos-5:checked + label {
-            @apply text-sv-blue;
-        }
+       
     </style>
 </Layout>
