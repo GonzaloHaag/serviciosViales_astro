@@ -7,13 +7,13 @@ interface Props {
 const {titleBold,subtitle,bgImageUrl} = Astro.props;
 ---
 <section
-class={`min-h-[25rem] w-full bg-blend-color bg-black/60 flex flex-col justify-center items-center relative`}
+class={`min-h-[25rem] w-full bg-blend-color bg-black/70 flex flex-col items-center justify-center relative`}
 >
 <img src={bgImageUrl} alt={titleBold} class="absolute w-full h-full -z-10 object-cover object-center aspect-video" loading="eager" />
-<div class="flex flex-col text-white text-4xl md:text-6xl text-center">
-    <h2 class="font-black leading-tight">{ titleBold }</h2>
-    <h2 class="font-semibold">{ subtitle }</h2>
+<div class="flex flex-col text-white text-4xl md:text-6xl text-center mb-8">
+    <h2 class="font-semiboldleading-[4.0625rem]">{ titleBold }</h2>
+    <h2 class="font-black ">{ subtitle }</h2>
 </div>
 
-    <slot name="images" />
+    <slot name="images"/>
 </section>

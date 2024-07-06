@@ -7,7 +7,7 @@ import Layout from "../../layouts/Layout.astro";
     description="CONSULTE — PREGUNTAS FRECUENTES ¿Cuál es su catalogo? ¿Cómo puedo conseguir uno? Nuestro catálogo presenta una descripción general de todas las categorías de productos y segmentos a los que servimos. Puede descargarlo desde nuestra sección productos dentro del banner principal, también si desea recibir una copia impresa, envíenos un correo electrónico con una solicitud"
 >
     <section
-        class="min-h-[600px] w-full bg-blend-color bg-black/40 flex flex-col justify-center text-white relative"
+        class="min-h-[520px] w-full bg-blend-color bg-black/50 flex flex-col justify-center text-white relative"
     >
     <img src="/assets/background-sections/bg-faq.webp" alt="preguntas frecuentes" class="absolute w-full h-full inset-0 object-cover object-center -z-10" loading="eager" />
         <div class="w-full xl:container px-4 xl:px-0 xl:mx-auto">
@@ -25,23 +25,18 @@ import Layout from "../../layouts/Layout.astro";
                 <input type="checkbox" hidden id="faq_1" class="peer" />
                 <label
                     for="faq_1"
-                    class="text-xs md:text-xl font-semibold grid grid-cols-[1fr,0.15fr] peer-checked:text-sv-blue cursor-pointer"
+                    class="text-xs md:text-2xl font-semibold grid grid-cols-[1fr,0.15fr] transition-colors duration-300 peer-checked:text-sv-blue cursor-pointer"
                 >
                     <p>¿Cuál es su catalogo? ¿Cómo puedo conseguir uno?</p>
                     <div class="flex items-center justify-end">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="w-6 h-6 peer-checked:fill-sv-blue"
-                        viewBox="0 0 448 512"
-                    >
-                        <path
-                            d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM200 344V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"
-                        ></path></svg
-                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-circle rotate-0 w-6 h-6 md:w-8 md:h-8 transition-transform duration-300" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                          </svg>
                 </div>
                 </label>
                 <div
-                    class="content max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-[300px]"
+                    class="content max-h-0 overflow-hidden transition-all duration-300 ease-in-out peer-checked:max-h-[300px]"
                 >
                     <p class="text-lg mt-5">
                         Nuestro catálogo presenta una descripción general de
@@ -57,19 +52,14 @@ import Layout from "../../layouts/Layout.astro";
                 <input type="checkbox" hidden id="faq_2" class="peer" />
                 <label
                     for="faq_2"
-                    class="text-xs md:text-xl font-semibold grid grid-cols-[1fr,0.15fr] peer-checked:text-sv-blue cursor-pointer"
+                    class="text-xs md:text-2xl font-semibold grid grid-cols-[1fr,0.15fr] transition-colors duration-300 peer-checked:text-sv-blue cursor-pointer"
                 >
                     <p>¿Cómo me puedo convertir en revendedor y/o distribuidor?</p>
                     <div class="flex items-center justify-end">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="w-6 h-6"
-                        viewBox="0 0 448 512"
-                    >
-                        <path
-                            d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM200 344V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"
-                        ></path></svg
-                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-circle rotate-0 w-6 h-6 md:w-8 md:h-8 transition-transform duration-300" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                          </svg>
                 </div>
                 </label>
                 <div
@@ -94,19 +84,14 @@ import Layout from "../../layouts/Layout.astro";
                 <input type="checkbox" hidden id="faq_3" class="peer" />
                 <label
                     for="faq_3"
-                    class="text-xs md:text-xl font-semibold grid grid-cols-[1fr,0.15fr] peer-checked:text-sv-blue cursor-pointer"
+                    class="text-xs md:text-2xl font-semibold grid grid-cols-[1fr,0.15fr] transition-colors duration-300 peer-checked:text-sv-blue cursor-pointer"
                 >
                     <p>¿Cúanto tiempo tarda en estar listo mi pedido?</p>
                     <div class="flex items-center justify-end">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="w-6 h-6"
-                        viewBox="0 0 448 512"
-                    >
-                        <path
-                            d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM200 344V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"
-                        ></path></svg
-                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-circle rotate-0 w-6 h-6 md:w-8 md:h-8 transition-transform duration-300" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                          </svg>
                 </div>
                 </label>
                 <div
@@ -123,19 +108,14 @@ import Layout from "../../layouts/Layout.astro";
                 <input type="checkbox" hidden id="faq_4" class="peer" />
                 <label
                     for="faq_4"
-                    class="text-xs md:text-xl font-semibold grid grid-cols-[1fr,0.15fr] peer-checked:text-sv-blue cursor-pointer"
+                    class="text-xs md:text-2xl font-semibold grid grid-cols-[1fr,0.15fr] transition-colors duration-300 peer-checked:text-sv-blue cursor-pointer"
                 >
                     <p>¿Cómo gestiono una devolución?</p>
                     <div class="flex items-center justify-end">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="w-6 h-6"
-                        viewBox="0 0 448 512"
-                    >
-                        <path
-                            d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM200 344V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"
-                        ></path></svg
-                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-circle rotate-0 w-6 h-6 md:w-8 md:h-8 transition-transform duration-300" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                          </svg>
                 </div>
                 </label>
                 <div
@@ -155,19 +135,14 @@ import Layout from "../../layouts/Layout.astro";
                 <input type="checkbox" hidden id="faq_5" class="peer" />
                 <label
                     for="faq_5"
-                    class="text-xs md:text-xl font-semibold grid grid-cols-[1fr,0.15fr] peer-checked:text-sv-blue cursor-pointer"
+                    class="text-xs md:text-2xl font-semibold grid grid-cols-[1fr,0.15fr] transition-colors duration-300 peer-checked:text-sv-blue cursor-pointer"
                 >
                     <p>¿Realizan envíos a todo el país?</p>
                     <div class="flex items-center justify-end">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="w-6 h-6"
-                        viewBox="0 0 448 512"
-                    >
-                        <path
-                            d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM200 344V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"
-                        ></path></svg
-                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-circle rotate-0 w-6 h-6 md:w-8 md:h-8 transition-transform duration-300" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                          </svg>
                 </div>
                 </label>
                 <div
@@ -186,19 +161,14 @@ import Layout from "../../layouts/Layout.astro";
                 <input type="checkbox" hidden id="faq_6" class="peer" />
                 <label
                     for="faq_6"
-                    class="text-xs md:text-xl font-semibold grid grid-cols-[1fr,0.15fr] peer-checked:text-sv-blue cursor-pointer"
+                    class="text-xs md:text-2xl font-semibold grid grid-cols-[1fr,0.15fr] transition-colors duration-300 peer-checked:text-sv-blue cursor-pointer"
                 >
                     <p>¿Cuáles son los beneficios de tener su portal de compras en línea?</p>
                         <div class="flex items-center justify-end">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="w-6 h-6"
-                        viewBox="0 0 448 512"
-                    >
-                        <path
-                            d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM200 344V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"
-                        ></path></svg
-                    >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-circle rotate-0 w-6 h-6 md:w-8 md:h-8 transition-transform duration-300" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                              </svg>
                 </div>
                 </label>
                 <div
@@ -224,19 +194,14 @@ import Layout from "../../layouts/Layout.astro";
                 <input type="checkbox" hidden id="faq_7" class="peer" />
                 <label
                     for="faq_7"
-                    class="text-xs md:text-xl font-semibold grid grid-cols-[1fr,0.15fr] peer-checked:text-sv-blue cursor-pointer"
+                    class="text-xs md:text-2xl font-semibold grid grid-cols-[1fr,0.15fr] transition-colors duration-300 peer-checked:text-sv-blue cursor-pointer"
                 >
                     <p>¿Cómo me pongo en contacto con un representante de ventas en mi zona?</p>
                     <div class="flex items-center justify-end">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="w-6 h-6"
-                        viewBox="0 0 448 512"
-                    >
-                        <path
-                            d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM200 344V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"
-                        ></path></svg
-                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-circle rotate-0 w-6 h-6 md:w-8 md:h-8 transition-transform duration-300" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                          </svg>
                 </div>
                 </label>
                 <div
@@ -262,24 +227,24 @@ import Layout from "../../layouts/Layout.astro";
 </Layout>
 <style>
     #faq_1:checked + label svg {
-        @apply fill-sv-blue
+        @apply fill-sv-blue rotate-90
     }
     #faq_2:checked + label svg {
-        @apply fill-sv-blue
+        @apply fill-sv-blue rotate-90
     }
     #faq_3:checked + label svg {
-        @apply fill-sv-blue
+        @apply fill-sv-blue rotate-90
     }
     #faq_4:checked + label svg {
-        @apply fill-sv-blue
+        @apply fill-sv-blue rotate-90
     }
     #faq_5:checked + label svg {
-        @apply fill-sv-blue
+        @apply fill-sv-blue rotate-90
     }
     #faq_6:checked + label svg {
-        @apply fill-sv-blue
+        @apply fill-sv-blue rotate-90
     }
     #faq_7:checked + label svg {
-        @apply fill-sv-blue
+        @apply fill-sv-blue rotate-90
     }
 </style>
