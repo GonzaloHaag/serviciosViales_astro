@@ -25,8 +25,10 @@ const { title, description } = Astro.props;
 		<Header />
 		<main>
 			<slot />
+			<a class="fixed right-5 bottom-4" href="https://api.whatsapp.com/send/?phone=5493426311894&text&type=phone_number&app_absent=0" target="_blank" rel="norefferer">
+				<img src="/assets/whatsapp.webp" width="50" height="50" />
+			</a>
 		</main>
-
 		<Footer />
 	</body>
 </html>
