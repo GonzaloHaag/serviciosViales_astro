@@ -9,7 +9,7 @@ import Layout from "../../layouts/Layout.astro";
     description="SOMOS DIFERENTES — LIDERANDO JUNTOS LA INDUSTRIA CONOCE — NUESTRA HISTORIA Nuestra marca es la reputación que hemos construido durante años y estamos comprometidos a diferenciarnos brindando un servicio superior para nuestros clientes. 1986 2000 2010 2015 2017 2019 2021 2024 Nuestro viaje comenzó humildemente en 1986 como taller de reparación de camiones y maquinaria […]"
 >
     <SectionHero
-        bgImageUrl='/assets/nosotros/bg-nosotros.webp'
+        bgImageUrl="/assets/nosotros/bg-nosotros.webp"
         span="SOMOS DIFERENTES —"
         titleBold="LIDERANDO JUNTOS"
         titleNormal="LA INDUSTRIA"
@@ -62,7 +62,7 @@ import Layout from "../../layouts/Layout.astro";
                 class="flex flex-col items-center text-center justify-center px-10 h-full rounded-3xl shadow-2xl md:w-2/4 md:mx-auto lg:w-full py-5 lg:py-0"
             >
                 <img
-                loading="lazy"
+                    loading="lazy"
                     src="/assets/compromiso.png"
                     alt="logo compromiso"
                     width="60"
@@ -80,7 +80,7 @@ import Layout from "../../layouts/Layout.astro";
                 class="flex flex-col items-center text-center justify-center px-10 h-full rounded-3xl shadow-2xl md:w-2/4 md:mx-auto lg:w-full py-5 lg:py-0"
             >
                 <img
-                loading="lazy"
+                    loading="lazy"
                     src="/assets/responsabilidad.png"
                     alt="logo compromiso"
                     width="60"
@@ -98,7 +98,7 @@ import Layout from "../../layouts/Layout.astro";
                 class="flex flex-col items-center text-center justify-center px-10 h-full rounded-3xl shadow-2xl md:w-2/4 md:mx-auto lg:w-full py-5 lg:py-0"
             >
                 <img
-                loading="lazy"
+                    loading="lazy"
                     src="/assets/honestidad.png"
                     alt="logo compromiso"
                     width="60"
@@ -123,93 +123,168 @@ import Layout from "../../layouts/Layout.astro";
                 nuestro legado en Argentina
             </h4>
             <p class="text-xl text-black mt-5 max-w-3xl">
-                Nuestra casa central y nuestras sucursales están ubicadas de
-                manera estratégica para estar cerca de ti y brindarte soluciones
-                de calidad en todo momento.
+                Nuestra casa central y sucursales están ubicadas de manera
+                estratégica para estar cerca de nuestros clientes y brindar
+                soluciones en todo momento.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-16 mt-5">
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-16 mt-5"
+            >
                 <div class="flex flex-col">
-                    <img src="/assets/nosotros/legado/santaFe.webp" loading="lazy" class="object-fill object-center" />
+                    <img
+                        src="/assets/nosotros/legado/santaFe.webp"
+                        loading="lazy"
+                        class="object-fill object-center"
+                    />
                     <h5 class="text-2xl font-bold mt-5">Santa Fe</h5>
-                    <input type="checkbox" hidden id="sucursal_santafe" class="peer" />
-                    <label for="sucursal_santafe" class="flex items-center gap-2 text-xl cursor-pointer">
+                    <input
+                        type="checkbox"
+                        hidden
+                        id="sucursal_santafe"
+                        class="peer"
+                    />
+                    <label
+                        for="sucursal_santafe"
+                        class="flex items-center gap-2 text-xl cursor-pointer"
+                    >
                         <svg
                             class="w-3 h-3 transition-all duration-300"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 512 512"
-                            >
+                        >
                             <path
                                 d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
                             ></path></svg
                         >
                         Rosa Carmen All 1551
                     </label>
-                    <div class="mt-2 max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-[300px]">
-                        <p class="text-sv-gris-bold">En nuestra sucursal de Santa Fe, contamos con un amplio espacio de 7.000 metros cuadrados y 18.000 códigos de una impresionante variedad.</p>
+                    <div
+                        class="mt-2 max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-[300px]"
+                    >
+                        <p class="text-sv-gris-bold">
+                            En nuestra sucursal de Santa Fe, contamos con un
+                            amplio espacio de 7.000 metros cuadrados y 18.000
+                            códigos de una impresionante variedad.
+                        </p>
                     </div>
                 </div>
 
                 <div class="flex flex-col">
-                    <img src="/assets/nosotros/legado/bsas.webp" loading="lazy" class="object-fill object-center" />
+                    <img
+                        src="/assets/nosotros/legado/bsas.webp"
+                        loading="lazy"
+                        class="object-fill object-center"
+                    />
                     <h5 class="text-2xl font-bold mt-5">Buenos aires</h5>
-                    <input type="checkbox" hidden id="sucursal_bsas" class="peer">
-                    <label for="sucursal_bsas" class="flex items-center gap-2 text-xl cursor-pointer">
+                    <input
+                        type="checkbox"
+                        hidden
+                        id="sucursal_bsas"
+                        class="peer"
+                    />
+                    <label
+                        for="sucursal_bsas"
+                        class="flex items-center gap-2 text-xl cursor-pointer"
+                    >
                         <svg
                             class="w-3 h-3 transition-all duration-300"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 512 512"
-                            >
+                        >
                             <path
                                 d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
                             ></path></svg
                         >
                         Patagones 2455, CABA
                     </label>
-                    <div class="mt-2 max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-[300px]">
-                        <p class="text-sv-gris-bold">Nuestra sucursal en Buenos Aires es un rincón especial con 1.500 metros cuadrados que almacenan más de 5.000 códigos para satisfacer tus necesidades.</p>
+                    <div
+                        class="mt-2 max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-[300px]"
+                    >
+                        <p class="text-sv-gris-bold">
+                            Nuestra sucursal en Buenos Aires es un rincón
+                            especial con 1.500 metros cuadrados que almacenan
+                            más de 5.000 códigos para satisfacer tus
+                            necesidades.
+                        </p>
                     </div>
                 </div>
 
                 <div class="flex flex-col">
-                    <img src="/assets/nosotros/legado/mendoza.webp" loading="lazy" class="object-fill object-center"/>
+                    <img
+                        src="/assets/nosotros/legado/mendoza.webp"
+                        loading="lazy"
+                        class="object-fill object-center"
+                    />
                     <h5 class="text-2xl font-bold mt-5">Mendoza</h5>
-                    <input type="checkbox" hidden id="sucursal_mendoza" class="peer"/>
-                    <label for="sucursal_mendoza" class="flex items-center gap-2 text-xl cursor-pointer">
+                    <input
+                        type="checkbox"
+                        hidden
+                        id="sucursal_mendoza"
+                        class="peer"
+                    />
+                    <label
+                        for="sucursal_mendoza"
+                        class="flex items-center gap-2 text-xl cursor-pointer"
+                    >
                         <svg
                             class="w-3 h-3 transition-all duration-300"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 512 512"
-                            >
+                        >
                             <path
                                 d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
                             ></path></svg
                         >
                         Carril Rodríguez Peña 2710
                     </label>
-                    <div class="mt-2 max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-[300px]">
-                        <p class="text-sv-gris-bold">En Mendoza, nuestro espacio de 2.000 metros cuadrados alberga una selección de 4.000 códigos esenciales.</p>
+                    <div
+                        class="mt-2 max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-[300px]"
+                    >
+                        <p class="text-sv-gris-bold">
+                            En Mendoza, nuestro espacio de 2.000 metros
+                            cuadrados alberga una selección de 4.000 códigos
+                            esenciales.
+                        </p>
                     </div>
                 </div>
 
                 <div class="flex flex-col">
-                    <img src="/assets/nosotros/legado/salta.webp" loading="lazy" class="object-fill object-center"/>
+                    <img
+                        src="/assets/nosotros/legado/salta.webp"
+                        loading="lazy"
+                        class="object-fill object-center"
+                    />
                     <h5 class="text-2xl font-bold mt-5">Salta</h5>
-                    <input type="checkbox" hidden id="sucursal_salta" class="peer"/>
-                    <label for="sucursal_salta" class="flex items-center gap-2 text-xl cursor-pointer">
+                    <input
+                        type="checkbox"
+                        hidden
+                        id="sucursal_salta"
+                        class="peer"
+                    />
+                    <label
+                        for="sucursal_salta"
+                        class="flex items-center gap-2 text-xl cursor-pointer"
+                    >
                         <svg
                             class="w-3 h-3 transition-all duration-300"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 512 512"
-                            >
+                        >
                             <path
                                 d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
                             ></path></svg
                         >
                         Av. Circunvalación Sureste Km 1.6
                     </label>
-                    <div class="mt-2 max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-[300px]">
-                        <p class="text-sv-gris-bold">En nuestra sucursal de Salta contamos con 4000 metros cuadrados de depósito y más de 8000 códigos que abastecen al NOA.</p>
+                    <div
+                        class="mt-2 max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-[300px]"
+                    >
+                        <p class="text-sv-gris-bold">
+                            En nuestra sucursal de Salta contamos con 4000
+                            metros cuadrados de depósito y más de 8000 códigos
+                            que abastecen al NOA.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -218,59 +293,92 @@ import Layout from "../../layouts/Layout.astro";
 
     <!-- div ferias -->
     <div class="grid grid-cols-1 md:grid-cols-2 min-h-screen">
-       <div class="bg-sv-blue flex flex-col justify-center text-white py-4">
-           <div class="flex flex-col items-start max-w-2xl mx-auto px-4 md:px-0 md:pl-4">
-            <span>SV PRESENTE —</span>
-            <h4 class="text-4xl md:text-5xl font-black">FERIAS Y EVENTOS DE</h4>
-            <h4 class="text-4xl md:text-5xl font-semibold">DE LA INDUSTRIA</h4>
-            <p class="text-xl mt-10 md:max-w-lg">
-                Explora nuestra participación en ferias y eventos. Mantenete al día con las últimas novedades y noticias de nuestra empresa...
-            </p> 
-        <a href="/nosotros/ferias-y-eventos" title="Agenda" class="bg-white text-sv-blue font-semibold px-10 py-4 rounded-full mt-10 text-lg transition-colors duration-300 hover:bg-sv-negro hover:text-white">
-            Ver agenda
-        </a>
-           </div>
-       </div>
-       <div class="min-h-[50vh] md:min-h-screen relative">
-        <img src="/assets/nosotros/IMG_Agroactiva_2022-1920.webp" alt="agroactiva" class="absolute w-full h-full inset-0 object-cover object-center" loading="lazy" />
-      </div>
+        <div class="bg-sv-blue flex flex-col justify-center text-white py-4">
+            <div
+                class="flex flex-col items-start max-w-2xl mx-auto px-4 md:px-0 md:pl-4"
+            >
+                <span>SV PRESENTE —</span>
+                <h4 class="text-4xl md:text-5xl font-black">
+                    FERIAS Y EVENTOS DE
+                </h4>
+                <h4 class="text-4xl md:text-5xl font-semibold">
+                    DE LA INDUSTRIA
+                </h4>
+                <p class="text-xl mt-10 md:max-w-lg">
+                    Explora nuestra participación en ferias y eventos. Mantenete
+                    al día con las últimas novedades y noticias de nuestra
+                    empresa...
+                </p>
+                <a
+                    href="/nosotros/ferias-y-eventos"
+                    title="Agenda"
+                    class="bg-white text-sv-blue font-semibold px-10 py-4 rounded-full mt-10 text-lg transition-colors duration-300 hover:bg-sv-negro hover:text-white"
+                >
+                    Ver agenda
+                </a>
+            </div>
+        </div>
+        <div class="min-h-[50vh] md:min-h-screen relative">
+            <img
+                src="/assets/nosotros/IMG_Agroactiva_2022-1920.webp"
+                alt="agroactiva"
+                class="absolute w-full h-full inset-0 object-cover object-center"
+                loading="lazy"
+            />
+        </div>
     </div>
     <!-- div acompaña -->
     <div class="grid grid-cols-1 md:grid-cols-2 min-h-screen">
         <div class="min-h-[50vh] md:min-h-screen relative">
-            <img src="/assets/nosotros/camiseta-union.webp" alt="imagen union" class="absolute w-full h-full inset-0 object-cover object-center" loading="lazy" />
+            <img
+                src="/assets/nosotros/camiseta-union.webp"
+                alt="imagen union"
+                class="absolute w-full h-full inset-0 object-cover object-center"
+                loading="lazy"
+            />
         </div>
         <div class="bg-sv-blue flex flex-col justify-center text-white py-4">
-            <div class="flex flex-col items-start max-w-3xl mx-auto px-4 md:px-0 md:pl-4">
-             <span>SV ACOMPAÑA —</span>
-             <h4 class="text-4xl md:text-5xl font-semibold">NUESTRA PARTICIPACIÓN</h4>
-             <h4 class="text-4xl md:text-5xl font-black">COMO SPONSOR</h4>
-             <p class="text-xl mt-10 md:max-w-lg">
-                Estamos orgullosos de anunciar que somos patrocinadores de Unión de Santa Fe. Apoyando al equipo y a sus fans en los diferentes logros y desafíos.
-             </p> 
-         <a href="https://www.clubaunion.com.ar/" target="_blank" rel="noreferrer" title="Agenda" class="bg-white text-sv-blue font-semibold px-10 py-4 rounded-full mt-10 text-lg transition-colors duration-300 hover:bg-sv-negro hover:text-white">
-             Conoce a unión
-         </a>
+            <div
+                class="flex flex-col items-start max-w-3xl mx-auto px-4 md:px-0 md:pl-4"
+            >
+                <span>SV ACOMPAÑA —</span>
+                <h4 class="text-4xl md:text-5xl font-semibold">
+                    NUESTRA PARTICIPACIÓN
+                </h4>
+                <h4 class="text-4xl md:text-5xl font-black">COMO SPONSOR</h4>
+                <p class="text-xl mt-10 md:max-w-lg">
+                    Estamos orgullosos de anunciar que somos patrocinadores de
+                    Unión de Santa Fe. Apoyando al equipo y a sus fans en los
+                    diferentes logros y desafíos.
+                </p>
+                <a
+                    href="https://www.clubaunion.com.ar/"
+                    target="_blank"
+                    rel="noreferrer"
+                    title="Agenda"
+                    class="bg-white text-sv-blue font-semibold px-10 py-4 rounded-full mt-10 text-lg transition-colors duration-300 hover:bg-sv-negro hover:text-white"
+                >
+                    Conoce a unión
+                </a>
             </div>
         </div>
-     </div>
+    </div>
 </Layout>
 
 <style>
-
-    #sucursal_santafe:checked + label svg{
+    #sucursal_santafe:checked + label svg {
         transform: rotate(180deg);
         fill: blue;
     }
-    #sucursal_bsas:checked + label svg{
+    #sucursal_bsas:checked + label svg {
         transform: rotate(180deg);
         fill: blue;
     }
-    #sucursal_mendoza:checked + label svg{
+    #sucursal_mendoza:checked + label svg {
         transform: rotate(180deg);
         fill: blue;
     }
-    #sucursal_salta:checked + label svg{
+    #sucursal_salta:checked + label svg {
         transform: rotate(180deg);
         fill: blue;
     }
