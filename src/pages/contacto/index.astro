@@ -10,8 +10,13 @@ import Layout from "../../layouts/Layout.astro";
     <section
         class="min-h-[600px] hidden md:flex w-full bg-blend-color bg-black/40 flex-col justify-center text-white relative"
     >
-    <img src="/assets/background-sections/bg-contacto.webp" alt="Contacto" class="absolute w-full h-full inset-0 object-cover object-center -z-10" loading="eager" />
-    <div class="w-full xl:container px-4 xl:px-0 xl:mx-auto">
+        <img
+            src="/assets/background-sections/bg-contacto.webp"
+            alt="Contacto"
+            class="absolute w-full h-full inset-0 object-cover object-center -z-10"
+            loading="eager"
+        />
+        <div class="w-full xl:container px-4 xl:px-0 xl:mx-auto">
             <span class="text-lg md:text-xl font-normal ml-1"
                 >MANTENGAMOS LA CHARLA —</span
             >
@@ -23,7 +28,7 @@ import Layout from "../../layouts/Layout.astro";
     <section
         class="min-h-[600px] flex md:hidden w-full bg-[url('/assets/background-sections/mobile/bg-contacto.webp')] bg-blend-color bg-black/40 bg-cover bg-center flex-col justify-center text-white relative"
     >
-    <div class="w-full xl:container px-4 xl:px-0 xl:mx-auto">
+        <div class="w-full xl:container px-4 xl:px-0 xl:mx-auto">
             <span class="text-lg md:text-xl font-normal ml-1"
                 >MANTENGAMOS LA CHARLA —</span
             >
@@ -34,9 +39,17 @@ import Layout from "../../layouts/Layout.astro";
     </section>
     <SectionModalsForm />
     <section class="w-full bg-sv-gris-light py-20">
-        <div class="w-full xl:container px-4 xl:px-0 xl:mx-auto flex flex-col gap-10 lg:gap-0 lg:flex-row">
-            <form class="bg-white rounded-2xl p-8 w-full lg:w-2/3" action="https://formsubmit.co/c2f76a29d894602b0289c6b6998ba9b5" method="POST">
-                <h4 class="text-2xl sm:text-3xl font-bold">Contactá un Asesor</h4>
+        <div
+            class="w-full xl:container px-4 xl:px-0 xl:mx-auto flex flex-col gap-10 lg:gap-0 lg:flex-row"
+        >
+            <form
+                class="bg-white rounded-2xl p-8 w-full lg:w-2/3"
+                action="https://formsubmit.co/c2f76a29d894602b0289c6b6998ba9b5"
+                method="POST"
+            >
+                <h4 class="text-2xl sm:text-3xl font-bold">
+                    Contactá un Asesor
+                </h4>
                 <div class="flex flex-col gap-5 w-full mt-5">
                     <input
                         type="text"
@@ -50,7 +63,12 @@ import Layout from "../../layouts/Layout.astro";
                             placeholder="Razón social"
                             required
                         />
-                        <input type="number" placeholder="CUIT" name="Cuit" required />
+                        <input
+                            type="number"
+                            placeholder="CUIT"
+                            name="Cuit"
+                            required
+                        />
                         <select name="Tipo">
                             <option selected value="consumidor"
                                 >Consumidor Final</option
@@ -59,101 +77,207 @@ import Layout from "../../layouts/Layout.astro";
                         </select>
                     </div>
                     <input name="Empresa" type="text" placeholder="Empresa" />
-                    <textarea name="Consulta" rows="6" placeholder="Consulta" required
-                    ></textarea>
+                    <textarea
+                        name="Consulta"
+                        rows="6"
+                        placeholder="Consulta"
+                        required></textarea>
                     <button
                         type="submit"
                         class="bg-sv-negro text-white w-32 py-4 mx-auto rounded-full"
                         >Enviar</button
                     >
                 </div>
-                <input type="hidden" name="_subject" value="Nuevo formulario enviado desde la web de SV. Formulario de contactá con un asesor" >
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="Nuevo formulario enviado desde la web de SV. Formulario de contactá con un asesor"
+                />
                 <!-- Copia de email -->
-              <input type="hidden" name="_cc" value="marketing@serviciosviales.com.ar">
+                <input
+                    type="hidden"
+                    name="_cc"
+                    value="marketing@serviciosviales.com.ar"
+                />
             </form>
 
             <div class="lg:p-8 flex flex-col gap-5">
                 <h4 class="text-3xl font-bold">Dirección</h4>
                 <div class="flex flex-col gap-6">
-                <div class="flex flex-row items-center gap-2">
-                    <svg class="w-8 h-8 text-sv-blue" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"/>
-                      </svg>
-                      
-                      
-                    <div class="flex flex-col">
-                        <span class="font-bold">Santa Fe</span>
-                        <p class="leading-4">
-                            Rosa Carmen All 1551 (Puerto), Santa Fe Capital
-                        </p>
-                    </div>
-                </div>
-                <div class="flex flex-row items-center gap-2">
-                    <svg class="w-8 h-8 text-sv-blue" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"/>
-                      </svg>
-                      
-                      
-                    <div class="flex flex-col">
-                        <span class="font-bold">Buenos Aires</span>
-                        <p class="leading-4">
-                            Patagones 2455, CABA
-                        </p>
-                    </div>
-                </div>
-                <div class="flex flex-row items-center gap-2">
-                    <svg class="w-8 h-8 text-sv-blue" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"/>
-                      </svg>
-                      
-                      
-                    <div class="flex flex-col">
-                        <span class="font-bold">Mendoza</span>
-                        <p class="leading-4">
-                            Carril Rodríguez Peña 2710, Godoy Cruz
-                        </p>
-                    </div>
-                </div>
+                    <div class="flex flex-row items-center gap-2">
+                        <a
+                            href="https://www.google.com.ar/maps/place/Rosa+Carmen+All+1551,+S3000+Santa+Fe+de+la+Vera+Cruz,+Santa+Fe/@-31.6468145,-60.6961806,17z/data=!3m1!4b1!4m6!3m5!1s0x95b5a99946d240df:0x5c21457d896848fd!8m2!3d-31.6468145!4d-60.6936057!16s%2Fg%2F11sdm6g41b?entry=ttu&g_ep=EgoyMDI0MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+                            title="Maps - Rosa Carmen All 1551 (Puerto), Santa Fe Capital"
+                            rel="noreferrer"
+                            target="_blank"
+                        >
+                            <svg
+                                class="w-8 h-8 text-sv-blue"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="32"
+                                height="32"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="1"
+                                    d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                                ></path>
+                                <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="1"
+                                    d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"
+                                ></path>
+                            </svg>
+                        </a>
 
-                <div class="flex flex-row items-center gap-2">
-                    <svg class="w-8 h-8 text-sv-blue" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"/>
-                      </svg>
-                      
-                      
-                    <div class="flex flex-col">
-                        <span class="font-bold">Salta</span>
-                        <p class="leading-4">
-                            Circunvalación sudeste km 1,6
-Urbanización Terranova
-                        </p>
+                        <div class="flex flex-col">
+                            <span class="font-bold">Santa Fe</span>
+                            <p class="leading-4">
+                                Rosa Carmen All 1551 (Puerto), Santa Fe Capital
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row items-center gap-2">
+                        <a
+                            href="https://www.google.com.ar/maps/place/Patagones+2455,+C1282ACA+Cdad.+Aut%C3%B3noma+de+Buenos+Aires/@-34.6364629,-58.3988691,17z/data=!3m1!4b1!4m6!3m5!1s0x95bccb1675e6c24d:0xfba7768f81b8d2ec!8m2!3d-34.6364629!4d-58.3962942!16s%2Fg%2F11fmz7dp86?entry=ttu&g_ep=EgoyMDI0MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+                            title="Maps - Patagones 2455, CABA"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <svg
+                                class="w-8 h-8 text-sv-blue"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="32"
+                                height="32"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="1"
+                                    d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                                ></path>
+                                <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="1"
+                                    d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"
+                                ></path>
+                            </svg>
+                        </a>
+
+                        <div class="flex flex-col">
+                            <span class="font-bold">Buenos Aires</span>
+                            <p class="leading-4">Patagones 2455, CABA</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row items-center gap-2">
+                        <a
+                            href="https://www.google.com.ar/maps/place/Carril+Rodr%C3%ADguez+Pe%C3%B1a+2710,+M5501+Godoy+Cruz,+Mendoza/@-32.9288837,-68.8125958,17z/data=!3m1!4b1!4m6!3m5!1s0x967e0c07ee43d2e9:0x6aeed520c1860078!8m2!3d-32.9288837!4d-68.8100209!16s%2Fg%2F11rpkm6pyy?entry=ttu&g_ep=EgoyMDI0MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+                            title="Maps - Carril Rodríguez Peña 2710, Godoy Cruz"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <svg
+                                class="w-8 h-8 text-sv-blue"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="32"
+                                height="32"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="1"
+                                    d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                                ></path>
+                                <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="1"
+                                    d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"
+                                ></path>
+                            </svg>
+                        </a>
+
+                        <div class="flex flex-col">
+                            <span class="font-bold">Mendoza</span>
+                            <p class="leading-4">
+                                Carril Rodríguez Peña 2710, Godoy Cruz
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-row items-center gap-2">
+                        <a
+                            href="https://www.google.com.ar/maps/place/SV+(Salta)+-+Servicios+Viales/@-24.8562431,-65.4190901,17z/data=!3m1!4b1!4m6!3m5!1s0x941bdda1a2142131:0xc1249492a6664d41!8m2!3d-24.8562431!4d-65.4165152!16s%2Fg%2F11wc1w1jlv?entry=ttu&g_ep=EgoyMDI0MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+                            title="Maps - Circunvalación sudeste km 1,6 Urbanización Terranova"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <svg
+                                class="w-8 h-8 text-sv-blue"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="32"
+                                height="32"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="1"
+                                    d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                                ></path>
+                                <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="1"
+                                    d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"
+                                ></path>
+                            </svg>
+                        </a>
+
+                        <div class="flex flex-col">
+                            <span class="font-bold">Salta</span>
+                            <p class="leading-4">
+                                Circunvalación sudeste km 1,6 Urbanización
+                                Terranova
+                            </p>
+                        </div>
                     </div>
                 </div>
-
-            </div>
-            <hr class="bg-black text-black w-full h-[2px]"/>
-            <div class="flex flex-col gap-6">
-                <h4 class="text-3xl font-bold">Contacto</h4>
-                <div class="flex flex-col">
-                    <span class="font-bold">Email</span>
-                    <p class="leading-4">
-                        contacto@serviciosviales.com.ar
-                    </p>
+                <hr class="bg-black text-black w-full h-[2px]" />
+                <div class="flex flex-col gap-6">
+                    <h4 class="text-3xl font-bold">Contacto</h4>
+                    <div class="flex flex-col">
+                        <span class="font-bold">Email</span>
+                        <p class="leading-4">contacto@serviciosviales.com.ar</p>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold">Teléfono</span>
+                        <p class="leading-4">+54 9 (342) 631-1894</p>
+                        <p class="leading-6">0810-888-8686</p>
+                    </div>
                 </div>
-                <div class="flex flex-col">
-                    <span class="font-bold">Teléfono</span>
-                    <p class="leading-4">
-                        +54 9 (342) 631-1894
-                    </p>
-                    <p class="leading-6">
-                        0810-888-8686
-                    </p>
-                </div>
-            </div>
             </div>
         </div>
     </section>

@@ -1,21 +1,117 @@
-<section class="w-full bg-sv-gris-light min-h-screen flex justify-center py-20 px-4 lg:px-0 mb-0">
-  <div class="bg-white w-full lg:w-2/3 rounded-2xl p-4 lg:p-20">
+<section
+  class="w-full bg-sv-gris-light min-h-screen flex justify-center py-20 px-4 lg:px-0 mb-0"
+>
+  <div class="bg-white w-full lg:w-3/5 rounded-2xl p-4 lg:p-20">
     <h5 class="text-2xl lg:text-5xl text-center">Contáctanos</h5>
-    <p class="text-xl text-center mt-2">Puede dejarnos aquí su consulta y responderemos a la mayor brevedad posible</p>
-    <form action="https://formsubmit.co/c2f76a29d894602b0289c6b6998ba9b5" method="POST" class="w-full flex flex-col gap-10 mt-10">
-        <div class="flex flex-row gap-2 lg:gap-8">
-            <input name="nombre" type="text" placeholder="Nombre" class="w-full outline-none transition-colors duration-300 focus:border-sv-blue border border-solid border-[#DBDBDB] rounded-lg p-4" required />
-            <input name="empresa" type="text" placeholder="Empresa" class="w-full outline-none transition-colors duration-300 focus:border-sv-blue border border-solid border-[#DBDBDB] rounded-lg p-4" required />
-        </div>
-        <div>
-            <input name="email" type="email" placeholder="Email" class="w-full outline-none transition-colors duration-300 focus:border-sv-blue border border-solid border-[#DBDBDB] rounded-lg p-4" required />
-            <input type="hidden" name="_autoresponse" value="Hemos recibido tu formulario. Muchas gracias por contactarnos, el equipo de Servicios Viales se comunicará pronto.">
-        </div>
-        <textarea name="Mensaje" rows="6" placeholder="Mensaje" class="w-full outline-none transition-colors duration-300 focus:border-sv-blue border border-solid border-[#DBDBDB] rounded-lg p-4" />
-        <input type="submit" value="Enviar" class="bg-sv-negro text-white block mx-auto py-3 px-10 rounded-full font-semibold transition-colors duration-300 hover:bg-sv-blue cursor-pointer" />
-        <input type="hidden" name="_subject" value="Nuevo formulario enviado desde la web de SV. Formulario de contáctanos" >
-        <!-- Copia de email -->
-        <input type="hidden" name="_cc" value="marketing@serviciosviales.com.ar">
+    <p class="text-xl text-center mt-2">
+      Puede dejarnos aquí su consulta y responderemos a la mayor brevedad
+      posible
+    </p>
+    <form
+      id="form_home"
+      class="w-full flex flex-col gap-10 mt-10"
+      method="post"
+    >
+      <div class="flex flex-row gap-2 lg:gap-8">
+        <input
+          name="from_name"
+          type="text"
+          placeholder="Nombre y apellido"
+          class="w-full outline-none transition-colors duration-300 focus:border-sv-blue border border-solid border-[#DBDBDB] rounded-lg p-4"
+          required
+        />
+        <input
+          name="from_cuit"
+          type="number"
+          placeholder="CUIT"
+          class="w-full outline-none transition-colors duration-300 focus:border-sv-blue border border-solid border-[#DBDBDB] rounded-lg p-4"
+          required
+        />
+      </div>
+      <div class="flex flex-row gap-2 lg:gap-8">
+        <input
+          name="from_email"
+          type="email"
+          placeholder="Email"
+          class="w-full outline-none transition-colors duration-300 focus:border-sv-blue border border-solid border-[#DBDBDB] rounded-lg p-4"
+          required
+        />
+        <input
+          name="from_phone"
+          type="number"
+          placeholder="Teléfono"
+          class="w-full outline-none transition-colors duration-300 focus:border-sv-blue border border-solid border-[#DBDBDB] rounded-lg p-4"
+          required
+        />
+      </div>
+      <input
+        name="from_provincia"
+        type="text"
+        placeholder="Provincia"
+        class="w-full outline-none transition-colors duration-300 focus:border-sv-blue border border-solid border-[#DBDBDB] rounded-lg p-4"
+        required
+      />
+      <select
+        name="from_tipocliente"
+        class="w-full outline-none transition-colors duration-300 focus:border-sv-blue border border-solid border-[#DBDBDB] rounded-lg p-4"
+        required
+      >
+        <option value="" disabled selected hidden>Tipo cliente</option>
+        <option value="Revendedor">Revendedor</option>
+        <option value="Consumidor final">Consumidor final</option>
+      </select>
+      <textarea
+        name="message"
+        rows="6"
+        placeholder="Mensaje"
+        class="w-full outline-none transition-colors duration-300 focus:border-sv-blue border border-solid border-[#DBDBDB] rounded-lg p-4"
+      ></textarea>
+      <div
+        class="g-recaptcha"
+        data-sitekey="6LfMRCAqAAAAAIE_0vQBGahLNxbYeZ_Q59jBGsxn"
+      >
+      </div>
+      <input
+        type="submit"
+        id="button_form_home"
+        value="Enviar"
+        class="bg-sv-negro text-white block mx-auto py-3 px-10 rounded-full font-semibold transition-colors duration-300 hover:bg-sv-blue cursor-pointer"
+      />
     </form>
   </div>
 </section>
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+  is:inline></script>
+
+<script type="text/javascript" is:inline>
+  emailjs.init("T-ilULX6uN-uxjTiJ");
+</script>
+<script is:inline>
+  document.addEventListener("astro:page-load", () => {
+    const btn = document.getElementById("button_form_home");
+    const formHome = document.getElementById("form_home");
+
+    formHome.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      btn.value = "Enviando...";
+
+      const serviceID = "service_61dv8ni";
+      const templateID = "template_53sq5da";
+
+      emailjs.sendForm(serviceID, templateID, this).then(
+        () => {
+          btn.value = "Enviar";
+          alert("Enviado!");
+          formHome.reset();
+        },
+        (err) => {
+          btn.value = "Enviar";
+          alert(JSON.stringify(err));
+        },
+      );
+    });
+  });
+</script>

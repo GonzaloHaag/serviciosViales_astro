@@ -10,7 +10,7 @@ interface Props {
 }
 const {numero,title,text,beforeNumber,afterNumber} = Astro.props;
 ---
-<div class="flex flex-col gap-20 px-10 pt-10 pb-16 border-b sm:border-r border-solid  border-sv-negro sm:last:border-r-0 number-item">
+<div class="flex flex-col gap-20 px-10 pt-10 pb-16 border-b sm:border-r sm:border-b-0 border-solid  border-sv-negro sm:last:border-r-0 number-item">
   <span class="text-7xl font-semibold flex items-center justify-end">
     {beforeNumber}<CounterUp client:visible initial={0} final={numero} decimals={0} />{afterNumber}
   </span>

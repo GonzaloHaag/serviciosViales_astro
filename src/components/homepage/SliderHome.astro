@@ -4,8 +4,7 @@ import HomeSliderBgImage from './HomeSliderBgImage.astro';
 <section class="slider">
  <div class="w-full h-full bg-blend-color bg-black/40 ">
     <video autoplay muted loop class="h-full w-full object-cover absolute -z-10 aspect-video" poster="/assets/banners-home-slide/poster-video.webp">
-      <source type="video/webm" src="/assets/banners-home-slide/video/SV-WEB-opti.webm"  />
-      <source type="video/mp4" src="/assets/banners-home-slide/video/SV-WEB-opti.mp4"  />
+      <source type="video/webm" src="/assets/banners-home-slide/video/SV-WEB.webm"  />
     </video>
     <HomeSliderBgImage 
                titleBold="TU SOCIO" 
@@ -99,6 +98,7 @@ import HomeSliderBgImage from './HomeSliderBgImage.astro';
         align-items: center;
         justify-content: flex-end;
         gap: 10px;
+        cursor: pointer;
     }
     .dots div {
         height: 12px;
@@ -216,6 +216,17 @@ import HomeSliderBgImage from './HomeSliderBgImage.astro';
         slider.addEventListener('touchmove', handleDragMove);
         slider.addEventListener('mouseup', handleDragEnd);
         slider.addEventListener('touchend', handleDragEnd);
+
+        // Hacer los dots clickeables
+        const dots = document.querySelectorAll('.dots div');
+        dots.forEach((dot, index) => {
+          dot.addEventListener('click', () => {
+            customChange = true;
+            sliding(index);
+            count = index + 1;
+            setTimeout(() => { customChange = false }, 6000);
+          });
+        });
   
         return intervalId;
       };
