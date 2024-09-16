@@ -68,6 +68,7 @@
       ></textarea>
       <div
         class="g-recaptcha"
+        id="g-recaptcha"
         data-sitekey="6LfMRCAqAAAAAIE_0vQBGahLNxbYeZ_Q59jBGsxn"
       >
       </div>
@@ -86,7 +87,14 @@
   is:inline></script>
 
 <script type="text/javascript" is:inline>
-  emailjs.init("T-ilULX6uN-uxjTiJ");
+  document.addEventListener("astro:page-load", () => {
+    if (typeof grecaptcha !== "undefined") {
+      grecaptcha.render("g-recaptcha", {
+        sitekey: "6LfMRCAqAAAAAIE_0vQBGahLNxbYeZ_Q59jBGsxn",
+      });
+    }
+  });
+ 
 </script>
 <script is:inline>
   document.addEventListener("astro:page-load", () => {

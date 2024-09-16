@@ -44,7 +44,7 @@ import Layout from "../../layouts/Layout.astro";
         >
             <form
                 class="bg-white rounded-2xl p-8 w-full lg:w-2/3"
-                action="https://formsubmit.co/c2f76a29d894602b0289c6b6998ba9b5"
+                id="form_contacto"
                 method="POST"
             >
                 <h4 class="text-2xl sm:text-3xl font-bold">
@@ -53,38 +53,48 @@ import Layout from "../../layouts/Layout.astro";
                 <div class="flex flex-col gap-5 w-full mt-5">
                     <input
                         type="text"
+                        name="from_name"
                         placeholder="Nombre y apellido"
                         required
                     />
                     <div class="flex flex-col sm:flex-row gap-5 sm:gap-3">
                         <input
                             type="text"
+                            name="from_razonSocial"
                             name="Razón Social"
                             placeholder="Razón social"
                             required
                         />
                         <input
                             type="number"
+                            name="from_cuit"
                             placeholder="CUIT"
                             name="Cuit"
                             required
                         />
-                        <select name="Tipo">
+                        <select name="from_tipo">
                             <option selected value="consumidor"
                                 >Consumidor Final</option
                             >
                             <option value="revendedor">Revendedor</option>
                         </select>
                     </div>
-                    <input name="Empresa" type="text" placeholder="Empresa" />
+                    <input name="from_empresa" type="text" placeholder="Empresa" />
                     <textarea
-                        name="Consulta"
+                        name="from_consulta"
                         rows="6"
                         placeholder="Consulta"
                         required></textarea>
+                        <div
+                        class="g-recaptcha-contacto"
+                        id="g-recaptcha-contacto"
+                        data-sitekey="6LfMRCAqAAAAAIE_0vQBGahLNxbYeZ_Q59jBGsxn"
+                      >
+                      </div>
                     <button
                         type="submit"
-                        class="bg-sv-negro text-white w-32 py-4 mx-auto rounded-full"
+                        id="button_form_contacto"
+                        class="bg-sv-negro text-white block mx-auto py-3 px-10 rounded-full font-semibold transition-colors duration-300 hover:bg-sv-blue cursor-pointer"
                         >Enviar</button
                     >
                 </div>
@@ -282,6 +292,43 @@ import Layout from "../../layouts/Layout.astro";
         </div>
     </section>
 </Layout>
+<script type="text/javascript" is:inline>
+    document.addEventListener("astro:page-load", () => {
+      if (typeof grecaptcha !== "undefined") {
+        grecaptcha.render("g-recaptcha-contacto", {
+          sitekey: "6LfMRCAqAAAAAIE_0vQBGahLNxbYeZ_Q59jBGsxn",
+        });
+      }
+    });
+   
+  </script>
+  <script is:inline>
+    document.addEventListener("astro:page-load", () => {
+      const btn = document.getElementById("button_form_contacto");
+      const formContacto = document.getElementById("form_contacto");
+  
+      formContacto.addEventListener("submit", function (event) {
+        event.preventDefault();
+  
+        btn.value = "Enviando...";
+  
+        const serviceID = "service_61dv8ni";
+        const templateID = "template_l1fngky";
+  
+        emailjs.sendForm(serviceID, templateID, this).then(
+          () => {
+            btn.value = "Enviar";
+            alert("Enviado!");
+            formContacto.reset();
+          },
+          (err) => {
+            btn.value = "Enviar";
+            alert(JSON.stringify(err));
+          },
+        );
+      });
+    });
+  </script>
 <style>
     input {
         @apply w-full;
