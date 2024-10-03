@@ -68,8 +68,7 @@
       ></textarea>
       <div
         class="g-recaptcha"
-        id="g-recaptcha"
-        data-sitekey="6LfMRCAqAAAAAIE_0vQBGahLNxbYeZ_Q59jBGsxn"
+        data-sitekey="6LdnDk8qAAAAAGnQiPoESwDYhX-SBCLw-_BiLqFX"
       >
       </div>
       <input
@@ -81,20 +80,14 @@
     </form>
   </div>
 </section>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script
   type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-  is:inline></script>
-
-<script type="text/javascript" is:inline>
-  document.addEventListener("astro:page-load", () => {
-    if (typeof grecaptcha !== "undefined") {
-      grecaptcha.render("g-recaptcha", {
-        sitekey: "6LfMRCAqAAAAAIE_0vQBGahLNxbYeZ_Q59jBGsxn",
-      });
-    }
-  });
- 
+></script>
+<script type="text/javascript">
+  emailjs.init("Vu8YAtqhpYEfQ4j9Z");
 </script>
 <script is:inline>
   document.addEventListener("astro:page-load", () => {
